@@ -19,5 +19,8 @@
   "engines": {
     "node": "18.17.0",
     "npm": "9.6.7"
+  },
+  "dependencies": {
+    "serverless-http": "^3.2.0"
   }
 }
