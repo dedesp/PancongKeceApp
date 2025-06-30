@@ -7,13 +7,17 @@
     "start": "cd backend && node server-minimal.js",
     "dev": "cd backend && npm run dev",
     "setup": "cd backend && npm install && node utils/dbSeed.js",
-    "build": "echo 'Static files ready for deployment'",
-    "test": "cd backend && npm test"
+    "build": "echo 'Starting build...' && npm run build:backend && npm run build:functions && echo 'Build completed successfully'",
+    "build:backend": "cd backend && npm install --production",
+    "build:functions": "mkdir -p netlify/functions && cp -r backend netlify/functions/",
+    "test": "cd backend && npm test",
+    "deploy": "npm run build && echo 'Ready for Netlify deployment'"
   },
   "keywords": ["cafe", "pos", "management", "pancong"],
   "author": "PancongKece Team",
   "license": "MIT",
   "engines": {
-    "node": ">=14.0.0"
+    "node": "18.17.0",
+    "npm": "9.6.7"
   }
 }
