@@ -1,0 +1,12 @@
+# Pancong Kece Deployment Bundle
+
+node_modules/
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Keep these for deployment
+!backend/node_modules/
+!backend/database/
+!backend/.env

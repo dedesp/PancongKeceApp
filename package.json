@@ -1,0 +1,19 @@
+{
+  "name": "pancong-kece-app",
+  "version": "1.0.0",
+  "description": "Pancong Kece Cafe Management System - Bundle Siap Deploy",
+  "main": "backend/server-minimal.js",
+  "scripts": {
+    "start": "cd backend && node server-minimal.js",
+    "dev": "cd backend && npm run dev",
+    "setup": "cd backend && npm install && node utils/dbSeed.js",
+    "build": "echo 'Static files ready for deployment'",
+    "test": "cd backend && npm test"
+  },
+  "keywords": ["cafe", "pos", "management", "pancong"],
+  "author": "PancongKece Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
