@@ -11,43 +11,6 @@
     <link rel="stylesheet" href="css/pages.css">
     <link rel="stylesheet" href="css/utilities.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <style>
-        .loading-spinner {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 3rem;
-            color: #4a7c59;
-        }
-        
-        .loading-spinner i {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            animation: spin 1s linear infinite;
-        }
-        
-        @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        
-        .error-state {
-            text-align: center;
-            padding: 3rem;
-            color: #dc3545;
-        }
-        
-        .error-state h2 {
-            margin: 1rem 0;
-            color: #2d5016;
-        }
-        
-        .error-state p {
-            color: #4a7c59;
-            margin-bottom: 2rem;
-        }
-    </style>
 </head>
 <body>
     <!-- Header Component - Will be loaded dynamically -->
@@ -67,11 +30,6 @@
                 </div>
             </div>
         </main>
-    </div>
-
-    <!-- Success Message -->
-    <div class="success-message" id="successMessage">
-        <p>Operasi berhasil!</p>
     </div>
 
     <!-- Component Loading System -->
@@ -101,47 +59,32 @@
         // Initialize the application with component-based architecture
         document.addEventListener('DOMContentLoaded', async () => {
             try {
-                console.log('🚀 Starting application initialization...');
-                
                 // Initialize component loader
                 if (typeof ComponentLoader !== 'undefined') {
                     await ComponentLoader.init();
-                    console.log('✅ Component loader initialized');
-                } else {
-                    throw new Error('ComponentLoader not found');
                 }
                 
                 // Load core components
-                console.log('📦 Loading core components...');
                 await Promise.all([
-                    ComponentLoader.loadComponent('header-container', 'core/header', {
-                        currentRole: 'Kasir',
-                        currentUser: 'Andi Pratama'
-                    }),
+                    ComponentLoader.loadComponent('header-container', 'core/header'),
                     ComponentLoader.loadComponent('sidebar-container', 'core/sidebar')
                 ]);
-                console.log('✅ Core components loaded');
                 
                 // Initialize navigation system
                 if (typeof NavigationEnhanced !== 'undefined') {
                     NavigationEnhanced.init();
-                    console.log('✅ Enhanced navigation initialized');
-                    
-                    // Load initial page (dashboard)
-                    const defaultSection = 'dashboard';
-                    await NavigationEnhanced.showSection(defaultSection);
-                    console.log('✅ Default section loaded:', defaultSection);
-                } else {
-                    throw new Error('NavigationEnhanced not found');
                 }
+                
+                // Load initial page (dashboard)
+                const defaultSection = 'dashboard';
+                await NavigationEnhanced.showSection(defaultSection);
                 
                 // Initialize keyboard shortcuts
                 if (typeof initKeyboardShortcuts === 'function') {
                     initKeyboardShortcuts();
-                    console.log('✅ Keyboard shortcuts initialized');
                 }
                 
-                console.log('🎉 Application initialized successfully with component system');
+                console.log('✅ Application initialized successfully with component system');
                 
             } catch (error) {
                 console.error('❌ Application initialization failed:', error);

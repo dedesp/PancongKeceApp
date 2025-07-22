@@ -1,0 +1,231 @@
+<section id="employees" class="section">
+    <div class="section-header">
+        <h2 class="section-title">Karyawan</h2>
+        <p class="section-subtitle">Manajemen karyawan, shift dan payroll</p>
+        <div class="header-actions">
+            <button class="btn-secondary" onclick="showAttendanceModal()">
+                <i class="hgi-stroke hgi-time-01"></i>
+                Absensi
+            </button>
+            <button class="btn-primary" onclick="showAddEmployeeModal()">
+                <i class="hgi-stroke hgi-user-add-01"></i>
+                Tambah Karyawan
+            </button>
+        </div>
+    </div>
+
+    <!-- Employee Summary Cards -->
+    <div class="employee-summary">
+        <div class="summary-card">
+            <div class="summary-icon">
+                <i class="hgi-stroke hgi-users-01"></i>
+            </div>
+            <div class="summary-content">
+                <h3 id="totalEmployees">0</h3>
+                <p>Total Karyawan</p>
+            </div>
+        </div>
+        <div class="summary-card">
+            <div class="summary-icon" style="background: #28a745;">
+                <i class="hgi-stroke hgi-user-check-01"></i>
+            </div>
+            <div class="summary-content">
+                <h3 id="activeEmployees">0</h3>
+                <p>Sedang Bekerja</p>
+            </div>
+        </div>
+        <div class="summary-card">
+            <div class="summary-icon" style="background: #ffc107;">
+                <i class="hgi-stroke hgi-calendar-01"></i>
+            </div>
+            <div class="summary-content">
+                <h3 id="monthlyPayroll">Rp 0</h3>
+                <p>Payroll Bulan Ini</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Employee Management Tabs -->
+    <div class="employee-tabs">
+        <button class="tab-button active" onclick="showEmployeeTab('list')">Daftar Karyawan</button>
+        <button class="tab-button" onclick="showEmployeeTab('schedule')">Jadwal Shift</button>
+        <button class="tab-button" onclick="showEmployeeTab('attendance')">Absensi</button>
+        <button class="tab-button" onclick="showEmployeeTab('payroll')">Payroll</button>
+    </div>
+
+    <!-- Employee List Tab -->
+    <div id="employeeListTab" class="employee-tab-content active">
+        <div class="employee-filters">
+            <div class="filter-group">
+                <select id="employeeStatus" onchange="filterEmployees()">
+                    <option value="all">Semua Status</option>
+                    <option value="active">Aktif</option>
+                    <option value="inactive">Tidak Aktif</option>
+                </select>
+                <select id="employeeRole" onchange="filterEmployees()">
+                    <option value="all">Semua Posisi</option>
+                    <option value="manager">Manager</option>
+                    <option value="cashier">Kasir</option>
+                    <option value="barista">Barista</option>
+                    <option value="server">Pelayan</option>
+                </select>
+            </div>
+            <div class="search-group">
+                <input type="text" id="employeeSearch" placeholder="Cari karyawan..." onkeyup="searchEmployees()">
+            </div>
+        </div>
+
+        <div id="employeeGrid" class="employee-grid">
+            <!-- Employee cards will be populated here -->
+        </div>
+    </div>
+
+    <!-- Schedule Tab -->
+    <div id="employeeScheduleTab" class="employee-tab-content">
+        <div class="schedule-header">
+            <h3>Jadwal Shift Mingguan</h3>
+            <div class="schedule-controls">
+                <button class="btn-secondary" onclick="prevWeek()">← Minggu Sebelumnya</button>
+                <span id="currentWeekDisplay">Minggu ini</span>
+                <button class="btn-secondary" onclick="nextWeek()">Minggu Selanjutnya →</button>
+            </div>
+        </div>
+        <div id="scheduleTable" class="schedule-table">
+            <!-- Schedule will be populated here -->
+        </div>
+    </div>
+
+    <!-- Attendance Tab -->
+    <div id="employeeAttendanceTab" class="employee-tab-content">
+        <div class="attendance-header">
+            <h3>Absensi Karyawan</h3>
+            <div class="attendance-controls">
+                <input type="date" id="attendanceDate" onchange="loadAttendanceData()">
+                <button class="btn-primary" onclick="showClockInModal()">Clock In/Out</button>
+            </div>
+        </div>
+        <div id="attendanceTable" class="attendance-table">
+            <!-- Attendance data will be populated here -->
+        </div>
+    </div>
+
+    <!-- Payroll Tab -->
+    <div id="employeePayrollTab" class="employee-tab-content">
+        <div class="payroll-header">
+            <h3>Payroll Management</h3>
+            <div class="payroll-controls">
+                <select id="payrollMonth" onchange="loadPayrollData()">
+                    <option value="current">Bulan ini</option>
+                    <option value="previous">Bulan lalu</option>
+                </select>
+                <button class="btn-primary" onclick="generatePayroll()">Generate Payroll</button>
+            </div>
+        </div>
+        <div id="payrollTable" class="payroll-table">
+            <!-- Payroll data will be populated here -->
+        </div>
+    </div>
+</section>
+
+<!-- Add Employee Modal -->
+<div id="addEmployeeModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 class="modal-title">Tambah Karyawan Baru</h3>
+            <span class="close-btn" onclick="closeAddEmployeeModal()">&times;</span>
+        </div>
+        <div class="modal-body">
+            <form id="addEmployeeForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="employeeName">Nama Lengkap *</label>
+                        <input type="text" id="employeeName" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="employeePhone">No. Telepon</label>
+                        <input type="tel" id="employeePhone" name="phone">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="employeeEmail">Email</label>
+                    <input type="email" id="employeeEmail" name="email">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="employeePosition">Posisi *</label>
+                        <select id="employeePosition" name="position" required>
+                            <option value="">Pilih Posisi</option>
+                            <option value="manager">Manager</option>
+                            <option value="cashier">Kasir</option>
+                            <option value="barista">Barista</option>
+                            <option value="server">Pelayan</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="employeeSalary">Gaji Pokok</label>
+                        <input type="number" id="employeeSalary" name="salary" min="0">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="employeeAddress">Alamat</label>
+                    <textarea id="employeeAddress" name="address" rows="3"></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="startDate">Tanggal Mulai Kerja</label>
+                        <input type="date" id="startDate" name="startDate">
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="employeeActive" name="active" checked>
+                            Status Aktif
+                        </label>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn-secondary" onclick="closeAddEmployeeModal()">Batal</button>
+            <button type="button" class="btn-primary" onclick="saveEmployee()">Simpan Karyawan</button>
+        </div>
+    </div>
+</div>
+
+<!-- Clock In/Out Modal -->
+<div id="clockInModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 class="modal-title">Clock In/Out</h3>
+            <span class="close-btn" onclick="closeClockInModal()">&times;</span>
+        </div>
+        <div class="modal-body">
+            <div class="clock-display">
+                <div id="currentTime" class="current-time"></div>
+                <div id="currentDate" class="current-date"></div>
+            </div>
+            
+            <div class="form-group">
+                <label for="clockEmployee">Pilih Karyawan</label>
+                <select id="clockEmployee" name="employee" required>
+                    <option value="">Pilih Karyawan</option>
+                    <!-- Will be populated with employee list -->
+                </select>
+            </div>
+            
+            <div class="clock-actions">
+                <button class="btn btn-success" onclick="clockIn()">
+                    <i class="hgi-stroke hgi-login-01"></i>
+                    Clock In
+                </button>
+                <button class="btn btn-warning" onclick="clockOut()">
+                    <i class="hgi-stroke hgi-logout-01"></i>
+                    Clock Out
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

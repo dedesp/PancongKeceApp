@@ -1,0 +1,3403 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pancong Kece - Sistem Manajemen Cafe</title>
+    <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        /* Temporary inline styles for components not yet modularized */
+
+    <style>
+        /* Temporary inline styles for components not yet modularized */
+    </style>
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <i class="hgi-stroke hgi-home-01"></i>
+            <h1>Pancong Kece</h1>
+        </div>
+        <div class="user-info">
+            <span class="user-role" id="currentRole">Kasir</span>
+            <i class="hgi-stroke hgi-user-circle"></i>
+            <span id="currentUser">Andi Pratama</span>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <a href="#" class="nav-item active" data-section="dashboard">
+                <i class="hgi-stroke hgi-dashboard-circle"></i>
+                <span class="nav-text">Dashboard</span>
+            </a>
+            <a href="#" class="nav-item" data-section="pos">
+                <i class="hgi-stroke hgi-cashier"></i>
+                <span class="nav-text">Point of Sales</span>
+            </a>
+            <a href="#" class="nav-item manager-only" data-section="products">
+                <i class="hgi-stroke hgi-menu-restaurant"></i>
+                <span class="nav-text">Manajemen Produk</span>
+            </a>
+            <a href="#" class="nav-item manager-only" data-section="inventory">
+                <i class="hgi-stroke hgi-trolley-02"></i>
+                <span class="nav-text">Inventaris</span>
+            </a>
+            <a href="#" class="nav-item manager-only" data-section="employees">
+                <i class="hgi-stroke hgi-user-group"></i>
+                <span class="nav-text">Karyawan</span>
+            </a>
+            <a href="#" class="nav-item manager-only" data-section="customers">
+                <i class="hgi-stroke hgi-user-heart-01"></i>
+                <span class="nav-text">Customer</span>
+            </a>
+            <a href="#" class="nav-item manager-only" data-section="crm">
+                <i class="hgi-stroke hgi-customer-service-02"></i>
+                <span class="nav-text">CRM</span>
+            </a>
+            <a href="#" class="nav-item manager-only" data-section="automation">
+                <i class="hgi-stroke hgi-ai-brain-02"></i>
+                <span class="nav-text">AI & Automation</span>
+            </a>
+            <a href="#" class="nav-item manager-only" data-section="finance">
+                <i class="hgi-stroke hgi-analytics-01"></i>
+                <span class="nav-text">Keuangan</span>
+            </a>
+            <a href="#" class="nav-item manager-only" data-section="reports">
+                <i class="hgi-stroke hgi-invoice-01"></i>
+                <span class="nav-text">Laporan</span>
+            </a>
+            <a href="#" class="nav-item" data-section="settings">
+                <i class="hgi-stroke hgi-settings-01"></i>
+                <span class="nav-text">Pengaturan</span>
+            </a>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Dashboard Section -->
+            <section id="dashboard" class="section active">
+                <div class="section-header">
+                    <h2 class="section-title">Dashboard</h2>
+                    <p class="section-subtitle">Ringkasan aktivitas cafe hari ini</p>
+                </div>
+
+                <!-- Cafe Status Bar -->
+                <div class="cafe-status-bar" style="background: #f0f8f5; border: 2px solid #4a7c59; border-radius: 12px; padding: 1rem; margin-bottom: 2rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div id="cafeStatusIcon" style="width: 24px; height: 24px; border-radius: 50%; background: #28a745;"></div>
+                            <div>
+                                <div id="cafeStatusText" style="font-weight: 700; color: #2d5016; font-size: 1.1rem;">Cafe Buka</div>
+                                <div id="cafeStatusTime" style="color: #4a7c59; font-size: 0.9rem;">Dibuka pukul 08:00</div>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 0.5rem;">
+                            <button id="openCafeBtn" class="btn btn-success" onclick="toggleCafe('open')" style="display: none;">
+                                <i class="hgi-stroke hgi-door-01"></i>
+                                Buka Cafe
+                            </button>
+                            <button id="closeCafeBtn" class="btn btn-danger" onclick="toggleCafe('close')">
+                                <i class="hgi-stroke hgi-door-exit"></i>
+                                Tutup Cafe
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">Rp 2.450.000</div>
+                        <div class="stat-label">Penjualan Hari Ini</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">127</div>
+                        <div class="stat-label">Transaksi</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">8</div>
+                        <div class="stat-label">Karyawan Aktif</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">Kepuasan Pelanggan</div>
+                    </div>
+                </div>
+
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="hgi-stroke hgi-cash-01"></i>
+                            </div>
+                            <div>
+                                <div class="card-title">Transaksi Terbaru</div>
+                                <div class="card-subtitle">5 transaksi terakhir</div>
+                            </div>
+                        </div>
+                        <div class="table-container">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Waktu</th>
+                                        <th>Total</th>
+                                        <th>Metode</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>14:30</td>
+                                        <td>Rp 35.000</td>
+                                        <td>QRIS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14:15</td>
+                                        <td>Rp 42.000</td>
+                                        <td>Cash</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14:00</td>
+                                        <td>Rp 28.000</td>
+                                        <td>Card</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="hgi-stroke hgi-menu-restaurant"></i>
+                            </div>
+                            <div>
+                                <div class="card-title">Produk Terlaris</div>
+                                <div class="card-subtitle">Top 5 hari ini</div>
+                            </div>
+                        </div>
+                        <div class="table-container">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Produk</th>
+                                        <th>Terjual</th>
+                                        <th>Stok</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Kopi Americano</td>
+                                        <td>23</td>
+                                        <td>77</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pancong Original</td>
+                                        <td>18</td>
+                                        <td>82</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Latte</td>
+                                        <td>15</td>
+                                        <td>65</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- POS Section -->
+            <section id="pos" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Point of Sales</h2>
+                    <p class="section-subtitle">Sistem kasir untuk transaksi pelanggan</p>
+                </div>
+
+                <!-- Customer Section -->
+                <div class="customer-section" style="background: #f8f9fa; border-radius: 12px; padding: 1rem; margin-bottom: 1.5rem;">
+                    <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem;">
+                        <div style="flex: 1;">
+                            <input type="text" id="customerSearch" class="form-input" placeholder="Cari customer (No. HP / Kode Customer)" style="margin-bottom: 0;">
+                        </div>
+                        <button class="btn btn-secondary" onclick="searchCustomer()">
+                            <i class="hgi-stroke hgi-search-01"></i>
+                            Cari
+                        </button>
+                        <button class="btn btn-primary" onclick="showNewCustomerModal()">
+                            <i class="hgi-stroke hgi-user-add-01"></i>
+                            Customer Baru
+                        </button>
+                    </div>
+                    <div id="customerInfo" style="display: none; padding: 1rem; background: white; border-radius: 8px; border-left: 4px solid #4a7c59;">
+                        <!-- Customer info will be populated here -->
+                    </div>
+                </div>
+
+                <div class="pos-container">
+                    <div class="menu-section">
+                        <h3 style="margin-bottom: 1rem; color: #2d5016;">Menu Pancong Kece</h3>
+                        <div class="menu-grid" id="menuGrid">
+                            <!-- Menu items will be loaded here -->
+                        </div>
+                    </div>
+
+                    <div class="cart-section">
+                        <div class="cart-header">
+                            <h3 style="color: #2d5016;">Keranjang Belanja</h3>
+                            <!-- Keyboard Shortcuts Hint -->
+                            <div style="font-size: 0.8rem; color: #4a7c59; margin-top: 0.5rem; padding: 0.5rem; background: #f0f8f5; border-radius: 6px; border-left: 3px solid #4a7c59;" class="shortcuts-hint">
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <span><strong>⌨️ Shortcuts:</strong> F1-F12 (Produk), Ctrl+P (Bayar), Ctrl+D (Diskon)</span>
+                                    <span style="color: #dc3545; font-weight: bold;">ESC (Batal)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-items" id="cartItems">
+                            <p style="text-align: center; color: #4a7c59; padding: 2rem;">Keranjang kosong</p>
+                        </div>
+                        <div class="cart-total">
+                            <!-- Subtotal Display -->
+                            <div id="subtotalDisplay" style="margin-bottom: 0.5rem; display: none;">
+                                <div style="display: flex; justify-content: space-between; color: #4a7c59; font-size: 0.9rem;">
+                                    <span>Subtotal:</span>
+                                    <span id="subtotalAmount">Rp 0</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Discount Section -->
+                            <div id="discountSection" style="margin-bottom: 0.5rem; display: block;">
+                                <div style="display: flex; gap: 0.5rem; margin-bottom: 0.5rem;">
+                                    <input type="text" id="discountCode" class="form-input" placeholder="Kode diskon (Ctrl+D untuk fokus)" style="flex: 1; font-size: 0.9rem;" title="Press Ctrl+D to focus here quickly">
+                                    <button class="btn btn-secondary" onclick="applyDiscount()" style="padding: 0.5rem 1rem; font-size: 0.9rem;">
+                                        <i class="hgi-stroke hgi-coupon-01"></i>
+                                        Apply
+                                    </button>
+                                </div>
+                                <div id="discountDisplay" style="display: none;">
+                                </div>
+                            </div>
+                            
+                            <!-- Tax and Service Breakdown -->
+                            <div id="taxServiceBreakdown" style="margin-bottom: 0.5rem; display: none;">
+                            </div>
+                            
+                            <!-- Rounding Display -->
+                            <div id="roundingDisplay" style="margin-bottom: 0.5rem; display: none;">
+                                <div style="display: flex; justify-content: space-between; color: #4a7c59; font-size: 0.9rem;">
+                                    <span>Pembulatan:</span>
+                                    <span id="roundingAmount">Rp 0</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Total Amount -->
+                            <div class="total-amount" id="totalAmount">Rp 0</div>
+                            
+                            <!-- Payment Methods -->
+                            <div class="payment-methods">
+                                <!-- Payment Methods Shortcut Hint -->
+                                <div style="width: 100%; text-align: center; font-size: 0.8rem; color: #4a7c59; margin-bottom: 0.5rem; padding: 0.3rem; background: #f0f8f5; border-radius: 6px;">
+                                    <strong>💳 Ctrl+P:</strong> Focus Pembayaran
+                                </div>
+                                <div class="payment-method active" data-method="cash">
+                                    <i class="hgi-stroke hgi-cash-01"></i>
+                                    <div>Cash</div>
+                                </div>
+                                <div class="payment-method" data-method="qris">
+                                    <i class="hgi-stroke hgi-qr-code"></i>
+                                    <div>QRIS</div>
+                                </div>
+                                <div class="payment-method" data-method="card">
+                                    <i class="hgi-stroke hgi-credit-card"></i>
+                                    <div>Card</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Cash Payment Input -->
+                            <div id="cashPaymentSection" style="margin: 1rem 0; display: block;">
+                                <div class="form-group" style="margin-bottom: 0.5rem;">
+                                    <label class="form-label" style="font-size: 0.9rem; margin-bottom: 0.3rem;">Jumlah Bayar</label>
+                                    <input type="number" id="paidAmount" class="form-input" placeholder="Masukkan jumlah uang" style="font-size: 1.1rem; text-align: right;" oninput="calculateChange()">
+                                </div>
+                                <div id="changeDisplay" style="display: none; padding: 0.5rem; background: #f0f8f5; border-radius: 8px; border-left: 4px solid #4a7c59;">
+                                    <div style="font-size: 0.9rem; color: #4a7c59; margin-bottom: 0.2rem;">Kembalian:</div>
+                                    <div id="changeAmount" style="font-size: 1.3rem; font-weight: 700; color: #2d5016;">Rp 0</div>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-primary" style="width: 100%;" onclick="processPayment()" id="paymentButton">
+                                <i class="hgi-stroke hgi-printer"></i>
+                                Bayar & Cetak Struk
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Products Section (Manager Only) -->
+            <section id="products" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Manajemen Produk</h2>
+                    <p class="section-subtitle">Kelola menu dan harga produk</p>
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <button class="btn btn-primary" onclick="showModal('productModal')">
+                        <i class="hgi-stroke hgi-shopping-bag-add"></i>
+                        Tambah Produk
+                    </button>
+                </div>
+
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Gambar</th>
+                                <th>Nama Produk</th>
+                                <th>Kategori</th>
+                                <th>Harga</th>
+                                <th>Stok</th>
+                                <th>Status</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="https://public.youware.com/users-website-assets/prod/63f75314-f75c-43cc-ae5d-0421aa05ea62/photo-1653411712105-31fdd4e39c40" style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px;"></td>
+                                <td>Kopi Americano</td>
+                                <td>Minuman</td>
+                                <td>Rp 15.000</td>
+                                <td>77</td>
+                                <td><span style="color: #28a745; font-weight: 600;">Aktif</span></td>
+                                <td>
+                                    <button class="btn btn-secondary" style="margin-right: 0.5rem;">Edit</button>
+                                    <button class="btn btn-danger">Hapus</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://public.youware.com/users-website-assets/prod/63f75314-f75c-43cc-ae5d-0421aa05ea62/photo-1721027322774-b1479ea07627" style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px;"></td>
+                                <td>Pancong Original</td>
+                                <td>Makanan</td>
+                                <td>Rp 12.000</td>
+                                <td>82</td>
+                                <td><span style="color: #28a745; font-weight: 600;">Aktif</span></td>
+                                <td>
+                                    <button class="btn btn-secondary" style="margin-right: 0.5rem;">Edit</button>
+                                    <button class="btn btn-danger">Hapus</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://public.youware.com/users-website-assets/prod/63f75314-f75c-43cc-ae5d-0421aa05ea62/photo-1549045108-1817700573a3" style="width: 50px; height: 50px; object-fit: cover; border-radius: 8px;"></td>
+                                <td>Latte</td>
+                                <td>Minuman</td>
+                                <td>Rp 18.000</td>
+                                <td>65</td>
+                                <td><span style="color: #28a745; font-weight: 600;">Aktif</span></td>
+                                <td>
+                                    <button class="btn btn-secondary" style="margin-right: 0.5rem;">Edit</button>
+                                    <button class="btn btn-danger">Hapus</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Inventory Section (Manager Only) -->
+            <section id="inventory" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Inventaris</h2>
+                    <p class="section-subtitle">Manajemen stok dan inventaris cafe</p>
+                </div>
+
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="hgi-stroke hgi-analytics-01"></i>
+                            </div>
+                            <div>
+                                <div class="card-title">Stok Rendah</div>
+                                <div class="card-subtitle">Perlu segera diisi ulang</div>
+                            </div>
+                        </div>
+                        <div class="table-container">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Item</th>
+                                        <th>Stok</th>
+                                        <th>Minimum</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Biji Kopi Arabica</td>
+                                        <td style="color: #dc3545; font-weight: 600;">5 kg</td>
+                                        <td>10 kg</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Susu UHT</td>
+                                        <td style="color: #ffc107; font-weight: 600;">8 ltr</td>
+                                        <td>15 ltr</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="hgi-stroke hgi-trolley-02"></i>
+                            </div>
+                            <div>
+                                <div class="card-title">Inventaris Lengkap</div>
+                                <div class="card-subtitle">Semua item inventaris</div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary">
+                            <i class="hgi-stroke hgi-invoice-01"></i>
+                            Lihat Detail Inventaris
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Employees Section (Manager Only) -->
+            <section id="employees" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Manajemen Karyawan</h2>
+                    <p class="section-subtitle">HRM, absensi, dan payroll karyawan</p>
+                </div>
+
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="hgi-stroke hgi-user-group"></i>
+                            </div>
+                            <div>
+                                <div class="card-title">Absensi Hari Ini</div>
+                                <div class="card-subtitle">Status kehadiran karyawan</div>
+                            </div>
+                        </div>
+                        <div class="table-container">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Nama</th>
+                                        <th>Posisi</th>
+                                        <th>Jam Masuk</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Andi Pratama</td>
+                                        <td>Kasir</td>
+                                        <td>08:00</td>
+                                        <td><span style="color: #28a745; font-weight: 600;">Hadir</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sari Wijaya</td>
+                                        <td>Barista</td>
+                                        <td>08:15</td>
+                                        <td><span style="color: #28a745; font-weight: 600;">Hadir</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dedi Kurniawan</td>
+                                        <td>Kitchen Staff</td>
+                                        <td>-</td>
+                                        <td><span style="color: #dc3545; font-weight: 600;">Tidak Hadir</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="hgi-stroke hgi-wallet-01"></i>
+                            </div>
+                            <div>
+                                <div class="card-title">Payroll</div>
+                                <div class="card-subtitle">Manajemen gaji karyawan</div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;">
+                            <i class="hgi-stroke hgi-user-add-01"></i>
+                            Tambah Karyawan
+                        </button>
+                        <button class="btn btn-secondary" style="width: 100%;">
+                            <i class="hgi-stroke hgi-invoice-01"></i>
+                            Proses Payroll
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Finance Section (Manager Only) -->
+            <section id="finance" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Manajemen Keuangan</h2>
+                    <p class="section-subtitle">Laporan keuangan dan petty cash</p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">Rp 15.750.000</div>
+                        <div class="stat-label">Pendapatan Bulan Ini</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">Rp 8.200.000</div>
+                        <div class="stat-label">Pengeluaran Bulan Ini</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">Rp 7.550.000</div>
+                        <div class="stat-label">Keuntungan Bersih</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">Rp 2.500.000</div>
+                        <div class="stat-label">Petty Cash</div>
+                    </div>
+                </div>
+
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="hgi-stroke hgi-analytics-01"></i>
+                            </div>
+                            <div>
+                                <div class="card-title">Analisis Keuangan</div>
+                                <div class="card-subtitle">Grafik pendapatan dan pengeluaran</div>
+                            </div>
+                        </div>
+                        <div style="height: 200px; background: #f0f8f5; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #4a7c59;">
+                            [Grafik akan ditampilkan di sini]
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="hgi-stroke hgi-cash-01"></i>
+                            </div>
+                            <div>
+                                <div class="card-title">Petty Cash</div>
+                                <div class="card-subtitle">Kas kecil harian</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Transaksi Petty Cash</label>
+                            <input type="text" class="form-input" placeholder="Keterangan transaksi">
+                        </div>
+                        <div style="display: flex; gap: 1rem;">
+                            <button class="btn btn-success" style="flex: 1;">
+                                <i class="hgi-stroke hgi-wallet-add-01"></i>
+                                Pemasukan
+                            </button>
+                            <button class="btn btn-warning" style="flex: 1;">
+                                <i class="hgi-stroke hgi-wallet-remove-01"></i>
+                                Pengeluaran
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Reports Section (Manager Only) -->
+            <section id="reports" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Laporan</h2>
+                    <p class="section-subtitle">Generate dan export laporan</p>
+                </div>
+
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="hgi-stroke hgi-invoice-01"></i>
+                            </div>
+                            <div>
+                                <div class="card-title">Laporan Penjualan</div>
+                                <div class="card-subtitle">Harian, mingguan, bulanan</div>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+                            <button class="btn btn-secondary" style="flex: 1;">PDF</button>
+                            <button class="btn btn-secondary" style="flex: 1;">Excel</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="hgi-stroke hgi-analytics-01"></i>
+                            </div>
+                            <div>
+                                <div class="card-title">Laporan Inventaris</div>
+                                <div class="card-subtitle">Stok masuk dan keluar</div>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+                            <button class="btn btn-secondary" style="flex: 1;">PDF</button>
+                            <button class="btn btn-secondary" style="flex: 1;">Excel</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="hgi-stroke hgi-user-group"></i>
+                            </div>
+                            <div>
+                                <div class="card-title">Laporan Karyawan</div>
+                                <div class="card-subtitle">Absensi dan payroll</div>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+                            <button class="btn btn-secondary" style="flex: 1;">PDF</button>
+                            <button class="btn btn-secondary" style="flex: 1;">Excel</button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="hgi-stroke hgi-setup-01"></i>
+                            </div>
+                            <div>
+                                <div class="card-title">Log Aplikasi</div>
+                                <div class="card-subtitle">Aktivitas sistem POS</div>
+                            </div>
+                        </div>
+                        <div class="table-container">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Waktu</th>
+                                        <th>User</th>
+                                        <th>Aktivitas</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>14:30:15</td>
+                                        <td>Andi Pratama</td>
+                                        <td>Transaksi #127 - Rp 35.000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14:25:03</td>
+                                        <td>Admin</td>
+                                        <td>Update stok Kopi Arabica</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14:20:45</td>
+                                        <td>Sari Wijaya</td>
+                                        <td>Login sistem</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Settings Section -->
+            <section id="settings" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Pengaturan</h2>
+                    <p class="section-subtitle">Konfigurasi sistem dan preferensi</p>
+                </div>
+
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="hgi-stroke hgi-user-settings-01"></i>
+                            </div>
+                            <div>
+                                <div class="card-title">Profil Pengguna</div>
+                                <div class="card-subtitle">Edit informasi personal</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Nama Lengkap</label>
+                            <input type="text" class="form-input" value="Andi Pratama">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-input" value="andi@pancongkece.com">
+                        </div>
+                        <button class="btn btn-primary">
+                            <i class="hgi-stroke hgi-user-check-01"></i>
+                            Simpan Perubahan
+                        </button>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="hgi-stroke hgi-printer"></i>
+                            </div>
+                            <div>
+                                <div class="card-title">Printer Thermal</div>
+                                <div class="card-subtitle">Konfigurasi printer struk</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Nama Printer</label>
+                            <input type="text" class="form-input" value="Thermal Printer POS">
+                        </div>
+                        <button class="btn btn-primary">
+                            <i class="hgi-stroke hgi-printer"></i>
+                            Test Print
+                        </button>
+                    </div>
+
+                    <div class="card" id="taxSettingsCard" style="display: none;">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="hgi-stroke hgi-calculator"></i>
+                            </div>
+                            <div>
+                                <div class="card-title">Pengaturan Pajak & Service</div>
+                                <div class="card-subtitle">Konfigurasi perhitungan pajak dan service charge</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">PPN (Pajak Pertambahan Nilai)</label>
+                            <div style="display: flex; gap: 1rem; align-items: center;">
+                                <input type="number" id="ppnPercentage" class="form-input" placeholder="11" style="flex: 1;" min="0" max="100" step="0.1">
+                                <span style="color: #4a7c59;">%</span>
+                                <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <input type="checkbox" id="ppnActive" checked>
+                                    <span style="font-size: 0.9rem;">Aktif</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Service Charge</label>
+                            <div style="display: flex; gap: 1rem; align-items: center;">
+                                <input type="number" id="servicePercentage" class="form-input" placeholder="5" style="flex: 1;" min="0" max="100" step="0.1">
+                                <span style="color: #4a7c59;">%</span>
+                                <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                    <input type="checkbox" id="serviceActive" checked>
+                                    <span style="font-size: 0.9rem;">Aktif</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div style="background: #f0f8f5; padding: 0.75rem; border-radius: 8px; margin-bottom: 1rem;">
+                            <div style="font-size: 0.9rem; color: #4a7c59; margin-bottom: 0.5rem;">Urutan Perhitungan:</div>
+                            <div style="font-size: 0.85rem; color: #2d5016;">
+                                1. Subtotal produk<br>
+                                2. Service Charge (jika aktif)<br>
+                                3. PPN dari subtotal + service
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" onclick="saveTaxSettings()">
+                            <i class="hgi-stroke hgi-tick-01"></i>
+                            Simpan Pengaturan
+                        </button>
+                    </div>
+
+                    <div class="card" id="discountSettingsCard" style="display: none;">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="hgi-stroke hgi-coupon-01"></i>
+                            </div>
+                            <div>
+                                <div class="card-title">Pengaturan Diskon</div>
+                                <div class="card-subtitle">Kelola kode dan aturan diskon</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Diskon Aktif</label>
+                            <div id="activeDiscountsList" style="max-height: 200px; overflow-y: auto;">
+                                <div style="text-align: center; color: #4a7c59; padding: 1rem;">Memuat data diskon...</div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" onclick="showCreateDiscountModal()">
+                            <i class="hgi-stroke hgi-add-01"></i>
+                            Tambah Diskon Baru
+                        </button>
+                    </div>
+
+                    <div class="card" id="roundingSettingsCard" style="display: none;">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="hgi-stroke hgi-calculator"></i>
+                            </div>
+                            <div>
+                                <div class="card-title">Pengaturan Pembulatan</div>
+                                <div class="card-subtitle">Aturan pembulatan harga akhir</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                                <input type="checkbox" id="roundingActive">
+                                <span>Aktifkan Pembulatan</span>
+                            </label>
+                        </div>
+                        <div id="roundingOptions" style="display: none;">
+                            <div class="form-group">
+                                <label class="form-label">Metode Pembulatan</label>
+                                <select id="roundingMethod" class="form-input">
+                                    <option value="nearest">Ke Terdekat</option>
+                                    <option value="up">Ke Atas</option>
+                                    <option value="down">Ke Bawah</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Kelipatan Pembulatan</label>
+                                <select id="roundingIncrement" class="form-input">
+                                    <option value="1">Rp 1</option>
+                                    <option value="5">Rp 5</option>
+                                    <option value="10">Rp 10</option>
+                                    <option value="25">Rp 25</option>
+                                    <option value="50">Rp 50</option>
+                                    <option value="100">Rp 100</option>
+                                    <option value="500">Rp 500</option>
+                                    <option value="1000">Rp 1.000</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" onclick="saveRoundingSettings()">
+                            <i class="hgi-stroke hgi-tick-01"></i>
+                            Simpan Pengaturan
+                        </button>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="hgi-stroke hgi-toggle-on"></i>
+                            </div>
+                            <div>
+                                <div class="card-title">Role Management</div>
+                                <div class="card-subtitle">Ganti role akses</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Role Saat Ini</label>
+                            <select class="form-input" id="roleSelector">
+                                <option value="kasir">Kasir</option>
+                                <option value="manager">Manager</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary" onclick="changeRole()">
+                            <i class="hgi-stroke hgi-user-switch"></i>
+                            Ganti Role
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Customer Section (Manager Only) -->
+            <section id="customers" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Manajemen Customer</h2>
+                    <p class="section-subtitle">Kelola data customer dan program loyalty</p>
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <button class="btn btn-primary" onclick="showNewCustomerModal()">
+                        <i class="hgi-stroke hgi-user-add-01"></i>
+                        Tambah Customer
+                    </button>
+                </div>
+
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="hgi-stroke hgi-user-heart-01"></i>
+                            </div>
+                            <div>
+                                <div class="card-title">Program Loyalty</div>
+                                <div class="card-subtitle">Pengaturan poin dan tier customer</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Earn Rate (Poin per Rp 1.000)</label>
+                            <input type="number" id="loyaltyEarnRate" class="form-input" value="1" min="0" step="0.1">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Redemption Rate (Poin untuk Rp 1.000 diskon)</label>
+                            <input type="number" id="loyaltyRedemptionRate" class="form-input" value="1000" min="1">
+                        </div>
+                        <div style="background: #f0f8f5; padding: 0.75rem; border-radius: 8px; margin-bottom: 1rem;">
+                            <div style="font-size: 0.9rem; color: #4a7c59; margin-bottom: 0.5rem;">Tier Requirements:</div>
+                            <div style="font-size: 0.85rem; color: #2d5016;">
+                                🥉 Bronze: Rp 0<br>
+                                🥈 Silver: Rp 500.000<br>
+                                🥇 Gold: Rp 1.500.000<br>
+                                💎 Platinum: Rp 5.000.000
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" onclick="saveLoyaltySettings()">
+                            <i class="hgi-stroke hgi-tick-01"></i>
+                            Simpan Pengaturan
+                        </button>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="hgi-stroke hgi-users-01"></i>
+                            </div>
+                            <div>
+                                <div class="card-title">Customer Aktif</div>
+                                <div class="card-subtitle">Daftar customer terdaftar</div>
+                            </div>
+                        </div>
+                        <div id="customersList" style="max-height: 300px; overflow-y: auto;">
+                            <div style="text-align: center; color: #4a7c59; padding: 1rem;">Memuat data customer...</div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="hgi-stroke hgi-gift-01"></i>
+                            </div>
+                            <div>
+                                <div class="card-title">Promo Management</div>
+                                <div class="card-subtitle">Kelola promo berdasarkan waktu</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Happy Hour (14:00-17:00)</label>
+                            <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                <input type="number" class="form-input" placeholder="15" style="flex: 1;" min="0" max="100">
+                                <span style="color: #4a7c59;">% discount</span>
+                                <label style="display: flex; align-items: center; gap: 0.3rem;">
+                                    <input type="checkbox" checked>
+                                    <span style="font-size: 0.9rem;">Aktif</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Weekend Special</label>
+                            <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                <input type="number" class="form-input" placeholder="20" style="flex: 1;" min="0" max="100">
+                                <span style="color: #4a7c59;">% discount</span>
+                                <label style="display: flex; align-items: center; gap: 0.3rem;">
+                                    <input type="checkbox">
+                                    <span style="font-size: 0.9rem;">Aktif</span>
+                                </label>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" onclick="savePromoSettings()">
+                            <i class="hgi-stroke hgi-tick-01"></i>
+                            Simpan Promo
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CRM Section (Manager Only) -->
+            <section id="crm" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Customer Relationship Management</h2>
+                    <p class="section-subtitle">Kelola hubungan dan komunikasi dengan customer</p>
+                </div>
+
+                <div class="stats-grid" style="margin-bottom: 2rem;">
+                    <div class="stat-card">
+                        <div class="stat-number" id="crmTotalLeads">25</div>
+                        <div class="stat-label">Total Leads</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="crmConversionRate">68%</div>
+                        <div class="stat-label">Conversion Rate</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="crmActiveCampaigns">3</div>
+                        <div class="stat-label">Kampanye Aktif</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="crmPendingFeedback">12</div>
+                        <div class="stat-label">Feedback Pending</div>
+                    </div>
+                </div>
+
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="hgi-stroke hgi-target-03"></i>
+                            </div>
+                            <div>
+                                <div class="card-title">Customer Segmentation</div>
+                                <div class="card-subtitle">Buat segmen customer berdasarkan kriteria</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Nama Segmen</label>
+                            <input type="text" id="segmentName" class="form-input" placeholder="Contoh: VIP Gold Customer">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Kriteria Tier</label>
+                            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                                <label style="display: flex; align-items: center; gap: 0.3rem;">
+                                    <input type="checkbox" value="bronze"> <span style="font-size: 0.9rem;">🥉 Bronze</span>
+                                </label>
+                                <label style="display: flex; align-items: center; gap: 0.3rem;">
+                                    <input type="checkbox" value="silver"> <span style="font-size: 0.9rem;">🥈 Silver</span>
+                                </label>
+                                <label style="display: flex; align-items: center; gap: 0.3rem;">
+                                    <input type="checkbox" value="gold" checked> <span style="font-size: 0.9rem;">🥇 Gold</span>
+                                </label>
+                                <label style="display: flex; align-items: center; gap: 0.3rem;">
+                                    <input type="checkbox" value="platinum"> <span style="font-size: 0.9rem;">💎 Platinum</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Total Belanja Minimum</label>
+                            <input type="number" id="segmentMinSpent" class="form-input" placeholder="1000000">
+                        </div>
+                        <button class="btn btn-primary" onclick="createCustomerSegment()">
+                            <i class="hgi-stroke hgi-add-01"></i>
+                            Buat Segmen
+                        </button>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="hgi-stroke hgi-mail-send-01"></i>
+                            </div>
+                            <div>
+                                <div class="card-title">Marketing Campaign</div>
+                                <div class="card-subtitle">Kirim pesan marketing ke customer</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Nama Kampanye</label>
+                            <input type="text" id="campaignName" class="form-input" placeholder="Promo Weekend Special">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Tipe Komunikasi</label>
+                            <select id="campaignType" class="form-input">
+                                <option value="whatsapp">WhatsApp</option>
+                                <option value="email">Email</option>
+                                <option value="sms">SMS</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Template Pesan</label>
+                            <textarea id="campaignMessage" class="form-input" rows="3" placeholder="Halo {name}, dapatkan diskon 20% untuk pembelian hari ini! Kunjungi Pancong Kece sekarang."></textarea>
+                        </div>
+                        <button class="btn btn-primary" onclick="createMarketingCampaign()">
+                            <i class="hgi-stroke hgi-rocket-01"></i>
+                            Kirim Kampanye
+                        </button>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="hgi-stroke hgi-user-question"></i>
+                            </div>
+                            <div>
+                                <div class="card-title">Lead Management</div>
+                                <div class="card-subtitle">Kelola calon customer potensial</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Nama Lead</label>
+                            <input type="text" id="leadName" class="form-input" placeholder="Nama calon customer">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Nomor HP</label>
+                            <input type="text" id="leadPhone" class="form-input" placeholder="081234567890">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Sumber Lead</label>
+                            <select id="leadSource" class="form-input">
+                                <option value="walk_in">Walk In</option>
+                                <option value="social_media">Social Media</option>
+                                <option value="referral">Referral</option>
+                                <option value="website">Website</option>
+                                <option value="event">Event</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Tingkat Minat</label>
+                            <select id="leadInterest" class="form-input">
+                                <option value="cold">Cold</option>
+                                <option value="warm" selected>Warm</option>
+                                <option value="hot">Hot</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary" onclick="createLead()">
+                            <i class="hgi-stroke hgi-user-add-01"></i>
+                            Tambah Lead
+                        </button>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="hgi-stroke hgi-message-02"></i>
+                            </div>
+                            <div>
+                                <div class="card-title">Customer Communication</div>
+                                <div class="card-subtitle">Log komunikasi dengan customer</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Customer</label>
+                            <input type="text" id="commCustomerSearch" class="form-input" placeholder="Cari nama atau HP customer">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Tipe Komunikasi</label>
+                            <select id="commType" class="form-input">
+                                <option value="phone_call">Telepon</option>
+                                <option value="whatsapp">WhatsApp</option>
+                                <option value="email">Email</option>
+                                <option value="in_person">Tatap Muka</option>
+                                <option value="note">Catatan</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Pesan/Catatan</label>
+                            <textarea id="commMessage" class="form-input" rows="3" placeholder="Isi komunikasi atau catatan penting"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                <input type="checkbox" id="commFollowUp">
+                                <span>Perlu follow-up</span>
+                            </label>
+                        </div>
+                        <button class="btn btn-primary" onclick="addCustomerCommunication()">
+                            <i class="hgi-stroke hgi-add-01"></i>
+                            Simpan Komunikasi
+                        </button>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="hgi-stroke hgi-star-01"></i>
+                            </div>
+                            <div>
+                                <div class="card-title">Customer Feedback</div>
+                                <div class="card-subtitle">Monitor feedback dan review customer</div>
+                            </div>
+                        </div>
+                        <div id="feedbackList" style="max-height: 300px; overflow-y: auto;">
+                            <div class="feedback-item" style="padding: 0.75rem; border: 1px solid #e0e0e0; border-radius: 8px; margin-bottom: 0.5rem;">
+                                <div style="display: flex; justify-content: space-between; align-items: start;">
+                                    <div>
+                                        <div style="font-weight: 600; color: #2d5016;">Budi Santoso</div>
+                                        <div style="color: #ffd700; margin: 0.3rem 0;">⭐⭐⭐⭐⭐</div>
+                                        <div style="font-size: 0.9rem; color: #4a7c59;">"Pelayanan sangat memuaskan, makanan enak dan suasana nyaman."</div>
+                                    </div>
+                                    <div style="text-align: right;">
+                                        <div style="font-size: 0.8rem; color: #4a7c59;">2 hari lalu</div>
+                                        <span style="background: #28a745; color: white; padding: 0.2rem 0.5rem; border-radius: 12px; font-size: 0.8rem;">Positif</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="feedback-item" style="padding: 0.75rem; border: 1px solid #e0e0e0; border-radius: 8px; margin-bottom: 0.5rem;">
+                                <div style="display: flex; justify-content: space-between; align-items: start;">
+                                    <div>
+                                        <div style="font-weight: 600; color: #2d5016;">Siti Rahayu</div>
+                                        <div style="color: #ffd700; margin: 0.3rem 0;">⭐⭐⭐⭐</div>
+                                        <div style="font-size: 0.9rem; color: #4a7c59;">"Pancong sangat enak, tapi antrian agak lama."</div>
+                                    </div>
+                                    <div style="text-align: right;">
+                                        <div style="font-size: 0.8rem; color: #4a7c59;">1 minggu lalu</div>
+                                        <span style="background: #ffc107; color: white; padding: 0.2rem 0.5rem; border-radius: 12px; font-size: 0.8rem;">Pending</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-secondary" onclick="viewAllFeedback()">
+                            <i class="hgi-stroke hgi-view"></i>
+                            Lihat Semua Feedback
+                        </button>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="hgi-stroke hgi-analytics-01"></i>
+                            </div>
+                            <div>
+                                <div class="card-title">Customer Analytics</div>
+                                <div class="card-subtitle">Analisis perilaku dan trend customer</div>
+                            </div>
+                        </div>
+                        <div style="background: #f0f8f5; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; font-size: 0.9rem;">
+                                <div>
+                                    <div style="color: #4a7c59;">Avg. Customer Lifetime Value</div>
+                                    <div style="font-weight: 700; color: #2d5016;">Rp 1.250.000</div>
+                                </div>
+                                <div>
+                                    <div style="color: #4a7c59;">Avg. Visit Frequency</div>
+                                    <div style="font-weight: 700; color: #2d5016;">2.5x / bulan</div>
+                                </div>
+                                <div>
+                                    <div style="color: #4a7c59;">Customer Retention Rate</div>
+                                    <div style="font-weight: 700; color: #2d5016;">75%</div>
+                                </div>
+                                <div>
+                                    <div style="color: #4a7c59;">Churn Rate</div>
+                                    <div style="font-weight: 700; color: #2d5016;">15%</div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" onclick="generateCRMReport()">
+                            <i class="hgi-stroke hgi-file-download"></i>
+                            Generate Report
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- AI & Automation Section (Manager Only) -->
+            <section id="automation" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">AI & Automation</h2>
+                    <p class="section-subtitle">Otomatisasi dan analisis AI untuk efisiensi maksimal</p>
+                </div>
+
+                <div class="stats-grid" style="margin-bottom: 2rem;">
+                    <div class="stat-card">
+                        <div class="stat-number" id="automationRulesActive">8</div>
+                        <div class="stat-label">Automation Rules</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="whatsappMessagesSent">245</div>
+                        <div class="stat-label">WhatsApp Sent</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="sentimentAnalyzed">89</div>
+                        <div class="stat-label">Feedback Analyzed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="avgSentimentScore">4.2</div>
+                        <div class="stat-label">Avg. Sentiment</div>
+                    </div>
+                </div>
+
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="hgi-stroke hgi-automation-03"></i>
+                            </div>
+                            <div>
+                                <div class="card-title">Birthday Automation</div>
+                                <div class="card-subtitle">Otomatis kirim greeting & bonus poin</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Template Pesan Birthday</label>
+                            <textarea id="birthdayTemplate" class="form-input" rows="3" placeholder="Selamat ulang tahun {name}! Dapatkan bonus 100 poin dan diskon 25% hari ini!">Selamat ulang tahun {name}! 🎉 Dapatkan bonus 100 poin dan diskon 25% untuk pembelian hari ini di Pancong Kece!</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Bonus Birthday Points</label>
+                            <input type="number" id="birthdayPoints" class="form-input" value="100" min="0">
+                        </div>
+                        <div class="form-group">
+                            <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                <input type="checkbox" id="birthdayAutoSend" checked>
+                                <span>Kirim otomatis setiap hari</span>
+                            </label>
+                        </div>
+                        <div style="display: flex; gap: 0.5rem;">
+                            <button class="btn btn-primary" onclick="saveBirthdayAutomation()">
+                                <i class="hgi-stroke hgi-tick-01"></i>
+                                Simpan
+                            </button>
+                            <button class="btn btn-secondary" onclick="testBirthdayAutomation()">
+                                <i class="hgi-stroke hgi-play"></i>
+                                Test Run
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="hgi-stroke hgi-whatsapp"></i>
+                            </div>
+                            <div>
+                                <div class="card-title">WhatsApp Integration</div>
+                                <div class="card-subtitle">Setup WhatsApp Business API</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Provider</label>
+                            <select id="whatsappProvider" class="form-input">
+                                <option value="wablas">Wablas</option>
+                                <option value="fonnte">Fonnte</option>
+                                <option value="whatsapp_business_api">WhatsApp Business API</option>
+                                <option value="twilio">Twilio</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">API Token</label>
+                            <input type="password" id="whatsappToken" class="form-input" placeholder="Masukkan API token">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Phone Number ID</label>
+                            <input type="text" id="whatsappPhone" class="form-input" placeholder="628123456789">
+                        </div>
+                        <div style="background: #f0f8f5; padding: 0.75rem; border-radius: 8px; margin-bottom: 1rem;">
+                            <div style="font-size: 0.9rem; color: #4a7c59; margin-bottom: 0.5rem;">Status: 
+                                <span id="whatsappStatus" style="color: #28a745; font-weight: 600;">✅ Connected</span>
+                            </div>
+                            <div style="font-size: 0.85rem; color: #2d5016;">Rate Limit: 1000 pesan/hari</div>
+                        </div>
+                        <button class="btn btn-primary" onclick="setupWhatsApp()">
+                            <i class="hgi-stroke hgi-settings-02"></i>
+                            Setup Integration
+                        </button>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="hgi-stroke hgi-message-multiple-01"></i>
+                            </div>
+                            <div>
+                                <div class="card-title">WhatsApp Broadcast</div>
+                                <div class="card-subtitle">Kirim pesan massal ke customer</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Target Customer</label>
+                            <select id="broadcastTarget" class="form-input">
+                                <option value="all_active">Semua Customer Aktif</option>
+                                <option value="gold_platinum">Gold & Platinum</option>
+                                <option value="inactive_30d">Tidak Aktif 30 Hari</option>
+                                <option value="birthday_this_month">Ulang Tahun Bulan Ini</option>
+                                <option value="custom">Custom Segment</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Template Broadcast</label>
+                            <textarea id="broadcastMessage" class="form-input" rows="4" placeholder="Halo {name}! Dapatkan diskon spesial 20% untuk customer {tier} kami. Valid sampai akhir bulan!">Halo {name}! 🌟 Promo Weekend Special untuk customer {tier}:
+✨ Diskon 20% semua menu
+🎁 Gratis pancong mini untuk pembelian >50k
+📅 Valid: Sabtu-Minggu saja
+
+Kunjungi Pancong Kece sekarang!</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                <input type="checkbox" id="broadcastSchedule">
+                                <span>Jadwalkan kirim</span>
+                            </label>
+                            <input type="datetime-local" id="broadcastTime" class="form-input" style="display: none; margin-top: 0.5rem;">
+                        </div>
+                        <button class="btn btn-primary" onclick="sendWhatsAppBroadcast()">
+                            <i class="hgi-stroke hgi-send-01"></i>
+                            Kirim Broadcast
+                        </button>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="hgi-stroke hgi-ai-brain-01"></i>
+                            </div>
+                            <div>
+                                <div class="card-title">AI Sentiment Analysis</div>
+                                <div class="card-subtitle">Analisis otomatis feedback customer</div>
+                            </div>
+                        </div>
+                        <div style="background: #f0f8f5; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; font-size: 0.9rem;">
+                                <div>
+                                    <div style="color: #4a7c59;">Positive Feedback</div>
+                                    <div style="font-weight: 700; color: #28a745;">68% (61 reviews)</div>
+                                </div>
+                                <div>
+                                    <div style="color: #4a7c59;">Negative Feedback</div>
+                                    <div style="font-weight: 700; color: #dc3545;">12% (11 reviews)</div>
+                                </div>
+                                <div>
+                                    <div style="color: #4a7c59;">Urgent Issues</div>
+                                    <div style="font-weight: 700; color: #ffc107;">3 feedback</div>
+                                </div>
+                                <div>
+                                    <div style="color: #4a7c59;">Auto Responses</div>
+                                    <div style="font-weight: 700; color: #2d5016;">45 sent</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                <input type="checkbox" id="autoSentimentAnalysis" checked>
+                                <span>Analisis otomatis feedback baru</span>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label style="display: flex; align-items: center; gap: 0.5rem;">
+                                <input type="checkbox" id="autoResponseEnabled" checked>
+                                <span>Kirim auto-response untuk feedback negatif</span>
+                            </label>
+                        </div>
+                        <div style="display: flex; gap: 0.5rem;">
+                            <button class="btn btn-primary" onclick="runSentimentAnalysis()">
+                                <i class="hgi-stroke hgi-ai-brain-02"></i>
+                                Analyze All
+                            </button>
+                            <button class="btn btn-secondary" onclick="viewSentimentReport()">
+                                <i class="hgi-stroke hgi-analytics-02"></i>
+                                View Report
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="hgi-stroke hgi-workflow-square-03"></i>
+                            </div>
+                            <div>
+                                <div class="card-title">Custom Automation Rules</div>
+                                <div class="card-subtitle">Buat aturan otomatisasi kustom</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Nama Rule</label>
+                            <input type="text" id="ruleName" class="form-input" placeholder="Contoh: Follow-up Customer Inactive">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Trigger</label>
+                            <select id="ruleTrigger" class="form-input">
+                                <option value="customer_inactive">Customer tidak aktif X hari</option>
+                                <option value="loyalty_tier_upgrade">Upgrade loyalty tier</option>
+                                <option value="high_spending">Total belanja mencapai X</option>
+                                <option value="feedback_negative">Feedback negatif diterima</option>
+                                <option value="birthday">Ulang tahun customer</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Action</label>
+                            <select id="ruleAction" class="form-input">
+                                <option value="send_whatsapp">Kirim WhatsApp</option>
+                                <option value="add_points">Tambah poin loyalty</option>
+                                <option value="create_discount">Buat diskon personal</option>
+                                <option value="assign_segment">Assign ke segment</option>
+                                <option value="create_task">Buat task follow-up</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary" onclick="createAutomationRule()">
+                            <i class="hgi-stroke hgi-add-01"></i>
+                            Buat Rule
+                        </button>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="hgi-stroke hgi-analytics-01"></i>
+                            </div>
+                            <div>
+                                <div class="card-title">Automation Analytics</div>
+                                <div class="card-subtitle">Performa automation dan AI</div>
+                            </div>
+                        </div>
+                        <div id="automationStats" style="max-height: 300px; overflow-y: auto;">
+                            <div style="padding: 0.75rem; border: 1px solid #e0e0e0; border-radius: 8px; margin-bottom: 0.5rem;">
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <div>
+                                        <div style="font-weight: 600; color: #2d5016;">Birthday Greetings</div>
+                                        <div style="font-size: 0.9rem; color: #4a7c59;">Auto-send birthday messages + bonus points</div>
+                                    </div>
+                                    <div style="text-align: right;">
+                                        <div style="font-weight: 700; color: #28a745;">23 executed</div>
+                                        <div style="font-size: 0.8rem; color: #4a7c59;">Bulan ini</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="padding: 0.75rem; border: 1px solid #e0e0e0; border-radius: 8px; margin-bottom: 0.5rem;">
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <div>
+                                        <div style="font-weight: 600; color: #2d5016;">Inactive Customer Follow-up</div>
+                                        <div style="font-size: 0.9rem; color: #4a7c59;">WhatsApp untuk customer tidak aktif >30 hari</div>
+                                    </div>
+                                    <div style="text-align: right;">
+                                        <div style="font-weight: 700; color: #ffc107;">15 executed</div>
+                                        <div style="font-size: 0.8rem; color: #4a7c59;">Minggu ini</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="padding: 0.75rem; border: 1px solid #e0e0e0; border-radius: 8px; margin-bottom: 0.5rem;">
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <div>
+                                        <div style="font-weight: 600; color: #2d5016;">Sentiment Auto-Response</div>
+                                        <div style="font-size: 0.9rem; color: #4a7c59;">Balasan otomatis feedback negatif</div>
+                                    </div>
+                                    <div style="text-align: right;">
+                                        <div style="font-weight: 700; color: #dc3545;">8 executed</div>
+                                        <div style="font-size: 0.8rem; color: #4a7c59;">Minggu ini</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-secondary" onclick="exportAutomationReport()">
+                            <i class="hgi-stroke hgi-file-export"></i>
+                            Export Report
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal for Product -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close-btn" onclick="hideModal('productModal')">&times;</span>
+                <h3 class="modal-title">Tambah Produk Baru</h3>
+            </div>
+            <form>
+                <div class="form-group">
+                    <label class="form-label">Nama Produk</label>
+                    <input type="text" class="form-input" placeholder="Masukkan nama produk">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Kategori</label>
+                    <select class="form-input">
+                        <option>Pilih kategori</option>
+                        <option>Minuman</option>
+                        <option>Makanan</option>
+                        <option>Snack</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Harga</label>
+                    <input type="number" class="form-input" placeholder="Rp 0">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Stok Awal</label>
+                    <input type="number" class="form-input" placeholder="0">
+                </div>
+                <div style="display: flex; gap: 1rem;">
+                    <button type="button" class="btn btn-secondary" style="flex: 1;" onclick="hideModal('productModal')">Batal</button>
+                    <button type="submit" class="btn btn-primary" style="flex: 1;">Simpan Produk</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Message -->
+    <div id="successMessage" class="success-message">
+        <i class="hgi-stroke hgi-user-check-01"></i>
+        <span id="successText">Operasi berhasil!</span>
+    </div>
+
+    <!-- JavaScript functionality now moved to modular files -->
+        
+        // Customer and loyalty settings
+        let selectedCustomer = null;
+        let loyaltySettings = {
+            earnRate: 1, // poin per Rp 1000
+            redemptionRate: 1000 // poin untuk Rp 1000 diskon
+        };
+        
+        // Cafe operation status
+        let cafeStatus = {
+            isOpen: true,
+            openTime: '08:00',
+            openBy: 'Andi Pratama'
+        };
+        
+        // Mock data for menu items
+        const menuItems = [
+            {
+                id: 1,
+                name: "Kopi Americano",
+                price: 15000,
+                image: "https://public.youware.com/users-website-assets/prod/63f75314-f75c-43cc-ae5d-0421aa05ea62/photo-1653411712105-31fdd4e39c40",
+                category: "minuman"
+            },
+            {
+                id: 2,
+                name: "Pancong Original",
+                price: 12000,
+                image: "https://public.youware.com/users-website-assets/prod/63f75314-f75c-43cc-ae5d-0421aa05ea62/photo-1721027322774-b1479ea07627",
+                category: "makanan"
+            },
+            {
+                id: 3,
+                name: "Latte",
+                price: 18000,
+                image: "https://public.youware.com/users-website-assets/prod/63f75314-f75c-43cc-ae5d-0421aa05ea62/photo-1549045108-1817700573a3",
+                category: "minuman"
+            },
+            {
+                id: 4,
+                name: "Cappuccino",
+                price: 17000,
+                image: "https://public.youware.com/users-website-assets/prod/63f75314-f75c-43cc-ae5d-0421aa05ea62/photo-1640244444369-ca21d61d7a05",
+                category: "minuman"
+            },
+            {
+                id: 5,
+                name: "Pancong Keju",
+                price: 15000,
+                image: "https://public.youware.com/users-website-assets/prod/63f75314-f75c-43cc-ae5d-0421aa05ea62/photo-1713700321951-d79e5c39ea93",
+                category: "makanan"
+            },
+            {
+                id: 6,
+                name: "Green Tea Latte",
+                price: 20000,
+                image: "https://public.youware.com/users-website-assets/prod/63f75314-f75c-43cc-ae5d-0421aa05ea62/photo-1739224054384-ec1343840e67",
+                category: "minuman"
+            },
+            {
+                id: 7,
+                name: "Pancong Coklat",
+                price: 14000,
+                image: "https://public.youware.com/users-website-assets/prod/63f75314-f75c-43cc-ae5d-0421aa05ea62/photo-1498604132755-751b73a22ec9",
+                category: "makanan"
+            },
+            {
+                id: 8,
+                name: "Espresso",
+                price: 13000,
+                image: "https://public.youware.com/users-website-assets/prod/63f75314-f75c-43cc-ae5d-0421aa05ea62/photo-1641816481191-d4522e79ba38",
+                category: "minuman"
+            }
+        ];
+
+        let cart = [];
+        let selectedPaymentMethod = 'cash';
+
+        // Initialize the application
+        document.addEventListener('DOMContentLoaded', function() {
+            loadMenu();
+            setupNavigation();
+            setupPaymentMethods();
+            updateRoleAccess();
+        });
+
+        // Navigation functionality
+        function setupNavigation() {
+            const navItems = document.querySelectorAll('.nav-item');
+            const sections = document.querySelectorAll('.section');
+
+            navItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Remove active class from all nav items and sections
+                    navItems.forEach(nav => nav.classList.remove('active'));
+                    sections.forEach(section => section.classList.remove('active'));
+                    
+                    // Add active class to clicked nav item
+                    this.classList.add('active');
+                    
+                    // Show corresponding section
+                    const sectionId = this.getAttribute('data-section');
+                    const targetSection = document.getElementById(sectionId);
+                    if (targetSection) {
+                        targetSection.classList.add('active');
+                    }
+                });
+            });
+        }
+
+        // Load menu items
+        function loadMenu() {
+            const menuGrid = document.getElementById('menuGrid');
+            if (!menuGrid) return;
+
+            menuGrid.innerHTML = '';
+            
+            // Function to get shortcut key for popular products
+            function getShortcutKey(itemId) {
+                for (const [key, product] of Object.entries(popularProducts)) {
+                    if (product.id === itemId) {
+                        return key;
+                    }
+                }
+                return null;
+            }
+            
+            menuItems.forEach(item => {
+                const menuItemEl = document.createElement('div');
+                menuItemEl.className = 'menu-item';
+                
+                // Check if this item has a keyboard shortcut
+                const shortcutKey = getShortcutKey(item.id);
+                const shortcutBadge = shortcutKey ? 
+                    `<div class="shortcut-badge" style="
+                        position: absolute; 
+                        top: 8px; 
+                        right: 8px; 
+                        background: #2d5016; 
+                        color: white; 
+                        padding: 4px 8px; 
+                        border-radius: 12px; 
+                        font-size: 0.7rem; 
+                        font-weight: bold; 
+                        z-index: 2;
+                        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+                    ">${shortcutKey}</div>` : '';
+                
+                menuItemEl.innerHTML = `
+                    ${shortcutBadge}
+                    <img src="${item.image}" alt="${item.name}" loading="lazy">
+                    <div class="item-name">${item.name}</div>
+                    <div class="item-price">Rp ${item.price.toLocaleString('id-ID')}</div>
+                `;
+                
+                // Add relative positioning to menu item for shortcut badge
+                if (shortcutKey) {
+                    menuItemEl.style.position = 'relative';
+                    menuItemEl.style.border = '2px solid #e8f5e8';
+                    menuItemEl.title = `Press ${shortcutKey} to add quickly`;
+                }
+                
+                menuItemEl.addEventListener('click', () => addToCart(item));
+                menuGrid.appendChild(menuItemEl);
+            });
+        }
+
+        // Cart functionality
+        function addToCart(item) {
+            const existingItem = cart.find(cartItem => cartItem.id === item.id);
+            
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({
+                    ...item,
+                    quantity: 1
+                });
+            }
+            
+            updateCartDisplay();
+            showSuccess(`${item.name} ditambahkan ke keranjang`);
+        }
+
+        function removeFromCart(itemId) {
+            cart = cart.filter(item => item.id !== itemId);
+            updateCartDisplay();
+        }
+
+        function updateCartDisplay() {
+            const cartItems = document.getElementById('cartItems');
+            const totalAmount = document.getElementById('totalAmount');
+            const subtotalDisplay = document.getElementById('subtotalDisplay');
+            const subtotalAmount = document.getElementById('subtotalAmount');
+            const taxServiceBreakdown = document.getElementById('taxServiceBreakdown');
+            
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<p style="text-align: center; color: #4a7c59; padding: 2rem;">Keranjang kosong</p>';
+                totalAmount.textContent = 'Rp 0';
+                subtotalDisplay.style.display = 'none';
+                taxServiceBreakdown.style.display = 'none';
+                return;
+            }
+            
+            let subtotal = 0;
+            cartItems.innerHTML = '';
+            
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                subtotal += itemTotal;
+                
+                const cartItem = document.createElement('div');
+                cartItem.className = 'cart-item';
+                cartItem.innerHTML = `
+                    <div>
+                        <div style="font-weight: 600; color: #2d5016;">${item.name}</div>
+                        <div style="color: #4a7c59; font-size: 0.9rem;">Rp ${item.price.toLocaleString('id-ID')} x ${item.quantity}</div>
+                    </div>
+                    <div style="text-align: right;">
+                        <div style="font-weight: 700; color: #2d5016; margin-bottom: 0.5rem;">Rp ${itemTotal.toLocaleString('id-ID')}</div>
+                        <button class="btn btn-danger" style="padding: 0.3rem 0.6rem; font-size: 0.8rem;" onclick="removeFromCart(${item.id})">
+                            <i class="hgi-stroke hgi-shopping-cart-remove-01"></i>
+                        </button>
+                    </div>
+                `;
+                cartItems.appendChild(cartItem);
+            });
+            
+            // Calculate tax and service
+            const calculation = calculateTaxAndService(subtotal);
+            
+            // Show subtotal
+            subtotalAmount.textContent = `Rp ${subtotal.toLocaleString('id-ID')}`;
+            subtotalDisplay.style.display = 'block';
+            
+            // Show discount breakdown
+            const discountDisplay = document.getElementById('discountDisplay');
+            if (appliedDiscount) {
+                discountDisplay.innerHTML = `
+                    <div style="padding: 0.5rem; background: #e8f5e8; border-radius: 6px; border-left: 4px solid #4a7c59;">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <div style="font-size: 0.9rem; font-weight: 600; color: #2d5016;">${appliedDiscount.name}</div>
+                                <div style="font-size: 0.8rem; color: #4a7c59;">${appliedDiscount.code}</div>
+                            </div>
+                            <div style="text-align: right;">
+                                <div style="font-weight: 700; color: #2d5016;">-Rp ${appliedDiscount.amount.toLocaleString('id-ID')}</div>
+                                <button onclick="removeDiscount()" style="background: none; border: none; color: #dc3545; font-size: 0.8rem; cursor: pointer;">Hapus</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                discountDisplay.style.display = 'block';
+            } else {
+                discountDisplay.style.display = 'none';
+            }
+            
+            // Show tax and service breakdown
+            let breakdownHTML = '';
+            
+            if (taxSettings.service.active && taxSettings.service.percentage > 0) {
+                breakdownHTML += `
+                    <div style="display: flex; justify-content: space-between; color: #4a7c59; font-size: 0.9rem;">
+                        <span>Service Charge (${taxSettings.service.percentage}%):</span>
+                        <span>Rp ${calculation.serviceAmount.toLocaleString('id-ID')}</span>
+                    </div>
+                `;
+            }
+            
+            if (taxSettings.ppn.active && taxSettings.ppn.percentage > 0) {
+                breakdownHTML += `
+                    <div style="display: flex; justify-content: space-between; color: #4a7c59; font-size: 0.9rem;">
+                        <span>PPN (${taxSettings.ppn.percentage}%):</span>
+                        <span>Rp ${calculation.taxAmount.toLocaleString('id-ID')}</span>
+                    </div>
+                `;
+            }
+            
+            if (breakdownHTML) {
+                taxServiceBreakdown.innerHTML = breakdownHTML;
+                taxServiceBreakdown.style.display = 'block';
+            } else {
+                taxServiceBreakdown.style.display = 'none';
+            }
+            
+            // Apply rounding
+            const roundedAmount = applyRounding(calculation.finalAmount);
+            const roundingAmount = roundedAmount - calculation.finalAmount;
+            
+            // Show rounding if applied
+            const roundingDisplay = document.getElementById('roundingDisplay');
+            const roundingAmountEl = document.getElementById('roundingAmount');
+            
+            if (roundingSettings.active && roundingAmount !== 0) {
+                roundingAmountEl.textContent = `${roundingAmount >= 0 ? '+' : ''}Rp ${roundingAmount.toLocaleString('id-ID')}`;
+                roundingDisplay.style.display = 'block';
+            } else {
+                roundingDisplay.style.display = 'none';
+            }
+            
+            totalAmount.textContent = `Rp ${roundedAmount.toLocaleString('id-ID')}`;
+            
+            // Recalculate change if cash payment is selected
+            if (selectedPaymentMethod === 'cash') {
+                calculateChange();
+            }
+        }
+        
+        function calculateTaxAndService(subtotal) {
+            let currentAmount = subtotal;
+            
+            // Apply discount first
+            if (appliedDiscount) {
+                currentAmount = subtotal - appliedDiscount.amount;
+            }
+            
+            let serviceAmount = 0;
+            let taxAmount = 0;
+            
+            // Calculate service charge first (applied before tax)
+            if (taxSettings.service.active && taxSettings.service.percentage > 0) {
+                serviceAmount = Math.round(currentAmount * (taxSettings.service.percentage / 100));
+                currentAmount += serviceAmount;
+            }
+            
+            // Calculate tax on subtotal + service
+            if (taxSettings.ppn.active && taxSettings.ppn.percentage > 0) {
+                taxAmount = Math.round(currentAmount * (taxSettings.ppn.percentage / 100));
+                currentAmount += taxAmount;
+            }
+            
+            return {
+                subtotal: subtotal,
+                discountAmount: appliedDiscount ? appliedDiscount.amount : 0,
+                serviceAmount: serviceAmount,
+                taxAmount: taxAmount,
+                finalAmount: currentAmount
+            };
+        }
+        
+        function applyRounding(amount) {
+            if (!roundingSettings.active) {
+                return amount;
+            }
+            
+            const increment = roundingSettings.increment;
+            const remainder = amount % increment;
+            
+            if (remainder === 0) {
+                return amount;
+            }
+            
+            switch (roundingSettings.method) {
+                case 'up':
+                    return amount + (increment - remainder);
+                case 'down':
+                    return amount - remainder;
+                case 'nearest':
+                default:
+                    if (remainder >= increment / 2) {
+                        return amount + (increment - remainder);
+                    } else {
+                        return amount - remainder;
+                    }
+            }
+        }
+        
+        function applyDiscount() {
+            const discountCode = document.getElementById('discountCode').value.trim().toUpperCase();
+            
+            if (!discountCode) {
+                alert('Masukkan kode diskon!');
+                return;
+            }
+            
+            // Mock discount validation
+            const mockDiscounts = {
+                'WELCOME10': { 
+                    name: 'Diskon Selamat Datang',
+                    code: 'WELCOME10',
+                    type: 'percentage',
+                    value: 10,
+                    maxAmount: 25000,
+                    minPurchase: 50000
+                },
+                'COFFEE50K': {
+                    name: 'Potongan Kopi 50ribu',
+                    code: 'COFFEE50K',
+                    type: 'fixed',
+                    value: 5000,
+                    minPurchase: 0
+                },
+                'BUY2GET1': {
+                    name: 'Beli 2 Gratis 1',
+                    code: 'BUY2GET1',
+                    type: 'buy_x_get_y',
+                    buyQuantity: 2,
+                    getQuantity: 1
+                }
+            };
+            
+            const discount = mockDiscounts[discountCode];
+            
+            if (!discount) {
+                alert('Kode diskon tidak valid!');
+                return;
+            }
+            
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            
+            // Check minimum purchase
+            if (discount.minPurchase && subtotal < discount.minPurchase) {
+                alert(`Minimal pembelian Rp ${discount.minPurchase.toLocaleString('id-ID')} untuk menggunakan diskon ini`);
+                return;
+            }
+            
+            // Calculate discount amount
+            let discountAmount = 0;
+            
+            switch (discount.type) {
+                case 'percentage':
+                    discountAmount = Math.round(subtotal * (discount.value / 100));
+                    if (discount.maxAmount && discountAmount > discount.maxAmount) {
+                        discountAmount = discount.maxAmount;
+                    }
+                    break;
+                case 'fixed':
+                    discountAmount = Math.min(discount.value, subtotal);
+                    break;
+                case 'buy_x_get_y':
+                    // Simplified calculation for demo
+                    const totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
+                    const freeItems = Math.floor(totalQuantity / discount.buyQuantity) * discount.getQuantity;
+                    if (freeItems > 0 && cart.length > 0) {
+                        discountAmount = freeItems * cart[0].price; // Simplified: use first item price
+                    }
+                    break;
+            }
+            
+            appliedDiscount = {
+                ...discount,
+                amount: discountAmount
+            };
+            
+            // Clear discount input
+            document.getElementById('discountCode').value = '';
+            
+            updateCartDisplay();
+            showSuccess(`Diskon ${discount.name} berhasil diterapkan!`);
+        }
+        
+        function removeDiscount() {
+            appliedDiscount = null;
+            updateCartDisplay();
+            showSuccess('Diskon berhasil dihapus');
+        }
+
+        // Payment methods
+        function setupPaymentMethods() {
+            const paymentMethods = document.querySelectorAll('.payment-method');
+            
+            paymentMethods.forEach(method => {
+                method.addEventListener('click', function() {
+                    paymentMethods.forEach(m => m.classList.remove('active'));
+                    this.classList.add('active');
+                    selectedPaymentMethod = this.getAttribute('data-method');
+                    
+                    // Show/hide cash payment section
+                    const cashSection = document.getElementById('cashPaymentSection');
+                    if (selectedPaymentMethod === 'cash') {
+                        cashSection.style.display = 'block';
+                    } else {
+                        cashSection.style.display = 'none';
+                        // Clear change display
+                        document.getElementById('changeDisplay').style.display = 'none';
+                        document.getElementById('paidAmount').value = '';
+                    }
+                });
+            });
+        }
+        
+        function calculateChange() {
+            const paidAmountInput = document.getElementById('paidAmount');
+            const changeDisplay = document.getElementById('changeDisplay');
+            const changeAmount = document.getElementById('changeAmount');
+            const paymentButton = document.getElementById('paymentButton');
+            
+            const paidAmount = parseInt(paidAmountInput.value) || 0;
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const calculation = calculateTaxAndService(subtotal);
+            const total = calculation.finalAmount;
+            
+            if (paidAmount > 0) {
+                if (paidAmount >= total) {
+                    const change = paidAmount - total;
+                    changeAmount.textContent = `Rp ${change.toLocaleString('id-ID')}`;
+                    changeDisplay.style.display = 'block';
+                    changeDisplay.style.borderColor = '#4a7c59';
+                    changeDisplay.style.background = '#f0f8f5';
+                    paymentButton.disabled = false;
+                    paymentButton.style.opacity = '1';
+                } else {
+                    const shortage = total - paidAmount;
+                    changeAmount.textContent = `Kurang Rp ${shortage.toLocaleString('id-ID')}`;
+                    changeDisplay.style.display = 'block';
+                    changeDisplay.style.borderColor = '#dc3545';
+                    changeDisplay.style.background = '#ffe6e6';
+                    paymentButton.disabled = true;
+                    paymentButton.style.opacity = '0.5';
+                }
+            } else {
+                changeDisplay.style.display = 'none';
+                paymentButton.disabled = false;
+                paymentButton.style.opacity = '1';
+            }
+        }
+
+        function processPayment() {
+            if (cart.length === 0) {
+                alert('Keranjang kosong!');
+                return;
+            }
+            
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const calculation = calculateTaxAndService(subtotal);
+            const total = calculation.finalAmount;
+            let paymentInfo = '';
+            let changeInfo = '';
+            
+            // Handle cash payment validation
+            if (selectedPaymentMethod === 'cash') {
+                const paidAmount = parseInt(document.getElementById('paidAmount').value) || 0;
+                
+                if (paidAmount <= 0) {
+                    alert('Masukkan jumlah uang yang dibayarkan!');
+                    return;
+                }
+                
+                if (paidAmount < total) {
+                    alert(`Jumlah pembayaran kurang! Kurang Rp ${(total - paidAmount).toLocaleString('id-ID')}`);
+                    return;
+                }
+                
+                const change = paidAmount - total;
+                paymentInfo = `Dibayar: Rp ${paidAmount.toLocaleString('id-ID')}`;
+                changeInfo = change > 0 ? `\nKembalian: Rp ${change.toLocaleString('id-ID')}` : '';
+            }
+            
+            // Show loading
+            const button = event.target;
+            const originalText = button.innerHTML;
+            button.innerHTML = '<div class="spinner" style="width: 20px; height: 20px; margin: 0 auto;"></div>';
+            button.disabled = true;
+            
+            setTimeout(() => {
+                // Reset button
+                button.innerHTML = originalText;
+                button.disabled = false;
+                
+                // Calculate loyalty points earned
+                let pointsEarned = 0;
+                if (selectedCustomer && loyaltySettings.earnRate > 0) {
+                    pointsEarned = Math.floor(finalAmount / 1000) * loyaltySettings.earnRate;
+                    selectedCustomer.points += pointsEarned;
+                    selectedCustomer.totalSpent += finalAmount;
+                    selectedCustomer.visitCount += 1;
+                }
+                
+                // Clear cart and reset form
+                cart = [];
+                selectedCustomer = null;
+                appliedDiscount = null;
+                updateCartDisplay();
+                hideCustomerInfo();
+                document.getElementById('customerSearch').value = '';
+                document.getElementById('paidAmount').value = '';
+                document.getElementById('changeDisplay').style.display = 'none';
+                
+                // Show success message with payment details and breakdown
+                let successMessage = `Pembayaran berhasil!\n\nSubtotal: Rp ${subtotal.toLocaleString('id-ID')}`;
+                
+                if (calculation.serviceAmount > 0) {
+                    successMessage += `\nService (${taxSettings.service.percentage}%): Rp ${calculation.serviceAmount.toLocaleString('id-ID')}`;
+                }
+                
+                if (calculation.taxAmount > 0) {
+                    successMessage += `\nPPN (${taxSettings.ppn.percentage}%): Rp ${calculation.taxAmount.toLocaleString('id-ID')}`;
+                }
+                
+                successMessage += `\nTotal: Rp ${total.toLocaleString('id-ID')} via ${selectedPaymentMethod.toUpperCase()}`;
+                
+                if (paymentInfo) {
+                    successMessage += `\n${paymentInfo}`;
+                }
+                if (changeInfo) {
+                    successMessage += changeInfo;
+                }
+                
+                if (pointsEarned > 0) {
+                    successMessage += `\n\n🎉 Poin Loyalty: +${pointsEarned} poin`;
+                }
+                
+                showSuccess(successMessage);
+                
+                // Simulate printing receipt with breakdown
+                setTimeout(() => {
+                    let receiptMessage = 'Struk sedang dicetak...';
+                    
+                    if (calculation.serviceAmount > 0 || calculation.taxAmount > 0) {
+                        receiptMessage += '\n\nDetail Tagihan:';
+                        receiptMessage += `\nSubtotal: Rp ${subtotal.toLocaleString('id-ID')}`;
+                        
+                        if (calculation.serviceAmount > 0) {
+                            receiptMessage += `\nService: Rp ${calculation.serviceAmount.toLocaleString('id-ID')}`;
+                        }
+                        
+                        if (calculation.taxAmount > 0) {
+                            receiptMessage += `\nPPN: Rp ${calculation.taxAmount.toLocaleString('id-ID')}`;
+                        }
+                        
+                        receiptMessage += `\nTotal: Rp ${total.toLocaleString('id-ID')}`;
+                    }
+                    
+                    if (selectedPaymentMethod === 'cash' && changeInfo) {
+                        receiptMessage += `\n\n${changeInfo}`;
+                    }
+                    
+                    alert(receiptMessage);
+                }, 1000);
+            }, 2000);
+        }
+
+        // Role management
+        function updateRoleAccess() {
+            const currentRole = document.getElementById('currentRole').textContent.toLowerCase();
+            const managerOnlyItems = document.querySelectorAll('.manager-only');
+            
+            if (currentRole === 'kasir') {
+                managerOnlyItems.forEach(item => {
+                    item.style.display = 'none';
+                });
+            } else {
+                managerOnlyItems.forEach(item => {
+                    item.style.display = 'flex';
+                });
+            }
+            
+            // Show/hide manager settings cards
+            const taxSettingsCard = document.getElementById('taxSettingsCard');
+            const discountSettingsCard = document.getElementById('discountSettingsCard');
+            const roundingSettingsCard = document.getElementById('roundingSettingsCard');
+            
+            if (taxSettingsCard) {
+                taxSettingsCard.style.display = currentRole === 'kasir' ? 'none' : 'block';
+            }
+            if (discountSettingsCard) {
+                discountSettingsCard.style.display = currentRole === 'kasir' ? 'none' : 'block';
+            }
+            if (roundingSettingsCard) {
+                roundingSettingsCard.style.display = currentRole === 'kasir' ? 'none' : 'block';
+            }
+            
+            // Load settings if manager
+            if (currentRole !== 'kasir') {
+                loadTaxSettings();
+                loadDiscountSettings();
+                loadRoundingSettings();
+                loadCustomersList();
+            }
+        }
+        
+        function loadTaxSettings() {
+            // Load current tax settings into form
+            document.getElementById('ppnPercentage').value = taxSettings.ppn.percentage;
+            document.getElementById('ppnActive').checked = taxSettings.ppn.active;
+            document.getElementById('servicePercentage').value = taxSettings.service.percentage;
+            document.getElementById('serviceActive').checked = taxSettings.service.active;
+        }
+        
+        function saveTaxSettings() {
+            // Get values from form
+            const ppnPercentage = parseFloat(document.getElementById('ppnPercentage').value) || 0;
+            const ppnActive = document.getElementById('ppnActive').checked;
+            const servicePercentage = parseFloat(document.getElementById('servicePercentage').value) || 0;
+            const serviceActive = document.getElementById('serviceActive').checked;
+            
+            // Validate percentages
+            if (ppnPercentage < 0 || ppnPercentage > 100) {
+                alert('Persentase PPN harus antara 0-100%');
+                return;
+            }
+            
+            if (servicePercentage < 0 || servicePercentage > 100) {
+                alert('Persentase Service Charge harus antara 0-100%');
+                return;
+            }
+            
+            // Update settings
+            taxSettings.ppn.percentage = ppnPercentage;
+            taxSettings.ppn.active = ppnActive;
+            taxSettings.service.percentage = servicePercentage;
+            taxSettings.service.active = serviceActive;
+            
+            // Update cart display with new calculations
+            updateCartDisplay();
+            
+            showSuccess('Pengaturan pajak dan service berhasil disimpan!');
+        }
+        
+        function loadDiscountSettings() {
+            // Mock active discounts data
+            const activeDiscounts = [
+                { code: 'WELCOME10', name: 'Diskon Selamat Datang', type: 'percentage', value: 10, status: 'active' },
+                { code: 'COFFEE50K', name: 'Potongan Kopi 50ribu', type: 'fixed_amount', value: 5000, status: 'active' },
+                { code: 'BUY2GET1', name: 'Beli 2 Gratis 1', type: 'buy_x_get_y', status: 'active' }
+            ];
+            
+            const discountsList = document.getElementById('activeDiscountsList');
+            let html = '';
+            
+            if (activeDiscounts.length === 0) {
+                html = '<div style="text-align: center; color: #4a7c59; padding: 1rem;">Belum ada diskon aktif</div>';
+            } else {
+                activeDiscounts.forEach(discount => {
+                    let valueText = '';
+                    switch (discount.type) {
+                        case 'percentage':
+                            valueText = `${discount.value}%`;
+                            break;
+                        case 'fixed_amount':
+                            valueText = `Rp ${discount.value.toLocaleString('id-ID')}`;
+                            break;
+                        case 'buy_x_get_y':
+                            valueText = 'Beli X Gratis Y';
+                            break;
+                    }
+                    
+                    html += `
+                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.5rem; border: 1px solid #e0e0e0; border-radius: 6px; margin-bottom: 0.5rem;">
+                            <div>
+                                <div style="font-weight: 600; color: #2d5016;">${discount.code}</div>
+                                <div style="font-size: 0.9rem; color: #4a7c59;">${discount.name}</div>
+                            </div>
+                            <div style="text-align: right;">
+                                <div style="font-weight: 600; color: #2d5016;">${valueText}</div>
+                                <div style="font-size: 0.8rem; color: #28a745;">${discount.status}</div>
+                            </div>
+                        </div>
+                    `;
+                });
+            }
+            
+            discountsList.innerHTML = html;
+        }
+        
+        function loadRoundingSettings() {
+            // Load current rounding settings into form
+            document.getElementById('roundingActive').checked = roundingSettings.active;
+            document.getElementById('roundingMethod').value = roundingSettings.method;
+            document.getElementById('roundingIncrement').value = roundingSettings.increment;
+            
+            toggleRoundingOptions();
+            
+            // Add event listener for toggle
+            document.getElementById('roundingActive').addEventListener('change', toggleRoundingOptions);
+        }
+        
+        function toggleRoundingOptions() {
+            const active = document.getElementById('roundingActive').checked;
+            const options = document.getElementById('roundingOptions');
+            options.style.display = active ? 'block' : 'none';
+        }
+        
+        function saveRoundingSettings() {
+            const active = document.getElementById('roundingActive').checked;
+            const method = document.getElementById('roundingMethod').value;
+            const increment = parseInt(document.getElementById('roundingIncrement').value);
+            
+            roundingSettings.active = active;
+            roundingSettings.method = method;
+            roundingSettings.increment = increment;
+            
+            // Update cart display with new rounding
+            updateCartDisplay();
+            
+            showSuccess('Pengaturan pembulatan berhasil disimpan!');
+        }
+        
+        function showCreateDiscountModal() {
+            alert('Fitur tambah diskon akan dibuka di modal terpisah (belum diimplementasikan dalam demo ini)');
+        }
+        
+        // Customer functions
+        function searchCustomer() {
+            const query = document.getElementById('customerSearch').value.trim();
+            
+            if (!query) {
+                alert('Masukkan nomor HP atau kode customer!');
+                return;
+            }
+            
+            // Mock customer search
+            const mockCustomers = {
+                '081234567890': {
+                    id: 1,
+                    code: 'CUS001',
+                    name: 'Budi Santoso',
+                    phone: '081234567890',
+                    tier: 'gold',
+                    points: 2500,
+                    totalSpent: 1850000,
+                    visitCount: 25
+                },
+                'CUS001': {
+                    id: 1,
+                    code: 'CUS001',
+                    name: 'Budi Santoso',
+                    phone: '081234567890',
+                    tier: 'gold',
+                    points: 2500,
+                    totalSpent: 1850000,
+                    visitCount: 25
+                }
+            };
+            
+            const customer = mockCustomers[query.toUpperCase()];
+            
+            if (customer) {
+                selectedCustomer = customer;
+                displayCustomerInfo(customer);
+                showSuccess(`Customer ${customer.name} ditemukan!`);
+            } else {
+                alert('Customer tidak ditemukan!');
+                selectedCustomer = null;
+                hideCustomerInfo();
+            }
+        }
+        
+        function displayCustomerInfo(customer) {
+            const customerInfo = document.getElementById('customerInfo');
+            const tierColors = {
+                bronze: '#cd7f32',
+                silver: '#c0c0c0',
+                gold: '#ffd700',
+                platinum: '#e5e4e2'
+            };
+            
+            const tierIcons = {
+                bronze: '🥉',
+                silver: '🥈',
+                gold: '🥇',
+                platinum: '💎'
+            };
+            
+            customerInfo.innerHTML = `
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                        <div style="font-weight: 700; color: #2d5016; font-size: 1.1rem;">${customer.name}</div>
+                        <div style="color: #4a7c59; font-size: 0.9rem; margin-bottom: 0.5rem;">${customer.phone} • ${customer.code}</div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem;">
+                            <span style="background: ${tierColors[customer.tier]}; color: white; padding: 0.2rem 0.5rem; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">
+                                ${tierIcons[customer.tier]} ${customer.tier.toUpperCase()}
+                            </span>
+                            <span style="background: #4a7c59; color: white; padding: 0.2rem 0.5rem; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">
+                                ${customer.points} Poin
+                            </span>
+                        </div>
+                    </div>
+                    <div style="text-align: right;">
+                        <div style="font-size: 0.9rem; color: #4a7c59;">Total Belanja</div>
+                        <div style="font-weight: 700; color: #2d5016;">Rp ${customer.totalSpent.toLocaleString('id-ID')}</div>
+                        <div style="font-size: 0.9rem; color: #4a7c59;">${customer.visitCount} kunjungan</div>
+                    </div>
+                </div>
+                <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #e0e0e0;">
+                    <div style="display: flex; gap: 0.5rem;">
+                        <button class="btn btn-secondary" onclick="useCustomerPoints()" style="font-size: 0.9rem;">
+                            <i class="hgi-stroke hgi-coins-01"></i>
+                            Gunakan Poin
+                        </button>
+                        <button class="btn btn-secondary" onclick="clearCustomer()" style="font-size: 0.9rem;">
+                            <i class="hgi-stroke hgi-cancel-01"></i>
+                            Hapus
+                        </button>
+                    </div>
+                </div>
+            `;
+            customerInfo.style.display = 'block';
+        }
+        
+        function hideCustomerInfo() {
+            document.getElementById('customerInfo').style.display = 'none';
+        }
+        
+        function clearCustomer() {
+            selectedCustomer = null;
+            document.getElementById('customerSearch').value = '';
+            hideCustomerInfo();
+            showSuccess('Data customer dihapus dari transaksi');
+        }
+        
+        function useCustomerPoints() {
+            if (!selectedCustomer || selectedCustomer.points < loyaltySettings.redemptionRate) {
+                alert('Poin customer tidak mencukupi untuk redemption!');
+                return;
+            }
+            
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const maxRedeemableAmount = Math.floor(subtotal * 0.5); // Max 50% dari subtotal
+            const maxRedeemablePoints = Math.floor(selectedCustomer.points / loyaltySettings.redemptionRate) * loyaltySettings.redemptionRate;
+            const maxDiscount = Math.min(maxRedeemableAmount, Math.floor(maxRedeemablePoints / loyaltySettings.redemptionRate) * 1000);
+            
+            if (maxDiscount <= 0) {
+                alert('Tidak ada poin yang bisa digunakan untuk transaksi ini!');
+                return;
+            }
+            
+            const redeemAmount = prompt(`Masukkan jumlah diskon (max Rp ${maxDiscount.toLocaleString('id-ID')}):`);
+            
+            if (redeemAmount && parseInt(redeemAmount) > 0 && parseInt(redeemAmount) <= maxDiscount) {
+                const pointsUsed = Math.ceil(parseInt(redeemAmount) / 1000) * loyaltySettings.redemptionRate;
+                
+                appliedDiscount = {
+                    name: 'Redemption Poin Customer',
+                    code: 'POINTS',
+                    type: 'points',
+                    amount: parseInt(redeemAmount),
+                    pointsUsed: pointsUsed
+                };
+                
+                // Update customer points display
+                selectedCustomer.points -= pointsUsed;
+                displayCustomerInfo(selectedCustomer);
+                
+                updateCartDisplay();
+                showSuccess(`Poin berhasil digunakan! ${pointsUsed} poin untuk diskon Rp ${parseInt(redeemAmount).toLocaleString('id-ID')}`);
+            }
+        }
+        
+        function showNewCustomerModal() {
+            const name = prompt('Nama Customer:');
+            if (!name) return;
+            
+            const phone = prompt('Nomor HP:');
+            if (!phone) return;
+            
+            // Mock customer creation
+            const newCustomer = {
+                id: Date.now(),
+                code: `CUS${Math.random().toString(36).substr(2, 6).toUpperCase()}`,
+                name: name,
+                phone: phone,
+                tier: 'bronze',
+                points: 0,
+                totalSpent: 0,
+                visitCount: 0
+            };
+            
+            selectedCustomer = newCustomer;
+            document.getElementById('customerSearch').value = phone;
+            displayCustomerInfo(newCustomer);
+            
+            showSuccess(`Customer baru ${name} berhasil didaftarkan!`);
+        }
+        
+        // Cafe operation functions
+        function toggleCafe(operation) {
+            const openBtn = document.getElementById('openCafeBtn');
+            const closeBtn = document.getElementById('closeCafeBtn');
+            const statusIcon = document.getElementById('cafeStatusIcon');
+            const statusText = document.getElementById('cafeStatusText');
+            const statusTime = document.getElementById('cafeStatusTime');
+            
+            if (operation === 'open') {
+                const openingCash = prompt('Masukkan kas awal (Rp):');
+                if (openingCash === null) return;
+                
+                cafeStatus.isOpen = true;
+                cafeStatus.openTime = new Date().toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' });
+                
+                statusIcon.style.background = '#28a745';
+                statusText.textContent = 'Cafe Buka';
+                statusTime.textContent = `Dibuka pukul ${cafeStatus.openTime}`;
+                
+                openBtn.style.display = 'none';
+                closeBtn.style.display = 'block';
+                
+                showSuccess(`Cafe berhasil dibuka dengan kas awal Rp ${parseInt(openingCash || 0).toLocaleString('id-ID')}`);
+                
+            } else if (operation === 'close') {
+                const closingCash = prompt('Masukkan kas akhir (Rp):');
+                if (closingCash === null) return;
+                
+                const notes = prompt('Catatan penutupan (opsional):') || '';
+                
+                cafeStatus.isOpen = false;
+                const closeTime = new Date().toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' });
+                
+                statusIcon.style.background = '#dc3545';
+                statusText.textContent = 'Cafe Tutup';
+                statusTime.textContent = `Ditutup pukul ${closeTime}`;
+                
+                openBtn.style.display = 'block';
+                closeBtn.style.display = 'none';
+                
+                // Mock sales summary
+                const mockSummary = {
+                    openingCash: 500000,
+                    closingCash: parseInt(closingCash || 0),
+                    totalSales: 2450000,
+                    totalTransactions: 127,
+                    expectedCash: 500000 + 1200000, // opening + cash transactions
+                    cashDifference: parseInt(closingCash || 0) - (500000 + 1200000)
+                };
+                
+                let summaryMessage = `Cafe berhasil ditutup!\n\n`;
+                summaryMessage += `Kas Awal: Rp ${mockSummary.openingCash.toLocaleString('id-ID')}\n`;
+                summaryMessage += `Kas Akhir: Rp ${mockSummary.closingCash.toLocaleString('id-ID')}\n`;
+                summaryMessage += `Total Penjualan: Rp ${mockSummary.totalSales.toLocaleString('id-ID')}\n`;
+                summaryMessage += `Total Transaksi: ${mockSummary.totalTransactions}\n`;
+                summaryMessage += `Selisih Kas: Rp ${mockSummary.cashDifference.toLocaleString('id-ID')}`;
+                
+                if (notes) {
+                    summaryMessage += `\n\nCatatan: ${notes}`;
+                }
+                
+                alert(summaryMessage);
+            }
+        }
+        
+        function loadCustomersList() {
+            // Mock customers data
+            const customers = [
+                { name: 'Budi Santoso', tier: 'gold', points: 2500, phone: '081234567890' },
+                { name: 'Siti Rahayu', tier: 'silver', points: 1200, phone: '081234567891' },
+                { name: 'Ahmad Fauzi', tier: 'bronze', points: 350, phone: '081234567892' },
+                { name: 'Dewi Sartika', tier: 'platinum', points: 5000, phone: '081234567893' }
+            ];
+            
+            const customersList = document.getElementById('customersList');
+            let html = '';
+            
+            customers.forEach(customer => {
+                const tierIcons = { bronze: '🥉', silver: '🥈', gold: '🥇', platinum: '💎' };
+                html += `
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; border: 1px solid #e0e0e0; border-radius: 8px; margin-bottom: 0.5rem;">
+                        <div>
+                            <div style="font-weight: 600; color: #2d5016;">${customer.name}</div>
+                            <div style="font-size: 0.9rem; color: #4a7c59;">${customer.phone}</div>
+                        </div>
+                        <div style="text-align: right;">
+                            <div style="font-size: 0.9rem;">${tierIcons[customer.tier]} ${customer.tier}</div>
+                            <div style="font-weight: 600; color: #2d5016;">${customer.points} poin</div>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            customersList.innerHTML = html;
+        }
+        
+        function saveLoyaltySettings() {
+            const earnRate = parseFloat(document.getElementById('loyaltyEarnRate').value) || 1;
+            const redemptionRate = parseInt(document.getElementById('loyaltyRedemptionRate').value) || 1000;
+            
+            loyaltySettings.earnRate = earnRate;
+            loyaltySettings.redemptionRate = redemptionRate;
+            
+            showSuccess('Pengaturan loyalty berhasil disimpan!');
+        }
+        
+        function savePromoSettings() {
+            showSuccess('Pengaturan promo berhasil disimpan!');
+        }
+        
+        // CRM Functions
+        function createCustomerSegment() {
+            const name = document.getElementById('segmentName').value.trim();
+            const minSpent = document.getElementById('segmentMinSpent').value;
+            
+            if (!name) {
+                alert('Nama segmen diperlukan!');
+                return;
+            }
+            
+            // Get selected tiers
+            const selectedTiers = [];
+            document.querySelectorAll('input[type="checkbox"][value]').forEach(checkbox => {
+                if (checkbox.checked) {
+                    selectedTiers.push(checkbox.value);
+                }
+            });
+            
+            if (selectedTiers.length === 0) {
+                alert('Pilih minimal satu tier customer!');
+                return;
+            }
+            
+            // Mock segment creation
+            const segmentData = {
+                name: name,
+                criteria: {
+                    tiers: selectedTiers,
+                    minSpent: parseInt(minSpent) || 0
+                },
+                estimatedCount: Math.floor(Math.random() * 50) + 10
+            };
+            
+            // Clear form
+            document.getElementById('segmentName').value = '';
+            document.getElementById('segmentMinSpent').value = '';
+            document.querySelectorAll('input[type="checkbox"][value]').forEach(checkbox => {
+                checkbox.checked = false;
+            });
+            
+            showSuccess(`Segmen "${name}" berhasil dibuat dengan estimasi ${segmentData.estimatedCount} customer!`);
+        }
+        
+        function createMarketingCampaign() {
+            const name = document.getElementById('campaignName').value.trim();
+            const type = document.getElementById('campaignType').value;
+            const message = document.getElementById('campaignMessage').value.trim();
+            
+            if (!name || !message) {
+                alert('Nama kampanye dan template pesan diperlukan!');
+                return;
+            }
+            
+            // Mock campaign creation
+            const estimatedRecipients = Math.floor(Math.random() * 100) + 50;
+            
+            // Clear form
+            document.getElementById('campaignName').value = '';
+            document.getElementById('campaignMessage').value = '';
+            
+            showSuccess(`Kampanye "${name}" berhasil dijadwalkan! Akan dikirim ke ${estimatedRecipients} customer via ${type.toUpperCase()}.`);
+        }
+        
+        function createLead() {
+            const name = document.getElementById('leadName').value.trim();
+            const phone = document.getElementById('leadPhone').value.trim();
+            const source = document.getElementById('leadSource').value;
+            const interest = document.getElementById('leadInterest').value;
+            
+            if (!name || !phone) {
+                alert('Nama dan nomor HP lead diperlukan!');
+                return;
+            }
+            
+            // Mock lead creation
+            const leadCode = `LEAD${Math.random().toString(36).substr(2, 6).toUpperCase()}`;
+            
+            // Clear form
+            document.getElementById('leadName').value = '';
+            document.getElementById('leadPhone').value = '';
+            
+            showSuccess(`Lead "${name}" berhasil dibuat dengan kode ${leadCode}! Status: ${interest.toUpperCase()}`);
+        }
+        
+        function addCustomerCommunication() {
+            const customerSearch = document.getElementById('commCustomerSearch').value.trim();
+            const type = document.getElementById('commType').value;
+            const message = document.getElementById('commMessage').value.trim();
+            const followUp = document.getElementById('commFollowUp').checked;
+            
+            if (!customerSearch || !message) {
+                alert('Customer dan pesan komunikasi diperlukan!');
+                return;
+            }
+            
+            // Mock communication logging
+            const timestamp = new Date().toLocaleString('id-ID');
+            
+            // Clear form
+            document.getElementById('commCustomerSearch').value = '';
+            document.getElementById('commMessage').value = '';
+            document.getElementById('commFollowUp').checked = false;
+            
+            let successMsg = `Komunikasi dengan customer berhasil dicatat pada ${timestamp}`;
+            if (followUp) {
+                successMsg += ' (Follow-up dijadwalkan)';
+            }
+            
+            showSuccess(successMsg);
+        }
+        
+        function viewAllFeedback() {
+            alert('Fitur detail feedback akan dibuka di halaman terpisah');
+        }
+        
+        function generateCRMReport() {
+            const reportData = {
+                totalCustomers: 156,
+                newCustomersThisMonth: 23,
+                avgCLV: 1250000,
+                retentionRate: 75,
+                campaignsSent: 12,
+                responseRate: 35
+            };
+            
+            let reportMessage = 'CRM Report - Bulan Ini:\n\n';
+            reportMessage += `Total Customer: ${reportData.totalCustomers}\n`;
+            reportMessage += `Customer Baru: ${reportData.newCustomersThisMonth}\n`;
+            reportMessage += `Avg. CLV: Rp ${reportData.avgCLV.toLocaleString('id-ID')}\n`;
+            reportMessage += `Retention Rate: ${reportData.retentionRate}%\n`;
+            reportMessage += `Kampanye Dikirim: ${reportData.campaignsSent}\n`;
+            reportMessage += `Response Rate: ${reportData.responseRate}%`;
+            
+            alert(reportMessage);
+        }
+        
+        // AI & Automation Functions
+        function saveBirthdayAutomation() {
+            const template = document.getElementById('birthdayTemplate').value;
+            const points = document.getElementById('birthdayPoints').value;
+            const autoSend = document.getElementById('birthdayAutoSend').checked;
+            
+            if (!template) {
+                alert('Template pesan birthday diperlukan!');
+                return;
+            }
+            
+            // Mock save automation rule
+            const automationData = {
+                name: 'Birthday Automation',
+                template: template,
+                bonusPoints: parseInt(points) || 100,
+                autoSend: autoSend
+            };
+            
+            showSuccess(`Birthday automation berhasil disimpan! ${autoSend ? 'Auto-send aktif.' : 'Manual mode.'}`);
+        }
+        
+        function testBirthdayAutomation() {
+            // Mock test dengan customer sample
+            const testResult = {
+                customersToday: 3,
+                messagesSent: 3,
+                pointsAwarded: 300
+            };
+            
+            let message = `Test Birthday Automation:\n\n`;
+            message += `Customer ulang tahun hari ini: ${testResult.customersToday}\n`;
+            message += `Pesan dikirim: ${testResult.messagesSent}\n`;
+            message += `Total poin awarded: ${testResult.pointsAwarded}`;
+            
+            alert(message);
+        }
+        
+        function setupWhatsApp() {
+            const provider = document.getElementById('whatsappProvider').value;
+            const token = document.getElementById('whatsappToken').value;
+            const phone = document.getElementById('whatsappPhone').value;
+            
+            if (!token) {
+                alert('API Token diperlukan untuk setup WhatsApp!');
+                return;
+            }
+            
+            // Mock WhatsApp setup
+            document.getElementById('whatsappStatus').innerHTML = '✅ Connected';
+            document.getElementById('whatsappStatus').style.color = '#28a745';
+            
+            // Clear sensitive data
+            document.getElementById('whatsappToken').value = '';
+            
+            showSuccess(`WhatsApp integration berhasil setup dengan provider ${provider.toUpperCase()}!`);
+        }
+        
+        function sendWhatsAppBroadcast() {
+            const target = document.getElementById('broadcastTarget').value;
+            const message = document.getElementById('broadcastMessage').value;
+            const scheduled = document.getElementById('broadcastSchedule').checked;
+            const scheduleTime = document.getElementById('broadcastTime').value;
+            
+            if (!message) {
+                alert('Template broadcast diperlukan!');
+                return;
+            }
+            
+            // Mock broadcast calculation
+            const targetCounts = {
+                'all_active': 156,
+                'gold_platinum': 45,
+                'inactive_30d': 23,
+                'birthday_this_month': 12,
+                'custom': 78
+            };
+            
+            const estimatedRecipients = targetCounts[target] || 0;
+            const estimatedCost = estimatedRecipients * 300; // Rp 300 per message
+            
+            let confirmMessage = `Konfirmasi Broadcast WhatsApp:\n\n`;
+            confirmMessage += `Target: ${document.getElementById('broadcastTarget').options[document.getElementById('broadcastTarget').selectedIndex].text}\n`;
+            confirmMessage += `Estimasi penerima: ${estimatedRecipients} customer\n`;
+            confirmMessage += `Estimasi biaya: Rp ${estimatedCost.toLocaleString('id-ID')}\n`;
+            
+            if (scheduled && scheduleTime) {
+                confirmMessage += `Dijadwalkan: ${new Date(scheduleTime).toLocaleString('id-ID')}\n`;
+            }
+            
+            confirmMessage += `\nLanjutkan broadcast?`;
+            
+            if (confirm(confirmMessage)) {
+                // Clear form
+                document.getElementById('broadcastMessage').value = '';
+                document.getElementById('broadcastSchedule').checked = false;
+                document.getElementById('broadcastTime').style.display = 'none';
+                
+                showSuccess(`Broadcast ${scheduled ? 'dijadwalkan' : 'berhasil dikirim'} ke ${estimatedRecipients} customer!`);
+            }
+        }
+        
+        function runSentimentAnalysis() {
+            // Mock sentiment analysis processing
+            const mockResults = {
+                totalAnalyzed: 23,
+                positive: 15,
+                negative: 3,
+                neutral: 5,
+                urgentIssues: 1,
+                autoResponses: 3
+            };
+            
+            let resultMessage = `AI Sentiment Analysis Complete:\n\n`;
+            resultMessage += `Total feedback analyzed: ${mockResults.totalAnalyzed}\n`;
+            resultMessage += `Positive: ${mockResults.positive}\n`;
+            resultMessage += `Negative: ${mockResults.negative}\n`;
+            resultMessage += `Neutral: ${mockResults.neutral}\n`;
+            resultMessage += `Urgent issues detected: ${mockResults.urgentIssues}\n`;
+            resultMessage += `Auto-responses sent: ${mockResults.autoResponses}`;
+            
+            alert(resultMessage);
+        }
+        
+        function viewSentimentReport() {
+            const reportData = {
+                avgSentiment: 4.2,
+                topPositiveKeywords: ['enak', 'lezat', 'puas', 'rekomendasi'],
+                topNegativeKeywords: ['lama', 'mahal', 'antrian'],
+                topIssues: ['service_time', 'queue_management', 'pricing'],
+                responseRate: 95
+            };
+            
+            let report = `Sentiment Analysis Report:\n\n`;
+            report += `Average Sentiment Score: ${reportData.avgSentiment}/5\n`;
+            report += `Response Rate: ${reportData.responseRate}%\n\n`;
+            report += `Top Positive: ${reportData.topPositiveKeywords.join(', ')}\n`;
+            report += `Top Negative: ${reportData.topNegativeKeywords.join(', ')}\n`;
+            report += `Issues to Address: ${reportData.topIssues.join(', ')}`;
+            
+            alert(report);
+        }
+        
+        function createAutomationRule() {
+            const name = document.getElementById('ruleName').value.trim();
+            const trigger = document.getElementById('ruleTrigger').value;
+            const action = document.getElementById('ruleAction').value;
+            
+            if (!name) {
+                alert('Nama rule diperlukan!');
+                return;
+            }
+            
+            // Mock rule creation
+            const ruleId = `RULE${Math.random().toString(36).substr(2, 6).toUpperCase()}`;
+            
+            // Clear form
+            document.getElementById('ruleName').value = '';
+            
+            showSuccess(`Automation rule "${name}" berhasil dibuat dengan ID ${ruleId}!`);
+        }
+        
+        function exportAutomationReport() {
+            const reportData = {
+                totalRules: 8,
+                totalExecutions: 156,
+                successRate: 97.5,
+                totalSavings: 2400000, // dalam Rupiah
+                avgResponseTime: 125 // dalam detik
+            };
+            
+            let report = `Automation Performance Report:\n\n`;
+            report += `Total Active Rules: ${reportData.totalRules}\n`;
+            report += `Total Executions: ${reportData.totalExecutions}\n`;
+            report += `Success Rate: ${reportData.successRate}%\n`;
+            report += `Estimated Time Savings: Rp ${reportData.totalSavings.toLocaleString('id-ID')}\n`;
+            report += `Avg Response Time: ${reportData.avgResponseTime}s`;
+            
+            alert(report);
+        }
+        
+        // Toggle schedule time input
+        document.addEventListener('DOMContentLoaded', function() {
+            const scheduleCheckbox = document.getElementById('broadcastSchedule');
+            const scheduleTimeInput = document.getElementById('broadcastTime');
+            
+            if (scheduleCheckbox) {
+                scheduleCheckbox.addEventListener('change', function() {
+                    scheduleTimeInput.style.display = this.checked ? 'block' : 'none';
+                });
+            }
+        });
+
+        function changeRole() {
+            const roleSelector = document.getElementById('roleSelector');
+            const newRole = roleSelector.value;
+            const currentRoleEl = document.getElementById('currentRole');
+            
+            currentRoleEl.textContent = newRole.charAt(0).toUpperCase() + newRole.slice(1);
+            updateRoleAccess();
+            showSuccess(`Role berhasil diubah menjadi ${newRole}`);
+        }
+
+        // Modal functionality
+        function showModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.add('active');
+            }
+        }
+
+        function hideModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.remove('active');
+            }
+        }
+
+        // Success message
+        function showSuccess(message) {
+            const successMessage = document.getElementById('successMessage');
+            const successText = document.getElementById('successText');
+            
+            successText.textContent = message;
+            successMessage.classList.add('active');
+            
+            setTimeout(() => {
+                successMessage.classList.remove('active');
+            }, 3000);
+        }
+
+        // Close modal when clicking outside
+        window.addEventListener('click', function(e) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                }
+            });
+        });
+
+        // Lazy loading for images
+        const observerOptions = {
+            root: null,
+            rootMargin: '50px',
+            threshold: 0.1
+        };
+
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src || img.src;
+                    img.classList.remove('lazy');
+                    observer.unobserve(img);
+                }
+            });
+        }, observerOptions);
+
+        // Observe all images
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            images.forEach(img => imageObserver.observe(img));
+        });
+
+        // ============================================
+        // POS KEYBOARD SHORTCUTS IMPLEMENTATION
+        // ============================================
+        
+        // Popular products mapping for F1-F12
+        const popularProducts = {
+            'F1': { id: 'kopi_americano', name: 'Kopi Americano', price: 15000, category: 'Minuman' },
+            'F2': { id: 'kopi_latte', name: 'Kopi Latte', price: 18000, category: 'Minuman' },
+            'F3': { id: 'kopi_cappuccino', name: 'Kopi Cappuccino', price: 17000, category: 'Minuman' },
+            'F4': { id: 'pancong_original', name: 'Pancong Original', price: 12000, category: 'Makanan' },
+            'F5': { id: 'pancong_coklat', name: 'Pancong Coklat', price: 15000, category: 'Makanan' },
+            'F6': { id: 'pancong_keju', name: 'Pancong Keju', price: 17000, category: 'Makanan' },
+            'F7': { id: 'es_teh_manis', name: 'Es Teh Manis', price: 8000, category: 'Minuman' },
+            'F8': { id: 'jus_jeruk', name: 'Jus Jeruk', price: 12000, category: 'Minuman' },
+            'F9': { id: 'kue_cubit', name: 'Kue Cubit', price: 10000, category: 'Makanan' },
+            'F10': { id: 'pisang_goreng', name: 'Pisang Goreng', price: 8000, category: 'Makanan' },
+            'F11': { id: 'es_krim', name: 'Es Krim', price: 15000, category: 'Makanan' },
+            'F12': { id: 'air_mineral', name: 'Air Mineral', price: 5000, category: 'Minuman' }
+        };
+
+        // Keyboard shortcut handler
+        document.addEventListener('keydown', function(e) {
+            // Only activate shortcuts when POS section is active
+            const posSection = document.getElementById('pos');
+            const currentSection = document.querySelector('.section.active') || document.querySelector('.section:not([style*="none"])');
+            
+            if (!posSection || (currentSection && currentSection.id !== 'pos')) {
+                return; // Not in POS section, ignore shortcuts
+            }
+
+            // Prevent shortcuts when user is typing in input fields
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
+                // Allow ESC to work even in input fields
+                if (e.key !== 'Escape') {
+                    return;
+                }
+            }
+
+            const key = e.key;
+            const ctrlKey = e.ctrlKey || e.metaKey; // Support both Ctrl and Cmd (Mac)
+
+            // F1-F12: Quick add popular products
+            if (key >= 'F1' && key <= 'F12') {
+                e.preventDefault();
+                const product = popularProducts[key];
+                if (product) {
+                    quickAddProduct(product);
+                    showTooltip(`${key}: ${product.name} ditambahkan ke keranjang`);
+                }
+            }
+            
+            // Ctrl+P: Process Payment
+            else if (ctrlKey && key.toLowerCase() === 'p') {
+                e.preventDefault();
+                processPaymentShortcut();
+                showTooltip('Ctrl+P: Memproses pembayaran');
+            }
+            
+            // Ctrl+D: Apply Discount
+            else if (ctrlKey && key.toLowerCase() === 'd') {
+                e.preventDefault();
+                focusDiscountCode();
+                showTooltip('Ctrl+D: Fokus ke kode diskon');
+            }
+            
+            // ESC: Cancel Transaction
+            else if (key === 'Escape') {
+                e.preventDefault();
+                cancelCurrentTransaction();
+                showTooltip('ESC: Transaksi dibatalkan');
+            }
+            
+            // Ctrl+N: New Customer (bonus shortcut)
+            else if (ctrlKey && key.toLowerCase() === 'n') {
+                e.preventDefault();
+                showNewCustomerModal();
+                showTooltip('Ctrl+N: Customer baru');
+            }
+            
+            // Ctrl+F: Focus Customer Search (bonus shortcut)
+            else if (ctrlKey && key.toLowerCase() === 'f') {
+                e.preventDefault();
+                focusCustomerSearch();
+                showTooltip('Ctrl+F: Cari customer');
+            }
+        });
+
+        // Quick add product function
+        function quickAddProduct(product) {
+            // Simulate adding product to cart
+            addToCart({
+                id: product.id,
+                name: product.name,
+                price: product.price,
+                category: product.category,
+                image: `https://via.placeholder.com/100x100.png?text=${product.name.substring(0,3)}`
+            });
+        }
+
+        // Process payment shortcut
+        function processPaymentShortcut() {
+            const cartItems = document.querySelectorAll('.cart-item');
+            if (cartItems.length === 0) {
+                alert('Keranjang kosong! Tidak ada yang bisa diproses.');
+                return;
+            }
+            
+            // Focus on payment section with visual effects
+            const paymentMethods = document.querySelector('.payment-methods');
+            const paidAmountInput = document.getElementById('paidAmount');
+            
+            if (paymentMethods && paidAmountInput) {
+                // Add keyboard focus class for animation
+                paymentMethods.classList.add('keyboard-focus');
+                
+                // Scroll to payment section smoothly
+                paymentMethods.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+                // Focus on payment amount input after a brief delay
+                setTimeout(() => {
+                    paidAmountInput.focus();
+                    paidAmountInput.select();
+                    
+                    // Remove focus class after animation
+                    setTimeout(() => {
+                        paymentMethods.classList.remove('keyboard-focus');
+                    }, 1000);
+                }, 500);
+            }
+        }
+
+        // Focus discount code input
+        function focusDiscountCode() {
+            const discountInput = document.getElementById('discountCode');
+            if (discountInput) {
+                discountInput.focus();
+                discountInput.select();
+            }
+        }
+
+        // Cancel current transaction
+        function cancelCurrentTransaction() {
+            const cartItems = document.querySelectorAll('.cart-item');
+            if (cartItems.length === 0) {
+                alert('Tidak ada transaksi yang sedang berlangsung.');
+                return;
+            }
+            
+            if (confirm('Yakin ingin membatalkan transaksi saat ini?')) {
+                // Clear cart
+                const cartContainer = document.getElementById('cartItems');
+                cartContainer.innerHTML = '<p style="text-align: center; color: #4a7c59; padding: 2rem;">Keranjang kosong</p>';
+                
+                // Reset totals
+                document.getElementById('totalAmount').textContent = 'Rp 0';
+                document.getElementById('subtotalAmount').textContent = 'Rp 0';
+                
+                // Hide discount and other displays
+                document.getElementById('discountDisplay').style.display = 'none';
+                document.getElementById('subtotalDisplay').style.display = 'none';
+                document.getElementById('taxServiceBreakdown').style.display = 'none';
+                document.getElementById('roundingDisplay').style.display = 'none';
+                
+                // Clear discount code
+                document.getElementById('discountCode').value = '';
+                
+                // Clear customer info if any
+                const customerInfo = document.getElementById('customerInfo');
+                if (customerInfo) {
+                    customerInfo.style.display = 'none';
+                }
+                
+                // Clear customer search
+                document.getElementById('customerSearch').value = '';
+                
+                alert('Transaksi berhasil dibatalkan!');
+            }
+        }
+
+        // Focus customer search
+        function focusCustomerSearch() {
+            const customerSearch = document.getElementById('customerSearch');
+            if (customerSearch) {
+                customerSearch.focus();
+                customerSearch.select();
+            }
+        }
+
+        // Show keyboard shortcut tooltip
+        function showTooltip(message) {
+            // Remove existing tooltip if any
+            const existingTooltip = document.getElementById('keyboardTooltip');
+            if (existingTooltip) {
+                existingTooltip.remove();
+            }
+
+            // Create tooltip
+            const tooltip = document.createElement('div');
+            tooltip.id = 'keyboardTooltip';
+            tooltip.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: #2d5016;
+                color: white;
+                padding: 0.75rem 1rem;
+                border-radius: 8px;
+                font-size: 0.9rem;
+                font-weight: 500;
+                box-shadow: 0 4px 12px rgba(45, 80, 22, 0.3);
+                z-index: 10000;
+                animation: slideInRight 0.3s ease, fadeOut 0.3s ease 2.2s;
+                pointer-events: none;
+            `;
+            tooltip.textContent = message;
+
+            // Add animation keyframes
+            if (!document.getElementById('keyboardTooltipStyles')) {
+                const style = document.createElement('style');
+                style.id = 'keyboardTooltipStyles';
+                style.textContent = `
+                    @keyframes slideInRight {
+                        from { transform: translateX(100%); opacity: 0; }
+                        to { transform: translateX(0); opacity: 1; }
+                    }
+                    @keyframes fadeOut {
+                        from { opacity: 1; }
+                        to { opacity: 0; }
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+
+            document.body.appendChild(tooltip);
+
+            // Remove tooltip after animation
+            setTimeout(() => {
+                if (tooltip.parentNode) {
+                    tooltip.remove();
+                }
+            }, 2500);
+        }
+
+        // Display keyboard shortcuts help
+        function showKeyboardShortcutsHelp() {
+            const helpContent = `
+                <h3 style="margin-bottom: 1rem; color: #2d5016;">⌨️ Keyboard Shortcuts POS</h3>
+                <div style="display: grid; gap: 0.5rem; font-size: 0.9rem;">
+                    <div><strong>F1-F12:</strong> Tambah produk populer ke keranjang</div>
+                    <div><strong>Ctrl+P:</strong> Proses pembayaran</div>
+                    <div><strong>Ctrl+D:</strong> Fokus ke kode diskon</div>
+                    <div><strong>ESC:</strong> Batalkan transaksi</div>
+                    <div><strong>Ctrl+N:</strong> Customer baru</div>
+                    <div><strong>Ctrl+F:</strong> Cari customer</div>
+                </div>
+                <div style="margin-top: 1rem; padding: 1rem; background: #f0f8f5; border-radius: 6px; font-size: 0.8rem;">
+                    <strong>Produk F1-F12:</strong><br>
+                    F1: Kopi Americano | F2: Kopi Latte | F3: Cappuccino | F4: Pancong Original<br>
+                    F5: Pancong Coklat | F6: Pancong Keju | F7: Es Teh | F8: Jus Jeruk<br>
+                    F9: Kue Cubit | F10: Pisang Goreng | F11: Es Krim | F12: Air Mineral
+                </div>
+            `;
+
+            // Create or update help modal
+            let helpModal = document.getElementById('keyboardHelpModal');
+            if (!helpModal) {
+                helpModal = document.createElement('div');
+                helpModal.id = 'keyboardHelpModal';
+                helpModal.className = 'modal';
+                helpModal.innerHTML = `
+                    <div class="modal-content" style="max-width: 600px;">
+                        <div class="modal-header">
+                            <h2>Keyboard Shortcuts</h2>
+                            <button class="close-btn" onclick="hideModal('keyboardHelpModal')">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            ${helpContent}
+                        </div>
+                    </div>
+                `;
+                document.body.appendChild(helpModal);
+            }
+
+            helpModal.classList.add('active');
+        }
+
+        // Add keyboard shortcuts help button to POS section
+        document.addEventListener('DOMContentLoaded', function() {
+            // Wait a bit for the DOM to be fully loaded
+            setTimeout(() => {
+                const posHeader = document.querySelector('#pos .section-header');
+                if (posHeader) {
+                    const helpButton = document.createElement('button');
+                    helpButton.className = 'btn btn-secondary';
+                    helpButton.style.cssText = 'margin-left: auto; font-size: 0.9rem;';
+                    helpButton.innerHTML = '<i class="hgi-stroke hgi-keyboard"></i> Shortcuts (?)';
+                    helpButton.onclick = showKeyboardShortcutsHelp;
+                    
+                    // Make header flex to accommodate the button
+                    posHeader.style.display = 'flex';
+                    posHeader.style.alignItems = 'center';
+                    posHeader.style.justifyContent = 'space-between';
+                    
+                    posHeader.appendChild(helpButton);
+                }
+            }, 500);
+        });
+
+    <!-- Modular JavaScript Files -->
+    <script src="js/config.js"></script>
+    <script src="js/keyboard-shortcuts.js"></script>
+    <script src="js/pos-core.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

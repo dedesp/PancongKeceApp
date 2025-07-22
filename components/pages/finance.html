@@ -1,0 +1,315 @@
+<section id="finance" class="section">
+    <div class="section-header">
+        <h2 class="section-title">Manajemen Keuangan</h2>
+        <p class="section-subtitle">Analisis keuangan, cash flow, dan profit analysis</p>
+        <div class="header-actions">
+            <button class="btn-secondary" onclick="showPettyCashModal()">
+                <i class="hgi-stroke hgi-cash-02"></i>
+                Kas Kecil
+            </button>
+            <button class="btn-primary" onclick="showExpenseModal()">
+                <i class="hgi-stroke hgi-receipt-01"></i>
+                Tambah Pengeluaran
+            </button>
+        </div>
+    </div>
+
+    <!-- Finance Summary Cards -->
+    <div class="finance-summary">
+        <div class="summary-card revenue">
+            <div class="summary-icon">
+                <i class="hgi-stroke hgi-trending-up"></i>
+            </div>
+            <div class="summary-content">
+                <h3 id="monthlyRevenue">Rp 0</h3>
+                <p>Revenue Bulan Ini</p>
+                <small class="trend positive">+15% vs bulan lalu</small>
+            </div>
+        </div>
+        <div class="summary-card expenses">
+            <div class="summary-icon">
+                <i class="hgi-stroke hgi-trending-down"></i>
+            </div>
+            <div class="summary-content">
+                <h3 id="monthlyExpenses">Rp 0</h3>
+                <p>Total Pengeluaran</p>
+                <small class="trend negative">+5% vs bulan lalu</small>
+            </div>
+        </div>
+        <div class="summary-card profit">
+            <div class="summary-icon">
+                <i class="hgi-stroke hgi-currency-dollar-circle"></i>
+            </div>
+            <div class="summary-content">
+                <h3 id="monthlyProfit">Rp 0</h3>
+                <p>Net Profit</p>
+                <small class="trend positive">+22% vs bulan lalu</small>
+            </div>
+        </div>
+        <div class="summary-card cash">
+            <div class="summary-icon">
+                <i class="hgi-stroke hgi-cash-01"></i>
+            </div>
+            <div class="summary-content">
+                <h3 id="cashBalance">Rp 0</h3>
+                <p>Saldo Kas</p>
+                <small class="balance-status">Sehat</small>
+            </div>
+        </div>
+    </div>
+
+    <!-- Finance Tabs -->
+    <div class="finance-tabs">
+        <button class="tab-button active" onclick="showFinanceTab('overview')">Overview</button>
+        <button class="tab-button" onclick="showFinanceTab('cashflow')">Cash Flow</button>
+        <button class="tab-button" onclick="showFinanceTab('expenses')">Pengeluaran</button>
+        <button class="tab-button" onclick="showFinanceTab('profit')">Profit Analysis</button>
+    </div>
+
+    <!-- Finance Overview Tab -->
+    <div id="financeOverviewTab" class="finance-tab-content active">
+        <div class="finance-charts-grid">
+            <div class="chart-card">
+                <div class="chart-header">
+                    <h3>Revenue vs Expenses</h3>
+                    <select id="overviewPeriod" onchange="updateOverviewChart()">
+                        <option value="week">7 Hari</option>
+                        <option value="month" selected>30 Hari</option>
+                        <option value="quarter">90 Hari</option>
+                    </select>
+                </div>
+                <div class="chart-container">
+                    <canvas id="revenueExpensesChart" width="400" height="200"></canvas>
+                </div>
+            </div>
+
+            <div class="chart-card">
+                <div class="chart-header">
+                    <h3>Profit Margin Trend</h3>
+                </div>
+                <div class="chart-container">
+                    <canvas id="profitMarginChart" width="400" height="200"></canvas>
+                </div>
+            </div>
+
+            <div class="chart-card">
+                <div class="chart-header">
+                    <h3>Expense Breakdown</h3>
+                </div>
+                <div class="chart-container">
+                    <canvas id="expenseBreakdownChart" width="300" height="300"></canvas>
+                </div>
+            </div>
+
+            <div class="kpi-card">
+                <div class="chart-header">
+                    <h3>Key Metrics</h3>
+                </div>
+                <div class="kpi-list">
+                    <div class="kpi-item">
+                        <span class="kpi-label">Gross Profit Margin</span>
+                        <span class="kpi-value" id="grossProfitMargin">65%</span>
+                    </div>
+                    <div class="kpi-item">
+                        <span class="kpi-label">Net Profit Margin</span>
+                        <span class="kpi-value" id="netProfitMargin">18%</span>
+                    </div>
+                    <div class="kpi-item">
+                        <span class="kpi-label">Break-even Point</span>
+                        <span class="kpi-value" id="breakEvenPoint">Rp 1,200,000</span>
+                    </div>
+                    <div class="kpi-item">
+                        <span class="kpi-label">ROI</span>
+                        <span class="kpi-value" id="roiPercentage">24%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cash Flow Tab -->
+    <div id="financeCashflowTab" class="finance-tab-content">
+        <div class="cashflow-controls">
+            <h3>Cash Flow Analysis</h3>
+            <div class="period-selector">
+                <input type="date" id="cashflowStartDate">
+                <span>to</span>
+                <input type="date" id="cashflowEndDate">
+                <button class="btn-secondary" onclick="updateCashflowChart()">Update</button>
+            </div>
+        </div>
+        
+        <div class="cashflow-chart-container">
+            <canvas id="cashflowChart" width="800" height="400"></canvas>
+        </div>
+
+        <div class="cashflow-summary">
+            <div class="cashflow-item">
+                <label>Cash In:</label>
+                <span id="totalCashIn" class="positive">Rp 0</span>
+            </div>
+            <div class="cashflow-item">
+                <label>Cash Out:</label>
+                <span id="totalCashOut" class="negative">Rp 0</span>
+            </div>
+            <div class="cashflow-item">
+                <label>Net Cash Flow:</label>
+                <span id="netCashFlow">Rp 0</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Expenses Tab -->
+    <div id="financeExpensesTab" class="finance-tab-content">
+        <div class="expenses-controls">
+            <h3>Manajemen Pengeluaran</h3>
+            <div class="expense-filters">
+                <select id="expenseCategory" onchange="filterExpenses()">
+                    <option value="all">Semua Kategori</option>
+                    <option value="food_cost">Food Cost</option>
+                    <option value="labor">Labor</option>
+                    <option value="rent">Sewa</option>
+                    <option value="utilities">Utilitas</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="maintenance">Maintenance</option>
+                    <option value="other">Lainnya</option>
+                </select>
+                <input type="month" id="expenseMonth" onchange="filterExpenses()">
+            </div>
+        </div>
+
+        <div id="expensesList" class="expenses-list">
+            <!-- Expenses will be populated here -->
+        </div>
+    </div>
+
+    <!-- Profit Analysis Tab -->
+    <div id="financeProfitTab" class="finance-tab-content">
+        <div class="profit-analysis">
+            <h3>Profit Analysis</h3>
+            
+            <div class="profit-breakdown">
+                <div class="profit-item">
+                    <label>Gross Sales:</label>
+                    <span id="grossSales">Rp 0</span>
+                </div>
+                <div class="profit-item">
+                    <label>Cost of Goods Sold (COGS):</label>
+                    <span id="totalCOGS" class="negative">-Rp 0</span>
+                </div>
+                <div class="profit-item gross-profit">
+                    <label>Gross Profit:</label>
+                    <span id="grossProfit">Rp 0</span>
+                </div>
+                <div class="profit-item">
+                    <label>Operating Expenses:</label>
+                    <span id="operatingExpenses" class="negative">-Rp 0</span>
+                </div>
+                <div class="profit-item net-profit">
+                    <label>Net Profit:</label>
+                    <span id="netProfit">Rp 0</span>
+                </div>
+            </div>
+
+            <div class="profit-chart">
+                <canvas id="profitAnalysisChart" width="600" height="400"></canvas>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Add Expense Modal -->
+<div id="expenseModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 class="modal-title">Tambah Pengeluaran</h3>
+            <span class="close-btn" onclick="closeExpenseModal()">&times;</span>
+        </div>
+        <div class="modal-body">
+            <form id="expenseForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="expenseDate">Tanggal *</label>
+                        <input type="date" id="expenseDate" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="expenseAmount">Jumlah *</label>
+                        <input type="number" id="expenseAmount" name="amount" required min="0">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="expenseCategory">Kategori *</label>
+                    <select id="expenseCategory" name="category" required>
+                        <option value="">Pilih Kategori</option>
+                        <option value="food_cost">Food Cost</option>
+                        <option value="labor">Labor</option>
+                        <option value="rent">Sewa</option>
+                        <option value="utilities">Utilitas</option>
+                        <option value="marketing">Marketing</option>
+                        <option value="maintenance">Maintenance</option>
+                        <option value="other">Lainnya</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="expenseDescription">Deskripsi *</label>
+                    <textarea id="expenseDescription" name="description" rows="3" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="expenseReceipt">Bukti/Receipt</label>
+                    <input type="file" id="expenseReceipt" name="receipt" accept="image/*,.pdf">
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn-secondary" onclick="closeExpenseModal()">Batal</button>
+            <button type="button" class="btn-primary" onclick="saveExpense()">Simpan Pengeluaran</button>
+        </div>
+    </div>
+</div>
+
+<!-- Petty Cash Modal -->
+<div id="pettyCashModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 class="modal-title">Kas Kecil</h3>
+            <span class="close-btn" onclick="closePettyCashModal()">&times;</span>
+        </div>
+        <div class="modal-body">
+            <div class="petty-cash-balance">
+                <h4>Saldo Kas Kecil: <span id="pettyCashBalance">Rp 0</span></h4>
+            </div>
+            
+            <form id="pettyCashForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="pettyCashType">Tipe Transaksi *</label>
+                        <select id="pettyCashType" name="type" required>
+                            <option value="in">Uang Masuk (+)</option>
+                            <option value="out">Uang Keluar (-)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="pettyCashAmount">Jumlah *</label>
+                        <input type="number" id="pettyCashAmount" name="amount" required min="0">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="pettyCashDescription">Keterangan *</label>
+                    <input type="text" id="pettyCashDescription" name="description" required>
+                </div>
+            </form>
+            
+            <div id="pettyCashHistory" class="petty-cash-history">
+                <!-- Petty cash history will be populated here -->
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn-secondary" onclick="closePettyCashModal()">Batal</button>
+            <button type="button" class="btn-primary" onclick="savePettyCash()">Simpan Transaksi</button>
+        </div>
+    </div>
+</div>

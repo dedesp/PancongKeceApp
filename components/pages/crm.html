@@ -1,0 +1,195 @@
+<section id="crm" class="section">
+    <div class="section-header">
+        <h2 class="section-title">CRM & Customer Intelligence</h2>
+        <p class="section-subtitle">Analisis perilaku customer dan kampanye marketing</p>
+        <button class="btn-primary" onclick="showCampaignModal()">
+            <i class="hgi-stroke hgi-megaphone-01"></i>
+            Buat Kampanye
+        </button>
+    </div>
+
+    <!-- CRM Tabs -->
+    <div class="crm-tabs">
+        <button class="tab-button active" onclick="showCRMTab('analytics')">Customer Analytics</button>
+        <button class="tab-button" onclick="showCRMTab('segments')">Segmentasi</button>
+        <button class="tab-button" onclick="showCRMTab('campaigns')">Kampanye</button>
+        <button class="tab-button" onclick="showCRMTab('feedback')">Feedback</button>
+    </div>
+
+    <!-- Customer Analytics Tab -->
+    <div id="crmAnalyticsTab" class="crm-tab-content active">
+        <!-- Customer Behavior Analytics -->
+        <div class="analytics-grid">
+            <div class="analytics-card">
+                <div class="card-header">
+                    <h3>Customer Lifetime Value</h3>
+                </div>
+                <div class="chart-container">
+                    <canvas id="clvChart" width="400" height="200"></canvas>
+                </div>
+            </div>
+
+            <div class="analytics-card">
+                <div class="card-header">
+                    <h3>Frequency Distribution</h3>
+                </div>
+                <div id="frequencyChart" class="chart-container">
+                    <!-- Frequency chart will be here -->
+                </div>
+            </div>
+
+            <div class="analytics-card">
+                <div class="card-header">
+                    <h3>Churn Risk Analysis</h3>
+                </div>
+                <div id="churnAnalysis" class="churn-analysis">
+                    <!-- Churn analysis data -->
+                </div>
+            </div>
+
+            <div class="analytics-card">
+                <div class="card-header">
+                    <h3>Top Customers</h3>
+                </div>
+                <div id="topCustomersList" class="top-customers-list">
+                    <!-- Top customers will be populated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Segmentation Tab -->
+    <div id="crmSegmentsTab" class="crm-tab-content">
+        <div class="segmentation-controls">
+            <h3>Customer Segmentation</h3>
+            <button class="btn-secondary" onclick="generateSegments()">
+                <i class="hgi-stroke hgi-analytics-01"></i>
+                Auto Generate Segments
+            </button>
+        </div>
+        
+        <div id="segmentsList" class="segments-list">
+            <!-- Customer segments will be populated here -->
+        </div>
+    </div>
+
+    <!-- Campaigns Tab -->
+    <div id="crmCampaignsTab" class="crm-tab-content">
+        <div class="campaigns-header">
+            <h3>Marketing Campaigns</h3>
+            <div class="campaigns-stats">
+                <div class="stat-item">
+                    <span class="stat-value" id="activeCampaigns">0</span>
+                    <span class="stat-label">Campaign Aktif</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" id="campaignReach">0</span>
+                    <span class="stat-label">Total Reach</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value" id="campaignConversion">0%</span>
+                    <span class="stat-label">Conversion Rate</span>
+                </div>
+            </div>
+        </div>
+        
+        <div id="campaignsList" class="campaigns-list">
+            <!-- Campaigns will be populated here -->
+        </div>
+    </div>
+
+    <!-- Feedback Tab -->
+    <div id="crmFeedbackTab" class="crm-tab-content">
+        <div class="feedback-summary">
+            <h3>Customer Feedback Analysis</h3>
+            <div class="feedback-stats">
+                <div class="feedback-rating">
+                    <span class="rating-score" id="averageRating">4.5</span>
+                    <div class="rating-stars">★★★★★</div>
+                    <span class="rating-count">dari 127 review</span>
+                </div>
+                <div class="sentiment-analysis">
+                    <div class="sentiment-item positive">
+                        <span class="sentiment-label">Positive</span>
+                        <span class="sentiment-value">78%</span>
+                    </div>
+                    <div class="sentiment-item neutral">
+                        <span class="sentiment-label">Neutral</span>
+                        <span class="sentiment-value">15%</span>
+                    </div>
+                    <div class="sentiment-item negative">
+                        <span class="sentiment-label">Negative</span>
+                        <span class="sentiment-value">7%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="feedbackList" class="feedback-list">
+            <!-- Customer feedback will be populated here -->
+        </div>
+    </div>
+</section>
+
+<!-- Campaign Modal -->
+<div id="campaignModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 class="modal-title">Buat Kampanye Marketing</h3>
+            <span class="close-btn" onclick="closeCampaignModal()">&times;</span>
+        </div>
+        <div class="modal-body">
+            <form id="campaignForm">
+                <div class="form-group">
+                    <label for="campaignName">Nama Kampanye *</label>
+                    <input type="text" id="campaignName" name="name" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="campaignType">Tipe Kampanye *</label>
+                        <select id="campaignType" name="type" required>
+                            <option value="">Pilih Tipe</option>
+                            <option value="promotion">Promosi</option>
+                            <option value="loyalty">Program Loyalty</option>
+                            <option value="announcement">Pengumuman</option>
+                            <option value="feedback">Survey/Feedback</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="campaignChannel">Channel *</label>
+                        <select id="campaignChannel" name="channel" required>
+                            <option value="whatsapp">WhatsApp</option>
+                            <option value="email">Email</option>
+                            <option value="sms">SMS</option>
+                            <option value="in-app">In-App</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="campaignMessage">Pesan Kampanye *</label>
+                    <textarea id="campaignMessage" name="message" rows="4" required placeholder="Tulis pesan kampanye..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="targetSegment">Target Segment</label>
+                    <select id="targetSegment" name="targetSegment">
+                        <option value="all">Semua Customer</option>
+                        <option value="new">Customer Baru</option>
+                        <option value="regular">Regular Customer</option>
+                        <option value="vip">VIP Customer</option>
+                        <option value="inactive">Customer Tidak Aktif</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn-secondary" onclick="closeCampaignModal()">Batal</button>
+            <button type="button" class="btn-primary" onclick="launchCampaign()">
+                <i class="hgi-stroke hgi-rocket-01"></i>
+                Launch Kampanye
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pancong Kece - Sistem Manajemen Cafe</title>
+    <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <i class="hgi-stroke hgi-home-01"></i>
+            <h1>Pancong Kece</h1>
+        </div>
+        <div class="user-info">
+            <span class="user-role" id="currentRole">Kasir</span>
+            <i class="hgi-stroke hgi-user-circle"></i>
+            <span id="currentUser">Andi Pratama</span>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <a href="#" class="nav-item active" data-section="dashboard">
+                <i class="hgi-stroke hgi-dashboard-circle"></i>
+                <span class="nav-text">Dashboard</span>
+            </a>
+            <a href="#" class="nav-item" data-section="pos">
+                <i class="hgi-stroke hgi-cashier"></i>
+                <span class="nav-text">Point of Sales</span>
+            </a>
+            <a href="#" class="nav-item manager-only" data-section="products">
+                <i class="hgi-stroke hgi-menu-restaurant"></i>
+                <span class="nav-text">Manajemen Produk</span>
+            </a>
+            <a href="#" class="nav-item manager-only" data-section="inventory">
+                <i class="hgi-stroke hgi-trolley-02"></i>
+                <span class="nav-text">Inventaris</span>
+            </a>
+            <a href="#" class="nav-item manager-only" data-section="employees">
+                <i class="hgi-stroke hgi-user-group"></i>
+                <span class="nav-text">Karyawan</span>
+            </a>
+            <a href="#" class="nav-item manager-only" data-section="customers">
+                <i class="hgi-stroke hgi-user-heart-01"></i>
+                <span class="nav-text">Customer</span>
+            </a>
+            <a href="#" class="nav-item manager-only" data-section="crm">
+                <i class="hgi-stroke hgi-customer-service-02"></i>
+                <span class="nav-text">CRM</span>
+            </a>
+            <a href="#" class="nav-item manager-only" data-section="automation">
+                <i class="hgi-stroke hgi-ai-brain-02"></i>
+                <span class="nav-text">AI & Automation</span>
+            </a>
+            <a href="#" class="nav-item manager-only" data-section="finance">
+                <i class="hgi-stroke hgi-analytics-01"></i>
+                <span class="nav-text">Keuangan</span>
+            </a>
+            <a href="#" class="nav-item manager-only" data-section="reports">
+                <i class="hgi-stroke hgi-invoice-01"></i>
+                <span class="nav-text">Laporan</span>
+            </a>
+            <a href="#" class="nav-item" data-section="settings">
+                <i class="hgi-stroke hgi-settings-01"></i>
+                <span class="nav-text">Pengaturan</span>
+            </a>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Dashboard Section -->
+            <section id="dashboard" class="section active">
+                <div class="section-header">
+                    <h2 class="section-title">Dashboard</h2>
+                    <p class="section-subtitle">Ringkasan aktivitas cafe hari ini</p>
+                </div>
+
+                <!-- Cafe Status Bar -->
+                <div class="cafe-status-bar" style="background: #f0f8f5; border: 2px solid #4a7c59; border-radius: 12px; padding: 1rem; margin-bottom: 2rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div id="cafeStatusIcon" style="width: 24px; height: 24px; border-radius: 50%; background: #28a745;"></div>
+                            <div>
+                                <div id="cafeStatusText" style="font-weight: 700; color: #2d5016; font-size: 1.1rem;">Cafe Buka</div>
+                                <div id="cafeStatusTime" style="color: #4a7c59; font-size: 0.9rem;">Dibuka pukul 08:00</div>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 0.5rem;">
+                            <button id="openCafeBtn" class="btn btn-success" onclick="toggleCafe('open')" style="display: none;">
+                                <i class="hgi-stroke hgi-door-01"></i>
+                                Buka Cafe
+                            </button>
+                            <button id="closeCafeBtn" class="btn btn-danger" onclick="toggleCafe('close')">
+                                <i class="hgi-stroke hgi-door-exit"></i>
+                                Tutup Cafe
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">Rp 2.450.000</div>
+                        <div class="stat-label">Penjualan Hari Ini</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">127</div>
+                        <div class="stat-label">Transaksi</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">8</div>
+                        <div class="stat-label">Karyawan Aktif</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">Kepuasan Pelanggan</div>
+                    </div>
+                </div>
+
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="hgi-stroke hgi-cash-01"></i>
+                            </div>
+                            <div>
+                                <div class="card-title">Transaksi Terbaru</div>
+                                <div class="card-subtitle">5 transaksi terakhir</div>
+                            </div>
+                        </div>
+                        <div class="table-container">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Waktu</th>
+                                        <th>Total</th>
+                                        <th>Metode</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>15:30</td>
+                                        <td>Rp 45.000</td>
+                                        <td>QRIS</td>
+                                    </tr>
+                                    <tr>
+                                        <td>15:15</td>
+                                        <td>Rp 32.000</td>
+                                        <td>Cash</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14:50</td>
+                                        <td>Rp 28.000</td>
+                                        <td>Card</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14:35</td>
+                                        <td>Rp 15.000</td>
+                                        <td>Cash</td>
+                                    </tr>
+                                    <tr>
+                                        <td>14:20</td>
+                                        <td>Rp 52.000</td>
+                                        <td>QRIS</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="hgi-stroke hgi-analytics-02"></i>
+                            </div>
+                            <div>
+                                <div class="card-title">Produk Terlaris</div>
+                                <div class="card-subtitle">Hari ini</div>
+                            </div>
+                        </div>
+                        <div class="loading">
+                            <div class="spinner"></div>
+                            <p>Memuat data...</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Point of Sales Section -->
+            <section id="pos" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Point of Sales</h2>
+                    <p class="section-subtitle">Sistem kasir dengan shortcut keyboard - Press F1-F12 untuk item populer</p>
+                </div>
+
+                <div class="pos-container">
+                    <div class="menu-section">
+                        <h3 style="margin-bottom: 1rem; color: #2d5016;">Menu Items</h3>
+                        <div class="menu-grid" id="menuGrid">
+                            <!-- Menu items will be loaded by JavaScript -->
+                        </div>
+                    </div>
+
+                    <div class="cart-section">
+                        <div class="cart-header">
+                            <h3 style="color: #2d5016; margin-bottom: 0.5rem;">Keranjang Belanja</h3>
+                            <p style="color: #4a7c59; font-size: 0.9rem;">Gunakan Ctrl+P untuk bayar, Ctrl+D untuk diskon</p>
+                        </div>
+
+                        <div class="cart-items" id="cartItems">
+                            <p style="text-align: center; color: #4a7c59; padding: 2rem;">Keranjang kosong</p>
+                        </div>
+
+                        <div class="cart-total">
+                            <!-- Subtotal -->
+                            <div id="subtotalDisplay" style="display: none; margin-bottom: 1rem;">
+                                <div style="display: flex; justify-content: space-between; color: #4a7c59; font-size: 0.9rem;">
+                                    <span>Subtotal:</span>
+                                    <span id="subtotalAmount">Rp 0</span>
+                                </div>
+                            </div>
+
+                            <!-- Discount Display -->
+                            <div id="discountDisplay" style="display: none; margin-bottom: 1rem;"></div>
+
+                            <!-- Tax and Service Breakdown -->
+                            <div id="taxServiceBreakdown" style="display: none; margin-bottom: 1rem;"></div>
+
+                            <!-- Rounding Display -->
+                            <div id="roundingDisplay" style="display: none; margin-bottom: 1rem;">
+                                <div style="display: flex; justify-content: space-between; color: #4a7c59; font-size: 0.9rem;">
+                                    <span>Pembulatan:</span>
+                                    <span id="roundingAmount">Rp 0</span>
+                                </div>
+                            </div>
+
+                            <!-- Final Total -->
+                            <div class="total-amount" id="totalAmount">Rp 0</div>
+
+                            <!-- Payment Methods -->
+                            <div class="payment-methods">
+                                <div class="payment-method active" data-method="cash">
+                                    <i class="hgi-stroke hgi-cash-01"></i>
+                                    <div>Cash</div>
+                                </div>
+                                <div class="payment-method" data-method="qris">
+                                    <i class="hgi-stroke hgi-qr-code-01"></i>
+                                    <div>QRIS</div>
+                                </div>
+                                <div class="payment-method" data-method="card">
+                                    <i class="hgi-stroke hgi-credit-card"></i>
+                                    <div>Card</div>
+                                </div>
+                            </div>
+
+                            <!-- Cash Payment Section -->
+                            <div id="cashPaymentSection" style="margin-bottom: 1rem;">
+                                <div class="form-group">
+                                    <label class="form-label">Jumlah Bayar</label>
+                                    <input type="number" class="form-input" id="cashAmount" placeholder="Masukkan jumlah uang" oninput="calculateChange()">
+                                </div>
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+                                    <span style="font-weight: 600; color: #2d5016;">Kembalian:</span>
+                                    <span id="changeAmount" style="font-weight: 700; color: #2d5016;">Rp 0</span>
+                                </div>
+                            </div>
+
+                            <!-- Process Payment Button -->
+                            <button class="btn btn-primary" onclick="processPayment()" style="width: 100%; margin-bottom: 0.5rem;">
+                                <i class="hgi-stroke hgi-cash-02"></i>
+                                Proses Pembayaran
+                            </button>
+                            
+                            <!-- Clear Cart Button -->
+                            <button class="btn btn-secondary" onclick="clearCart()" style="width: 100%;">
+                                <i class="hgi-stroke hgi-shopping-cart-remove-02"></i>
+                                Bersihkan Keranjang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Products Section -->
+            <section id="products" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Manajemen Produk</h2>
+                    <p class="section-subtitle">Kelola menu dan produk cafe</p>
+                </div>
+
+                <div class="cards-grid">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="hgi-stroke hgi-add-circle"></i>
+                            </div>
+                            <div>
+                                <div class="card-title">Tambah Produk</div>
+                                <div class="card-subtitle">Buat produk baru</div>
+                            </div>
+                        </div>
+                        <p>Fitur manajemen produk dalam pengembangan...</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i class="hgi-stroke hgi-view-01"></i>
+                            </div>
+                            <div>
+                                <div class="card-title">Daftar Produk</div>
+                                <div class="card-subtitle">Kelola produk existing</div>
+                            </div>
+                        </div>
+                        <p>Lihat dan edit produk yang sudah ada...</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Other sections (inventory, employees, customers, etc.) -->
+            <section id="inventory" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Inventaris</h2>
+                    <p class="section-subtitle">Manajemen stok dan inventaris</p>
+                </div>
+                <div class="card">
+                    <p>Fitur inventaris dalam pengembangan...</p>
+                </div>
+            </section>
+
+            <section id="employees" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Karyawan</h2>
+                    <p class="section-subtitle">Manajemen karyawan dan shift</p>
+                </div>
+                <div class="card">
+                    <p>Fitur manajemen karyawan dalam pengembangan...</p>
+                </div>
+            </section>
+
+            <section id="customers" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Customer</h2>
+                    <p class="section-subtitle">Database pelanggan dan loyalitas</p>
+                </div>
+                <div class="card">
+                    <p>Fitur customer database dalam pengembangan...</p>
+                </div>
+            </section>
+
+            <section id="crm" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">CRM</h2>
+                    <p class="section-subtitle">Customer Relationship Management</p>
+                </div>
+                <div class="card">
+                    <p>Fitur CRM dalam pengembangan...</p>
+                </div>
+            </section>
+
+            <section id="automation" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">AI & Automation</h2>
+                    <p class="section-subtitle">Otomasi dan kecerdasan buatan</p>
+                </div>
+                <div class="card">
+                    <p>Fitur AI & automation dalam pengembangan...</p>
+                </div>
+            </section>
+
+            <section id="finance" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Keuangan</h2>
+                    <p class="section-subtitle">Manajemen keuangan dan akuntansi</p>
+                </div>
+                <div class="card">
+                    <p>Fitur keuangan dalam pengembangan...</p>
+                </div>
+            </section>
+
+            <section id="reports" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Laporan</h2>
+                    <p class="section-subtitle">Laporan penjualan dan analitik</p>
+                </div>
+                <div class="card">
+                    <p>Fitur laporan dalam pengembangan...</p>
+                </div>
+            </section>
+
+            <section id="settings" class="section">
+                <div class="section-header">
+                    <h2 class="section-title">Pengaturan</h2>
+                    <p class="section-subtitle">Konfigurasi sistem</p>
+                </div>
+                <div class="card">
+                    <p>Fitur pengaturan dalam pengembangan...</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Success Message -->
+    <div class="success-message" id="successMessage">
+        <p>Operasi berhasil!</p>
+    </div>
+
+    <!-- Modular JavaScript Files -->
+    <script src="js/config.js"></script>
+    <script src="js/keyboard-shortcuts.js"></script>
+    <script src="js/pos-core.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

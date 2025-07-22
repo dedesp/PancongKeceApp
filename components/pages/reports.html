@@ -1,0 +1,234 @@
+<section id="reports" class="section">
+    <div class="section-header">
+        <h2 class="section-title">Laporan</h2>
+        <p class="section-subtitle">Laporan penjualan dan analitik</p>
+    </div>
+
+    <!-- Report Filter Controls -->
+    <div class="report-controls">
+        <div class="date-range-picker">
+            <label>Periode Laporan:</label>
+            <select id="reportPeriod" onchange="updateReportPeriod()">
+                <option value="today">Hari Ini</option>
+                <option value="yesterday">Kemarin</option>
+                <option value="week">Minggu Ini</option>
+                <option value="month" selected>Bulan Ini</option>
+                <option value="custom">Custom Range</option>
+            </select>
+            <div id="customDateRange" style="display: none;">
+                <input type="date" id="startDate">
+                <span>sampai</span>
+                <input type="date" id="endDate">
+                <button class="btn-secondary btn-sm" onclick="applyCustomRange()">Apply</button>
+            </div>
+        </div>
+        <button class="btn-primary" onclick="generateReport()">
+            <i class="hgi-stroke hgi-refresh"></i>
+            Generate Laporan
+        </button>
+    </div>
+
+    <!-- Summary Cards -->
+    <div class="summary-cards">
+        <div class="summary-card">
+            <div class="summary-icon">
+                <i class="hgi-stroke hgi-currency-dollar-circle"></i>
+            </div>
+            <div class="summary-content">
+                <h3 id="totalRevenue">Rp 0</h3>
+                <p>Total Pendapatan</p>
+            </div>
+        </div>
+        <div class="summary-card">
+            <div class="summary-icon">
+                <i class="hgi-stroke hgi-shopping-cart-01"></i>
+            </div>
+            <div class="summary-content">
+                <h3 id="totalTransactions">0</h3>
+                <p>Total Transaksi</p>
+            </div>
+        </div>
+        <div class="summary-card">
+            <div class="summary-icon">
+                <i class="hgi-stroke hgi-package"></i>
+            </div>
+            <div class="summary-content">
+                <h3 id="totalItems">0</h3>
+                <p>Total Item Terjual</p>
+            </div>
+        </div>
+        <div class="summary-card">
+            <div class="summary-icon">
+                <i class="hgi-stroke hgi-trending-up"></i>
+            </div>
+            <div class="summary-content">
+                <h3 id="averageTransaction">Rp 0</h3>
+                <p>Rata-rata per Transaksi</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Charts and Analytics -->
+    <div class="analytics-grid">
+        <!-- Sales Chart -->
+        <div class="analytics-card">
+            <div class="card-header">
+                <h3>Trend Penjualan</h3>
+                <select id="salesChartPeriod" onchange="updateSalesChart()">
+                    <option value="daily">Harian</option>
+                    <option value="weekly">Mingguan</option>
+                    <option value="monthly">Bulanan</option>
+                </select>
+            </div>
+            <div class="chart-container">
+                <canvas id="salesChart" width="400" height="200"></canvas>
+            </div>
+        </div>
+
+        <!-- Top Products -->
+        <div class="analytics-card">
+            <div class="card-header">
+                <h3>Produk Terlaris</h3>
+            </div>
+            <div id="topProductsList" class="top-products-list">
+                <!-- Top products will be populated here -->
+            </div>
+        </div>
+
+        <!-- Payment Methods -->
+        <div class="analytics-card">
+            <div class="card-header">
+                <h3>Metode Pembayaran</h3>
+            </div>
+            <div class="payment-methods-chart">
+                <canvas id="paymentChart" width="300" height="300"></canvas>
+            </div>
+        </div>
+
+        <!-- Hourly Sales -->
+        <div class="analytics-card">
+            <div class="card-header">
+                <h3>Penjualan per Jam</h3>
+            </div>
+            <div class="chart-container">
+                <canvas id="hourlyChart" width="400" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Detailed Reports Table -->
+    <div class="reports-table-section">
+        <div class="section-header">
+            <h3>Detail Transaksi</h3>
+            <div class="table-controls">
+                <input type="text" id="transactionSearch" placeholder="Cari transaksi..." onkeyup="searchTransactions()">
+                <button class="btn-secondary" onclick="exportReport()">
+                    <i class="hgi-stroke hgi-download-01"></i>
+                    Export CSV
+                </button>
+            </div>
+        </div>
+        <div class="table-container">
+            <table id="transactionsTable">
+                <thead>
+                    <tr>
+                        <th>No. Transaksi</th>
+                        <th>Tanggal/Waktu</th>
+                        <th>Items</th>
+                        <th>Metode Bayar</th>
+                        <th>Subtotal</th>
+                        <th>Pajak/Service</th>
+                        <th>Total</th>
+                        <th>Kasir</th>
+                    </tr>
+                </thead>
+                <tbody id="transactionsTableBody">
+                    <!-- Transaction data will be populated here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Financial Summary -->
+    <div class="financial-summary">
+        <h3>Ringkasan Keuangan</h3>
+        <div class="financial-grid">
+            <div class="financial-item">
+                <label>Total Penjualan Kotor:</label>
+                <span id="grossSales">Rp 0</span>
+            </div>
+            <div class="financial-item">
+                <label>Total PPN:</label>
+                <span id="totalTax">Rp 0</span>
+            </div>
+            <div class="financial-item">
+                <label>Total Service Charge:</label>
+                <span id="totalService">Rp 0</span>
+            </div>
+            <div class="financial-item">
+                <label>Total Diskon:</label>
+                <span id="totalDiscount">Rp 0</span>
+            </div>
+            <div class="financial-item">
+                <label>Penjualan Bersih:</label>
+                <span id="netSales">Rp 0</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Export Options Modal -->
+<div id="exportModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 class="modal-title">Export Laporan</h3>
+            <span class="close-btn" onclick="closeExportModal()">&times;</span>
+        </div>
+        <div class="modal-body">
+            <div class="export-options">
+                <h4>Pilih Format Export:</h4>
+                <div class="export-format-options">
+                    <label>
+                        <input type="radio" name="exportFormat" value="csv" checked>
+                        CSV (Comma Separated Values)
+                    </label>
+                    <label>
+                        <input type="radio" name="exportFormat" value="excel">
+                        Excel (.xlsx)
+                    </label>
+                    <label>
+                        <input type="radio" name="exportFormat" value="pdf">
+                        PDF Report
+                    </label>
+                </div>
+                
+                <h4>Data yang akan di-export:</h4>
+                <div class="export-data-options">
+                    <label>
+                        <input type="checkbox" name="exportData" value="summary" checked>
+                        Ringkasan Laporan
+                    </label>
+                    <label>
+                        <input type="checkbox" name="exportData" value="transactions" checked>
+                        Detail Transaksi
+                    </label>
+                    <label>
+                        <input type="checkbox" name="exportData" value="products">
+                        Analisis Produk
+                    </label>
+                    <label>
+                        <input type="checkbox" name="exportData" value="payments">
+                        Metode Pembayaran
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn-secondary" onclick="closeExportModal()">Batal</button>
+            <button type="button" class="btn-primary" onclick="processExport()">
+                <i class="hgi-stroke hgi-download-01"></i>
+                Download
+            </button>
+        </div>
+    </div>
+</div>

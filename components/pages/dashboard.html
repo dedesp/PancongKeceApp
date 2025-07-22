@@ -1,0 +1,93 @@
+<!-- Dashboard Page Component -->
+<div class="section-header">
+    <h2 class="section-title">Dashboard</h2>
+    <p class="section-subtitle">Ringkasan aktivitas cafe hari ini</p>
+</div>
+
+<!-- Cafe Status Bar -->
+<div class="cafe-status-bar" style="background: #f0f8f5; border: 2px solid #4a7c59; border-radius: 12px; padding: 1rem; margin-bottom: 2rem;">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div style="display: flex; align-items: center; gap: 1rem;">
+            <div id="cafeStatusIcon" style="width: 24px; height: 24px; border-radius: 50%; background: #28a745;"></div>
+            <div>
+                <div id="cafeStatusText" style="font-weight: 700; color: #2d5016; font-size: 1.1rem;">Cafe {{cafeStatus}}</div>
+                <div id="cafeStatusTime" style="color: #4a7c59; font-size: 0.9rem;">{{cafeStatusTime}}</div>
+            </div>
+        </div>
+        <div style="display: flex; gap: 0.5rem;">
+            <button id="openCafeBtn" class="btn btn-success" onclick="toggleCafe('open')" style="display: none;">
+                <i class="hgi-stroke hgi-door-01"></i>
+                Buka Cafe
+            </button>
+            <button id="closeCafeBtn" class="btn btn-danger" onclick="toggleCafe('close')">
+                <i class="hgi-stroke hgi-door-exit"></i>
+                Tutup Cafe
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="stats-grid">
+    <div class="stat-card">
+        <div class="stat-number">{{todaySales}}</div>
+        <div class="stat-label">Penjualan Hari Ini</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-number">{{todayTransactions}}</div>
+        <div class="stat-label">Transaksi</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-number">{{activeEmployees}}</div>
+        <div class="stat-label">Karyawan Aktif</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-number">{{customerSatisfaction}}</div>
+        <div class="stat-label">Kepuasan Pelanggan</div>
+    </div>
+</div>
+
+<div class="cards-grid">
+    <div class="card">
+        <div class="card-header">
+            <div class="card-icon">
+                <i class="hgi-stroke hgi-cash-01"></i>
+            </div>
+            <div>
+                <div class="card-title">Transaksi Terbaru</div>
+                <div class="card-subtitle">5 transaksi terakhir</div>
+            </div>
+        </div>
+        <div class="table-container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Waktu</th>
+                        <th>Total</th>
+                        <th>Metode</th>
+                    </tr>
+                </thead>
+                <tbody id="recentTransactions">
+                    <!-- Recent transactions will be populated by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <div class="card-icon">
+                <i class="hgi-stroke hgi-analytics-02"></i>
+            </div>
+            <div>
+                <div class="card-title">Produk Terlaris</div>
+                <div class="card-subtitle">Hari ini</div>
+            </div>
+        </div>
+        <div id="topProducts">
+            <div class="loading">
+                <div class="spinner"></div>
+                <p>Memuat data...</p>
+            </div>
+        </div>
+    </div>
+</div>

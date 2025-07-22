@@ -1,0 +1,180 @@
+<section id="products" class="section">
+    <div class="section-header">
+        <h2 class="section-title">Manajemen Produk</h2>
+        <p class="section-subtitle">Kelola menu dan produk cafe</p>
+        <button class="btn-primary" onclick="showAddProductModal()">
+            <i class="hgi-stroke hgi-add-circle"></i>
+            Tambah Produk Baru
+        </button>
+    </div>
+
+    <!-- Product Categories Filter -->
+    <div class="filter-tabs">
+        <button class="filter-tab active" data-category="all" onclick="filterProducts('all')">Semua Produk</button>
+        <button class="filter-tab" data-category="beverages" onclick="filterProducts('beverages')">Minuman</button>
+        <button class="filter-tab" data-category="food" onclick="filterProducts('food')">Makanan</button>
+        <button class="filter-tab" data-category="snacks" onclick="filterProducts('snacks')">Snack</button>
+        <button class="filter-tab" data-category="others" onclick="filterProducts('others')">Lainnya</button>
+    </div>
+
+    <!-- Search and Sort -->
+    <div class="search-sort-bar">
+        <div class="search-input-wrapper">
+            <input type="text" id="productSearchInput" placeholder="Cari produk..." onkeyup="searchProducts()">
+            <i class="hgi-stroke hgi-search-01"></i>
+        </div>
+        <select id="productSortSelect" onchange="sortProducts()" class="sort-select">
+            <option value="name">Urutkan: Nama</option>
+            <option value="price">Urutkan: Harga</option>
+            <option value="category">Urutkan: Kategori</option>
+            <option value="popularity">Urutkan: Popularitas</option>
+        </select>
+    </div>
+
+    <!-- Products Grid -->
+    <div id="productsGrid" class="products-grid">
+        <!-- Products will be dynamically loaded here -->
+    </div>
+</section>
+
+<!-- Add Product Modal -->
+<div id="addProductModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 class="modal-title">Tambah Produk Baru</h3>
+            <span class="close-btn" onclick="closeAddProductModal()">&times;</span>
+        </div>
+        <div class="modal-body">
+            <form id="addProductForm">
+                <div class="form-group">
+                    <label for="productName">Nama Produk *</label>
+                    <input type="text" id="productName" name="name" required placeholder="Masukkan nama produk">
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="productCategory">Kategori *</label>
+                        <select id="productCategory" name="category" required>
+                            <option value="">Pilih Kategori</option>
+                            <option value="beverages">Minuman</option>
+                            <option value="food">Makanan</option>
+                            <option value="snacks">Snack</option>
+                            <option value="others">Lainnya</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="productPrice">Harga *</label>
+                        <input type="number" id="productPrice" name="price" required placeholder="0" min="0">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="productDescription">Deskripsi</label>
+                    <textarea id="productDescription" name="description" rows="3" placeholder="Deskripsi produk (opsional)"></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="productKeyboardShortcut">Keyboard Shortcut</label>
+                        <select id="productKeyboardShortcut" name="keyboardShortcut">
+                            <option value="">Tidak ada shortcut</option>
+                            <option value="F1">F1</option>
+                            <option value="F2">F2</option>
+                            <option value="F3">F3</option>
+                            <option value="F4">F4</option>
+                            <option value="F5">F5</option>
+                            <option value="F6">F6</option>
+                            <option value="F7">F7</option>
+                            <option value="F8">F8</option>
+                            <option value="F9">F9</option>
+                            <option value="F10">F10</option>
+                            <option value="F11">F11</option>
+                            <option value="F12">F12</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="productAvailable" name="available" checked>
+                            Produk tersedia
+                        </label>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn-secondary" onclick="closeAddProductModal()">Batal</button>
+            <button type="button" class="btn-primary" onclick="saveProduct()">Simpan Produk</button>
+        </div>
+    </div>
+</div>
+
+<!-- Edit Product Modal -->
+<div id="editProductModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 class="modal-title">Edit Produk</h3>
+            <span class="close-btn" onclick="closeEditProductModal()">&times;</span>
+        </div>
+        <div class="modal-body">
+            <form id="editProductForm">
+                <input type="hidden" id="editProductId">
+                <div class="form-group">
+                    <label for="editProductName">Nama Produk *</label>
+                    <input type="text" id="editProductName" name="name" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="editProductCategory">Kategori *</label>
+                        <select id="editProductCategory" name="category" required>
+                            <option value="beverages">Minuman</option>
+                            <option value="food">Makanan</option>
+                            <option value="snacks">Snack</option>
+                            <option value="others">Lainnya</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="editProductPrice">Harga *</label>
+                        <input type="number" id="editProductPrice" name="price" required min="0">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="editProductDescription">Deskripsi</label>
+                    <textarea id="editProductDescription" name="description" rows="3"></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="editProductKeyboardShortcut">Keyboard Shortcut</label>
+                        <select id="editProductKeyboardShortcut" name="keyboardShortcut">
+                            <option value="">Tidak ada shortcut</option>
+                            <option value="F1">F1</option>
+                            <option value="F2">F2</option>
+                            <option value="F3">F3</option>
+                            <option value="F4">F4</option>
+                            <option value="F5">F5</option>
+                            <option value="F6">F6</option>
+                            <option value="F7">F7</option>
+                            <option value="F8">F8</option>
+                            <option value="F9">F9</option>
+                            <option value="F10">F10</option>
+                            <option value="F11">F11</option>
+                            <option value="F12">F12</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="editProductAvailable" name="available">
+                            Produk tersedia
+                        </label>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn-secondary" onclick="closeEditProductModal()">Batal</button>
+            <button type="button" class="btn-primary" onclick="updateProduct()">Update Produk</button>
+        </div>
+    </div>
+</div>

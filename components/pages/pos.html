@@ -1,0 +1,92 @@
+<!-- Point of Sales Component -->
+<div class="section-header">
+    <h2 class="section-title">Point of Sales</h2>
+    <p class="section-subtitle">Sistem kasir dengan shortcut keyboard - Press F1-F12 untuk item populer</p>
+</div>
+
+<div class="pos-container">
+    <div class="menu-section">
+        <h3 style="margin-bottom: 1rem; color: #2d5016;">Menu Items</h3>
+        <div class="menu-grid" id="menuGrid">
+            <!-- Menu items will be loaded by JavaScript -->
+        </div>
+    </div>
+
+    <div class="cart-section">
+        <div class="cart-header">
+            <h3 style="color: #2d5016; margin-bottom: 0.5rem;">Keranjang Belanja</h3>
+            <p style="color: #4a7c59; font-size: 0.9rem;">Gunakan Ctrl+P untuk bayar, Ctrl+D untuk diskon</p>
+        </div>
+
+        <div class="cart-items" id="cartItems">
+            <p style="text-align: center; color: #4a7c59; padding: 2rem;">Keranjang kosong</p>
+        </div>
+
+        <div class="cart-total">
+            <!-- Subtotal -->
+            <div id="subtotalDisplay" style="display: none; margin-bottom: 1rem;">
+                <div style="display: flex; justify-content: space-between; color: #4a7c59; font-size: 0.9rem;">
+                    <span>Subtotal:</span>
+                    <span id="subtotalAmount">Rp 0</span>
+                </div>
+            </div>
+
+            <!-- Discount Display -->
+            <div id="discountDisplay" style="display: none; margin-bottom: 1rem;"></div>
+
+            <!-- Tax and Service Breakdown -->
+            <div id="taxServiceBreakdown" style="display: none; margin-bottom: 1rem;"></div>
+
+            <!-- Rounding Display -->
+            <div id="roundingDisplay" style="display: none; margin-bottom: 1rem;">
+                <div style="display: flex; justify-content: space-between; color: #4a7c59; font-size: 0.9rem;">
+                    <span>Pembulatan:</span>
+                    <span id="roundingAmount">Rp 0</span>
+                </div>
+            </div>
+
+            <!-- Final Total -->
+            <div class="total-amount" id="totalAmount">Rp 0</div>
+
+            <!-- Payment Methods -->
+            <div class="payment-methods">
+                <div class="payment-method active" data-method="cash">
+                    <i class="hgi-stroke hgi-cash-01"></i>
+                    <div>Cash</div>
+                </div>
+                <div class="payment-method" data-method="qris">
+                    <i class="hgi-stroke hgi-qr-code-01"></i>
+                    <div>QRIS</div>
+                </div>
+                <div class="payment-method" data-method="card">
+                    <i class="hgi-stroke hgi-credit-card"></i>
+                    <div>Card</div>
+                </div>
+            </div>
+
+            <!-- Cash Payment Section -->
+            <div id="cashPaymentSection" style="margin-bottom: 1rem;">
+                <div class="form-group">
+                    <label class="form-label">Jumlah Bayar</label>
+                    <input type="number" class="form-input" id="cashAmount" placeholder="Masukkan jumlah uang" oninput="calculateChange()">
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+                    <span style="font-weight: 600; color: #2d5016;">Kembalian:</span>
+                    <span id="changeAmount" style="font-weight: 700; color: #2d5016;">Rp 0</span>
+                </div>
+            </div>
+
+            <!-- Process Payment Button -->
+            <button class="btn btn-primary" onclick="processPayment()" style="width: 100%; margin-bottom: 0.5rem;">
+                <i class="hgi-stroke hgi-cash-02"></i>
+                Proses Pembayaran
+            </button>
+            
+            <!-- Clear Cart Button -->
+            <button class="btn btn-secondary" onclick="clearCart()" style="width: 100%;">
+                <i class="hgi-stroke hgi-shopping-cart-remove-02"></i>
+                Bersihkan Keranjang
+            </button>
+        </div>
+    </div>
+</div>

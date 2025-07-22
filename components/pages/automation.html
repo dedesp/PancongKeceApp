@@ -1,0 +1,209 @@
+<section id="automation" class="section">
+    <div class="section-header">
+        <h2 class="section-title">AI & Automation</h2>
+        <p class="section-subtitle">Otomatisasi proses dan analisis cerdas</p>
+        <button class="btn-primary" onclick="showAutomationModal()">
+            <i class="hgi-stroke hgi-ai-brain-02"></i>
+            Buat Rule Automation
+        </button>
+    </div>
+
+    <!-- Automation Tabs -->
+    <div class="automation-tabs">
+        <button class="tab-button active" onclick="showAutomationTab('rules')">Automation Rules</button>
+        <button class="tab-button" onclick="showAutomationTab('sentiment')">Sentiment Analysis</button>
+        <button class="tab-button" onclick="showAutomationTab('predictions')">AI Predictions</button>
+        <button class="tab-button" onclick="showAutomationTab('triggers')">Smart Triggers</button>
+    </div>
+
+    <!-- Automation Rules Tab -->
+    <div id="automationRulesTab" class="automation-tab-content active">
+        <div class="automation-stats">
+            <div class="stat-card">
+                <i class="hgi-stroke hgi-settings-02"></i>
+                <div>
+                    <h3 id="activeRules">5</h3>
+                    <p>Active Rules</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class="hgi-stroke hgi-lightning-01"></i>
+                <div>
+                    <h3 id="triggeredToday">23</h3>
+                    <p>Triggered Today</p>
+                </div>
+            </div>
+            <div class="stat-card">
+                <i class="hgi-stroke hgi-time-02"></i>
+                <div>
+                    <h3 id="timeSaved">2.5h</h3>
+                    <p>Time Saved Today</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="automationRulesList" class="automation-rules-list">
+            <!-- Automation rules will be populated here -->
+        </div>
+    </div>
+
+    <!-- Sentiment Analysis Tab -->
+    <div id="automationSentimentTab" class="automation-tab-content">
+        <div class="sentiment-overview">
+            <h3>Customer Sentiment Overview</h3>
+            <div class="sentiment-charts">
+                <div class="sentiment-chart">
+                    <canvas id="sentimentTrendChart" width="400" height="200"></canvas>
+                </div>
+                <div class="sentiment-breakdown">
+                    <div class="sentiment-item positive">
+                        <span class="sentiment-icon">😊</span>
+                        <div class="sentiment-info">
+                            <span class="sentiment-label">Positive</span>
+                            <span class="sentiment-percentage">75%</span>
+                        </div>
+                    </div>
+                    <div class="sentiment-item neutral">
+                        <span class="sentiment-icon">😐</span>
+                        <div class="sentiment-info">
+                            <span class="sentiment-label">Neutral</span>
+                            <span class="sentiment-percentage">18%</span>
+                        </div>
+                    </div>
+                    <div class="sentiment-item negative">
+                        <span class="sentiment-icon">😞</span>
+                        <div class="sentiment-info">
+                            <span class="sentiment-label">Negative</span>
+                            <span class="sentiment-percentage">7%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="recentSentiments" class="recent-sentiments">
+            <!-- Recent sentiment analysis will be populated here -->
+        </div>
+    </div>
+
+    <!-- AI Predictions Tab -->
+    <div id="automationPredictionsTab" class="automation-tab-content">
+        <div class="predictions-grid">
+            <div class="prediction-card">
+                <div class="prediction-header">
+                    <h3>Sales Prediction</h3>
+                    <span class="prediction-accuracy">Accuracy: 89%</span>
+                </div>
+                <div class="prediction-content">
+                    <div class="prediction-value">
+                        <span class="value">Rp 2,450,000</span>
+                        <span class="period">Tomorrow</span>
+                    </div>
+                    <div class="prediction-trend positive">
+                        <i class="hgi-stroke hgi-trending-up"></i>
+                        <span>+12% vs avg</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="prediction-card">
+                <div class="prediction-header">
+                    <h3>Busy Hours</h3>
+                    <span class="prediction-accuracy">Confidence: 92%</span>
+                </div>
+                <div class="prediction-content">
+                    <div class="busy-hours">
+                        <span class="hour-slot peak">11:00-12:00</span>
+                        <span class="hour-slot peak">19:00-20:00</span>
+                        <span class="hour-slot moderate">16:00-17:00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="prediction-card">
+                <div class="prediction-header">
+                    <h3>Stock Alert</h3>
+                    <span class="prediction-accuracy">Alert Level: Medium</span>
+                </div>
+                <div class="prediction-content">
+                    <div id="stockPredictions" class="stock-predictions">
+                        <!-- Stock predictions will be populated here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Smart Triggers Tab -->
+    <div id="automationTriggersTab" class="automation-tab-content">
+        <div class="triggers-overview">
+            <h3>Smart Triggers</h3>
+            <p>Automatic actions based on conditions and AI insights</p>
+        </div>
+
+        <div id="triggersList" class="triggers-list">
+            <!-- Smart triggers will be populated here -->
+        </div>
+    </div>
+</section>
+
+<!-- Automation Rule Modal -->
+<div id="automationModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 class="modal-title">Buat Automation Rule</h3>
+            <span class="close-btn" onclick="closeAutomationModal()">&times;</span>
+        </div>
+        <div class="modal-body">
+            <form id="automationForm">
+                <div class="form-group">
+                    <label for="ruleName">Nama Rule *</label>
+                    <input type="text" id="ruleName" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="triggerCondition">Kondisi Trigger *</label>
+                    <select id="triggerCondition" name="trigger" required>
+                        <option value="">Pilih Kondisi</option>
+                        <option value="low_stock">Stock Menipis</option>
+                        <option value="high_sales">Penjualan Tinggi</option>
+                        <option value="customer_birthday">Ulang Tahun Customer</option>
+                        <option value="inactive_customer">Customer Tidak Aktif</option>
+                        <option value="payment_failed">Pembayaran Gagal</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="actionType">Aksi yang Dilakukan *</label>
+                    <select id="actionType" name="action" required>
+                        <option value="">Pilih Aksi</option>
+                        <option value="send_whatsapp">Kirim WhatsApp</option>
+                        <option value="send_email">Kirim Email</option>
+                        <option value="create_order">Buat Purchase Order</option>
+                        <option value="apply_discount">Berikan Diskon</option>
+                        <option value="notify_manager">Notify Manager</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="ruleParameters">Parameter (JSON)</label>
+                    <textarea id="ruleParameters" name="parameters" rows="4" placeholder='{"threshold": 10, "message": "Stock running low"}'></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="ruleActive" name="active" checked>
+                        Aktifkan Rule
+                    </label>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn-secondary" onclick="closeAutomationModal()">Batal</button>
+            <button type="button" class="btn-primary" onclick="saveAutomationRule()">
+                <i class="hgi-stroke hgi-check-circle"></i>
+                Simpan Rule
+            </button>
+        </div>
+    </div>
+</div>

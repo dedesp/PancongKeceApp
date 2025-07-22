@@ -1,0 +1,217 @@
+<section id="settings" class="section">
+    <div class="section-header">
+        <h2 class="section-title">Pengaturan</h2>
+        <p class="section-subtitle">Konfigurasi sistem dan manajemen user</p>
+    </div>
+
+    <div class="cards-grid">
+        <!-- User & Role Management -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">
+                    <i class="hgi-stroke hgi-user-settings-01"></i>
+                </div>
+                <div>
+                    <div class="card-title">Manajemen User</div>
+                    <div class="card-subtitle">Role dan akses pengguna</div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">Current User Role</label>
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                    <span id="currentRoleDisplay" style="padding: 0.5rem 1rem; background: #e8f5e8; color: #2d5016; border-radius: 8px; font-weight: 600;">{{currentRole}}</span>
+                    <button class="btn btn-primary" onclick="showRoleChangeModal()">
+                        <i class="hgi-stroke hgi-user-switch"></i>
+                        Ganti Role
+                    </button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Active User</label>
+                <input type="text" class="form-input" id="usernameInput" placeholder="Nama pengguna" value="{{currentUser}}">
+                <button class="btn btn-secondary" onclick="updateUsername()" style="margin-top: 0.5rem;">
+                    <i class="hgi-stroke hgi-edit-user-02"></i>
+                    Update Nama
+                </button>
+            </div>
+        </div>
+
+        <!-- POS Settings -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">
+                    <i class="hgi-stroke hgi-cashier-02"></i>
+                </div>
+                <div>
+                    <div class="card-title">Pengaturan POS</div>
+                    <div class="card-subtitle">Konfigurasi sistem kasir</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Tax Settings</label>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div>
+                        <label style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                            <input type="checkbox" id="ppnActive" checked onchange="updateTaxSettings()">
+                            PPN Active
+                        </label>
+                        <input type="number" class="form-input" id="ppnPercentage" value="11" min="0" max="100" style="font-size: 0.9rem;" onchange="updateTaxSettings()">
+                        <small style="color: #4a7c59;">PPN Percentage (%)</small>
+                    </div>
+                    <div>
+                        <label style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                            <input type="checkbox" id="serviceActive" checked onchange="updateTaxSettings()">
+                            Service Charge
+                        </label>
+                        <input type="number" class="form-input" id="servicePercentage" value="5" min="0" max="100" style="font-size: 0.9rem;" onchange="updateTaxSettings()">
+                        <small style="color: #4a7c59;">Service Percentage (%)</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Rounding Settings</label>
+                <div style="display: grid; grid-template-columns: auto 1fr auto; gap: 1rem; align-items: center;">
+                    <label style="display: flex; align-items: center; gap: 0.5rem;">
+                        <input type="checkbox" id="roundingActive" checked onchange="updateRoundingSettings()">
+                        Enable Rounding
+                    </label>
+                    <select class="form-input" id="roundingMethod" onchange="updateRoundingSettings()" style="font-size: 0.9rem;">
+                        <option value="nearest">Nearest</option>
+                        <option value="up">Round Up</option>
+                        <option value="down">Round Down</option>
+                    </select>
+                    <select class="form-input" id="roundingIncrement" onchange="updateRoundingSettings()" style="font-size: 0.9rem; max-width: 100px;">
+                        <option value="100">Rp 100</option>
+                        <option value="500">Rp 500</option>
+                        <option value="1000">Rp 1000</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Keyboard Shortcuts -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">
+                    <i class="hgi-stroke hgi-keyboard"></i>
+                </div>
+                <div>
+                    <div class="card-title">Keyboard Shortcuts</div>
+                    <div class="card-subtitle">Shortcut dan hotkeys</div>
+                </div>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; font-size: 0.9rem;">
+                <div>
+                    <div style="font-weight: 600; color: #2d5016; margin-bottom: 0.5rem;">Product Shortcuts</div>
+                    <div style="color: #4a7c59; line-height: 1.6;">
+                        <div><strong>F1-F12:</strong> Add popular items</div>
+                        <div><strong>Click items:</strong> Add to cart</div>
+                    </div>
+                </div>
+                <div>
+                    <div style="font-weight: 600; color: #2d5016; margin-bottom: 0.5rem;">System Shortcuts</div>
+                    <div style="color: #4a7c59; line-height: 1.6;">
+                        <div><strong>Ctrl+P:</strong> Process payment</div>
+                        <div><strong>Ctrl+D:</strong> Apply discount</div>
+                        <div><strong>Ctrl+N:</strong> New transaction</div>
+                        <div><strong>ESC:</strong> Cancel transaction</div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="btn btn-secondary" onclick="showKeyboardShortcutsNotification()" style="margin-top: 1rem;">
+                <i class="hgi-stroke hgi-notification-01"></i>
+                Show Shortcuts Notification
+            </button>
+        </div>
+
+        <!-- System Info -->
+        <div class="card">
+            <div class="card-header">
+                <div class="card-icon">
+                    <i class="hgi-stroke hgi-information-circle"></i>
+                </div>
+                <div>
+                    <div class="card-title">System Information</div>
+                    <div class="card-subtitle">Informasi aplikasi</div>
+                </div>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; font-size: 0.9rem;">
+                <div>
+                    <div style="color: #4a7c59; margin-bottom: 0.3rem;">Application Version:</div>
+                    <div style="font-weight: 600; color: #2d5016;">v1.0.0</div>
+                </div>
+                <div>
+                    <div style="color: #4a7c59; margin-bottom: 0.3rem;">Last Updated:</div>
+                    <div style="font-weight: 600; color: #2d5016;">July 22, 2025</div>
+                </div>
+                <div>
+                    <div style="color: #4a7c59; margin-bottom: 0.3rem;">Architecture:</div>
+                    <div style="font-weight: 600; color: #2d5016;">Modular</div>
+                </div>
+                <div>
+                    <div style="color: #4a7c59; margin-bottom: 0.3rem;">Status:</div>
+                    <div style="font-weight: 600; color: #28a745;">Active</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Role Change Modal -->
+<div class="modal" id="roleChangeModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 class="modal-title">Ganti Role Pengguna</h3>
+            <span class="close-btn" onclick="closeRoleChangeModal()">×</span>
+        </div>
+        
+        <div style="margin-bottom: 2rem;">
+            <p style="color: #4a7c59; margin-bottom: 1rem;">Pilih role yang ingin digunakan:</p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                <div class="role-option" onclick="selectRole('kasir')" data-role="kasir">
+                    <div style="text-align: center; padding: 1.5rem; border: 2px solid #e8f5e8; border-radius: 12px; cursor: pointer; transition: all 0.3s ease;">
+                        <i class="hgi-stroke hgi-cashier" style="font-size: 2rem; color: #4a7c59; margin-bottom: 1rem;"></i>
+                        <div style="font-weight: 600; color: #2d5016; margin-bottom: 0.5rem;">Kasir</div>
+                        <div style="font-size: 0.85rem; color: #4a7c59;">
+                            • Point of Sales<br>
+                            • Dashboard<br>
+                            • Pengaturan basic
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="role-option" onclick="selectRole('manager')" data-role="manager">
+                    <div style="text-align: center; padding: 1.5rem; border: 2px solid #e8f5e8; border-radius: 12px; cursor: pointer; transition: all 0.3s ease;">
+                        <i class="hgi-stroke hgi-manager" style="font-size: 2rem; color: #4a7c59; margin-bottom: 1rem;"></i>
+                        <div style="font-weight: 600; color: #2d5016; margin-bottom: 0.5rem;">Manager</div>
+                        <div style="font-size: 0.85rem; color: #4a7c59;">
+                            • Semua fitur Kasir<br>
+                            • Manajemen Produk<br>
+                            • CRM & Analytics<br>
+                            • Laporan & Keuangan
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div style="display: flex; justify-content: flex-end; gap: 1rem;">
+            <button class="btn btn-secondary" onclick="closeRoleChangeModal()">
+                <i class="hgi-stroke hgi-cancel-01"></i>
+                Batal
+            </button>
+            <button class="btn btn-primary" id="confirmRoleBtn" onclick="confirmRoleChange()" disabled>
+                <i class="hgi-stroke hgi-check-circle"></i>
+                Konfirmasi
+            </button>
+        </div>
+    </div>
+</div>

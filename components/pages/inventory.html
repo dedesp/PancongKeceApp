@@ -1,0 +1,213 @@
+<section id="inventory" class="section">
+    <div class="section-header">
+        <h2 class="section-title">Inventaris</h2>
+        <p class="section-subtitle">Manajemen stok dan inventaris</p>
+        <button class="btn-primary" onclick="showAddInventoryModal()">
+            <i class="hgi-stroke hgi-add-circle"></i>
+            Tambah Item Inventaris
+        </button>
+    </div>
+
+    <!-- Inventory Summary Cards -->
+    <div class="inventory-summary">
+        <div class="summary-card">
+            <div class="summary-icon">
+                <i class="hgi-stroke hgi-package"></i>
+            </div>
+            <div class="summary-content">
+                <h3 id="totalItems">0</h3>
+                <p>Total Item</p>
+            </div>
+        </div>
+        <div class="summary-card">
+            <div class="summary-icon" style="background: #dc3545;">
+                <i class="hgi-stroke hgi-alert-triangle"></i>
+            </div>
+            <div class="summary-content">
+                <h3 id="lowStockItems">0</h3>
+                <p>Stok Menipis</p>
+            </div>
+        </div>
+        <div class="summary-card">
+            <div class="summary-icon" style="background: #28a745;">
+                <i class="hgi-stroke hgi-trending-up"></i>
+            </div>
+            <div class="summary-content">
+                <h3 id="totalValue">Rp 0</h3>
+                <p>Total Nilai Stok</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Inventory Filters -->
+    <div class="inventory-filters">
+        <div class="filter-group">
+            <select id="inventoryCategory" onchange="filterInventory()">
+                <option value="all">Semua Kategori</option>
+                <option value="ingredients">Bahan Baku</option>
+                <option value="packaging">Kemasan</option>
+                <option value="equipment">Peralatan</option>
+                <option value="consumables">Habis Pakai</option>
+            </select>
+            <select id="stockStatus" onchange="filterInventory()">
+                <option value="all">Semua Status</option>
+                <option value="adequate">Stok Cukup</option>
+                <option value="low">Stok Menipis</option>
+                <option value="out">Habis</option>
+            </select>
+        </div>
+        <div class="search-group">
+            <input type="text" id="inventorySearch" placeholder="Cari item inventaris..." onkeyup="searchInventory()">
+            <button class="btn-secondary" onclick="exportInventory()">
+                <i class="hgi-stroke hgi-download-01"></i>
+                Export
+            </button>
+        </div>
+    </div>
+
+    <!-- Inventory Table -->
+    <div class="inventory-table-container">
+        <table class="inventory-table">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Kategori</th>
+                    <th>Stok Saat Ini</th>
+                    <th>Min. Stok</th>
+                    <th>Unit</th>
+                    <th>Harga/Unit</th>
+                    <th>Total Nilai</th>
+                    <th>Status</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody id="inventoryTableBody">
+                <!-- Inventory items will be populated here -->
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<!-- Add/Edit Inventory Modal -->
+<div id="inventoryModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 class="modal-title" id="inventoryModalTitle">Tambah Item Inventaris</h3>
+            <span class="close-btn" onclick="closeInventoryModal()">&times;</span>
+        </div>
+        <div class="modal-body">
+            <form id="inventoryForm">
+                <input type="hidden" id="inventoryId">
+                
+                <div class="form-group">
+                    <label for="itemName">Nama Item *</label>
+                    <input type="text" id="itemName" name="name" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="itemCategory">Kategori *</label>
+                        <select id="itemCategory" name="category" required>
+                            <option value="">Pilih Kategori</option>
+                            <option value="ingredients">Bahan Baku</option>
+                            <option value="packaging">Kemasan</option>
+                            <option value="equipment">Peralatan</option>
+                            <option value="consumables">Habis Pakai</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="itemUnit">Unit *</label>
+                        <select id="itemUnit" name="unit" required>
+                            <option value="">Pilih Unit</option>
+                            <option value="kg">Kilogram (kg)</option>
+                            <option value="liter">Liter (L)</option>
+                            <option value="pcs">Pieces (pcs)</option>
+                            <option value="pack">Pack</option>
+                            <option value="box">Box</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="currentStock">Stok Saat Ini *</label>
+                        <input type="number" id="currentStock" name="currentStock" required min="0" step="0.1">
+                    </div>
+                    <div class="form-group">
+                        <label for="minStock">Minimum Stok *</label>
+                        <input type="number" id="minStock" name="minStock" required min="0" step="0.1">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="unitPrice">Harga per Unit (Rp) *</label>
+                        <input type="number" id="unitPrice" name="unitPrice" required min="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="supplier">Supplier</label>
+                        <input type="text" id="supplier" name="supplier" placeholder="Nama supplier (opsional)">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="itemDescription">Deskripsi</label>
+                    <textarea id="itemDescription" name="description" rows="3" placeholder="Deskripsi item (opsional)"></textarea>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn-secondary" onclick="closeInventoryModal()">Batal</button>
+            <button type="button" class="btn-primary" onclick="saveInventoryItem()">Simpan</button>
+        </div>
+    </div>
+</div>
+
+<!-- Stock Adjustment Modal -->
+<div id="stockAdjustmentModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 class="modal-title">Penyesuaian Stok</h3>
+            <span class="close-btn" onclick="closeStockAdjustmentModal()">&times;</span>
+        </div>
+        <div class="modal-body">
+            <form id="stockAdjustmentForm">
+                <input type="hidden" id="adjustmentItemId">
+                
+                <div class="form-group">
+                    <label id="adjustmentItemName">Nama Item</label>
+                    <p id="currentStockDisplay" class="form-info">Stok saat ini: <span></span></p>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="adjustmentType">Jenis Penyesuaian *</label>
+                        <select id="adjustmentType" name="type" required onchange="updateAdjustmentUI()">
+                            <option value="">Pilih Jenis</option>
+                            <option value="in">Stok Masuk (+)</option>
+                            <option value="out">Stok Keluar (-)</option>
+                            <option value="set">Set Stok Baru</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="adjustmentQuantity" id="adjustmentQuantityLabel">Jumlah *</label>
+                        <input type="number" id="adjustmentQuantity" name="quantity" required min="0" step="0.1">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="adjustmentReason">Alasan Penyesuaian</label>
+                    <textarea id="adjustmentReason" name="reason" rows="2" placeholder="Alasan penyesuaian stok"></textarea>
+                </div>
+
+                <div id="adjustmentPreview" class="adjustment-preview" style="display: none;">
+                    <p>Stok akan berubah dari <span id="previewOldStock"></span> menjadi <span id="previewNewStock"></span></p>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn-secondary" onclick="closeStockAdjustmentModal()">Batal</button>
+            <button type="button"="btn-primary" onclick="saveStockAdjustment()">Simpan Penyesuaian</button>
+        </div>
+    </div>
+</div>

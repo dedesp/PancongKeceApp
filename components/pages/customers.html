@@ -1,0 +1,106 @@
+<section id="customers" class="section">
+    <div class="section-header">
+        <h2 class="section-title">Customer Management</h2>
+        <p class="section-subtitle">Manajemen pelanggan dan program loyalitas</p>
+        <button class="btn-primary" onclick="showAddCustomerModal()">
+            <i class="hgi-stroke hgi-user-add-01"></i>
+            Tambah Customer
+        </button>
+    </div>
+
+    <!-- Customer Summary Cards -->
+    <div class="customer-summary">
+        <div class="summary-card">
+            <div class="summary-icon">
+                <i class="hgi-stroke hgi-users-01"></i>
+            </div>
+            <div class="summary-content">
+                <h3 id="totalCustomers">0</h3>
+                <p>Total Customer</p>
+            </div>
+        </div>
+        <div class="summary-card">
+            <div class="summary-icon" style="background: #28a745;">
+                <i class="hgi-stroke hgi-star"></i>
+            </div>
+            <div class="summary-content">
+                <h3 id="loyaltyMembers">0</h3>
+                <p>Member Loyalty</p>
+            </div>
+        </div>
+        <div class="summary-card">
+            <div class="summary-icon" style="background: #ffc107;">
+                <i class="hgi-stroke hgi-gift"></i>
+            </div>
+            <div class="summary-content">
+                <h3 id="totalPoints">0</h3>
+                <p>Total Poin Loyalty</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Customer Filters -->
+    <div class="customer-filters">
+        <div class="filter-group">
+            <select id="customerSegment" onchange="filterCustomers()">
+                <option value="all">Semua Segment</option>
+                <option value="new">Customer Baru</option>
+                <option value="regular">Regular</option>
+                <option value="vip">VIP</option>
+            </select>
+            <select id="loyaltyStatus" onchange="filterCustomers()">
+                <option value="all">Semua Status</option>
+                <option value="member">Member</option>
+                <option value="non-member">Non-Member</option>
+            </select>
+        </div>
+        <div class="search-group">
+            <input type="text" id="customerSearch" placeholder="Cari customer..." onkeyup="searchCustomers()">
+        </div>
+    </div>
+
+    <!-- Customer List -->
+    <div id="customerGrid" class="customer-grid">
+        <!-- Customer cards will be populated here -->
+    </div>
+</section>
+
+<!-- Add Customer Modal -->
+<div id="addCustomerModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 class="modal-title">Tambah Customer Baru</h3>
+            <span class="close-btn" onclick="closeAddCustomerModal()">&times;</span>
+        </div>
+        <div class="modal-body">
+            <form id="addCustomerForm">
+                <div class="form-group">
+                    <label for="customerName">Nama Lengkap *</label>
+                    <input type="text" id="customerName" name="name" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="customerPhone">No. Telepon</label>
+                        <input type="tel" id="customerPhone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="customerEmail">Email</label>
+                        <input type="email" id="customerEmail" name="email">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="loyaltyMember" name="loyaltyMember">
+                        Daftar sebagai Member Loyalty
+                    </label>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn-secondary" onclick="closeAddCustomerModal()">Batal</button>
+            <button type="button" class="btn-primary" onclick="saveCustomer()">Simpan Customer</button>
+        </div>
+    </div>
+</div>
