@@ -352,4 +352,12 @@ async function updateCustomerAfterTransaction(customerId, transactionAmount, ear
   }
 }
 
-module.exports = { updateCustomerAfterTransaction };
+module.exports = {
+  getAllCustomers: exports.getAllCustomers,
+  searchCustomer: exports.searchCustomer,
+  createCustomer: exports.createCustomer,
+  updateCustomer: exports.updateCustomer,
+  getCustomerTransactions: exports.getCustomerTransactions,
+  getCustomerPointHistory: exports.getCustomerPointHistory,
+  updateCustomerAfterTransaction
+};

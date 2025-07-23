@@ -180,4 +180,9 @@ function applyRoundingToAmount(amount, roundingSetting) {
   }
 }
 
-module.exports = { applyRoundingToAmount };
+module.exports = { 
+  getRoundingSettings: exports.getRoundingSettings,
+  updateRoundingSettings: exports.updateRoundingSettings,
+  applyRounding: exports.applyRounding,
+  applyRoundingToAmount 
+};

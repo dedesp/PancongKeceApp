@@ -389,4 +389,12 @@ function calculateDiscountAmount(discount, cartItems, subtotal) {
   };
 }
 
-module.exports = { calculateDiscountAmount };
+module.exports = {
+  getAllDiscounts: exports.getAllDiscounts,
+  getActiveDiscounts: exports.getActiveDiscounts,
+  validateDiscount: exports.validateDiscount,
+  createDiscount: exports.createDiscount,
+  updateDiscount: exports.updateDiscount,
+  deleteDiscount: exports.deleteDiscount,
+  calculateDiscountAmount
+};

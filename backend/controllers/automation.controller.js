@@ -401,4 +401,10 @@ function calculateNextExecution(rule) {
   return null;
 }
 
-module.exports = { executeRule };
+module.exports = {
+  getAutomationRules: exports.getAutomationRules,
+  createAutomationRule: exports.createAutomationRule,
+  executeAutomationRule: exports.executeAutomationRule,
+  processBirthdayAutomation: exports.processBirthdayAutomation,
+  executeRule
+};
