@@ -1,0 +1,179 @@
+<!-- Dashboard Page Component - Sajati Smart System -->
+<div class="dashboard-container">
+    <div class="dashboard-header">
+        <h1 class="dashboard-title">Dashboard</h1>
+        <p class="dashboard-subtitle">Selamat datang di Sajati Smart System - Smart & Integrated Cafe Management</p>
+    </div>
+
+    <!-- Cafe Status Section -->
+    <div class="card" style="margin-bottom: 2rem;">
+        <div class="card-header">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h2 class="card-title">Status Cafe</h2>
+                <button class="btn btn-primary" id="toggleCafeBtn">
+                    <span id="cafeStatusText">Cafe Buka</span>
+                </button>
+            </div>
+            <p class="card-description">Ringkasan aktivitas cafe hari ini</p>
+        </div>
+    </div>
+
+    <!-- Quick Stats -->
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-header">
+                <h3 class="stat-title">Penjualan Hari Ini</h3>
+                <i class="stat-icon">💰</i>
+            </div>
+            <p class="stat-value">Rp 2.450.000</p>
+            <p class="stat-change positive">+12.5% dari kemarin</p>
+        </div>
+        <div class="stat-card">
+            <div class="stat-header">
+                <h3 class="stat-title">Total Transaksi</h3>
+                <i class="stat-icon">📊</i>
+            </div>
+            <p class="stat-value">47</p>
+            <p class="stat-change positive">+8 transaksi</p>
+        </div>
+        <div class="stat-card">
+            <div class="stat-header">
+                <h3 class="stat-title">Karyawan Aktif</h3>
+                <i class="stat-icon">👥</i>
+            </div>
+            <p class="stat-value">5</p>
+            <p class="stat-change">Sedang bertugas</p>
+        </div>
+        <div class="stat-card">
+            <div class="stat-header">
+                <h3 class="stat-title">Kepuasan Pelanggan</h3>
+                <i class="stat-icon">⭐</i>
+            </div>
+            <p class="stat-value">4.8/5</p>
+            <p class="stat-change positive">Rating minggu ini</p>
+        </div>
+    </div>
+
+    <!-- Content Grid -->
+    <div class="content-grid">
+        <!-- Recent Activity -->
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Aktivitas Terbaru</h3>
+                <p class="card-description">Transaksi dan aktivitas terkini</p>
+            </div>
+            <div class="card-content">
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon">🛒</div>
+                        <div class="activity-content">
+                            <p class="activity-title">Transaksi Baru</p>
+                            <p class="activity-description">Pancong Special + Es Teh - Rp 25.000</p>
+                        </div>
+                        <div class="activity-time">2 menit lalu</div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">👤</div>
+                        <div class="activity-content">
+                            <p class="activity-title">Pelanggan Baru</p>
+                            <p class="activity-description">Sarah Putri bergabung</p>
+                        </div>
+                        <div class="activity-time">5 menit lalu</div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">📦</div>
+                        <div class="activity-content">
+                            <p class="activity-title">Stok Update</p>
+                            <p class="activity-description">Bahan baku diperbarui</p>
+                        </div>
+                        <div class="activity-time">10 menit lalu</div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon">⭐</div>
+                        <div class="activity-content">
+                            <p class="activity-title">Review Baru</p>
+                            <p class="activity-description">Rating 5 bintang dari Ahmad</p>
+                        </div>
+                        <div class="activity-time">15 menit lalu</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Aksi Cepat</h3>
+                <p class="card-description">Akses fitur utama dengan cepat</p>
+            </div>
+            <div class="card-content">
+                <div class="quick-actions" style="flex-direction: column; gap: 0.5rem;">
+                    <a href="#" class="quick-action" data-section="pos">
+                        <i>🛒</i>
+                        <span>Buka POS</span>
+                    </a>
+                    <a href="#" class="quick-action" data-section="products">
+                        <i>🍽️</i>
+                        <span>Kelola Produk</span>
+                    </a>
+                    <a href="#" class="quick-action" data-section="inventory">
+                        <i>📦</i>
+                        <span>Cek Inventaris</span>
+                    </a>
+                    <a href="#" class="quick-action" data-section="reports">
+                        <i>📊</i>
+                        <span>Lihat Laporan</span>
+                    </a>
+                    <a href="#" class="quick-action" data-section="customers">
+                        <i>👥</i>
+                        <span>Kelola Customer</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Performance Chart Section -->
+    <div class="card" style="margin-top: 2rem;">
+        <div class="card-header">
+            <h3 class="card-title">Performa Penjualan</h3>
+            <p class="card-description">Grafik penjualan 7 hari terakhir</p>
+        </div>
+        <div class="card-content">
+            <div class="empty-state">
+                <div class="empty-state-icon">📈</div>
+                <h4 class="empty-state-title">Chart Coming Soon</h4>
+                <p class="empty-state-description">Grafik performa akan ditampilkan di sini</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Dashboard functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Toggle cafe status
+    const toggleBtn = document.getElementById('toggleCafeBtn');
+    const statusText = document.getElementById('cafeStatusText');
+    let isOpen = true;
+    
+    if (toggleBtn) {
+        toggleBtn.addEventListener('click', function() {
+            isOpen = !isOpen;
+            statusText.textContent = isOpen ? 'Cafe Buka' : 'Cafe Tutup';
+            toggleBtn.className = isOpen ? 'btn btn-primary' : 'btn btn-secondary';
+        });
+    }
+    
+    // Quick action navigation
+    document.querySelectorAll('.quick-action').forEach(action => {
+        action.addEventListener('click', function(e) {
+            e.preventDefault();
+            const section = this.getAttribute('data-section');
+            if (section && window.navigation) {
+                window.navigation.showSection(section);
+            }
+        });
+    });
+});
+</script>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sajati Smart System - Smart & Integrated Cafe Management System</title>
+    <meta name="description" content="Sajati Smart System - Smart & Integrated Cafe Management System untuk bisnis cafe modern">
+    <meta name="keywords" content="sajati, smart system, cafe management, pos, inventory, crm">
+    <meta name="author" content="Sajati Smart System">
+        <link rel="icon" type="image/jpeg" href="Sajati_logo.jpg">
+    <link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css">
+    <!-- Optimized CSS Splitting for Better Performance -->
+    <link rel="stylesheet" href="css/core.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        .loading-spinner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem;
+            color: #4a7c59;
+        }
+        
+        .loading-spinner i {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .error-state {
+            text-align: center;
+            padding: 3rem;
+            color: #dc3545;
+        }
+        
+        .error-state h2 {
+            margin: 1rem 0;
+            color: #2d5016;
+        }
+        
+        .error-state p {
+            color: #4a7c59;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Component - Will be loaded dynamically -->
+    <div id="header-container"></div>
+
+    <div class="container">
+        <!-- Sidebar Component - Will be loaded dynamically -->
+        <div id="sidebar-container"></div>
+
+        <!-- Main Content - Pages will be loaded dynamically -->
+        <main class="main-content">
+            <div id="content-container">
+                <!-- Dynamic page content will be loaded here -->
+                <div class="loading-spinner">
+                    <i class="hgi-stroke hgi-loading-01 spin"></i>
+                    <span>Memuat...</span>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Success Message -->
+    <div class="success-message" id="successMessage">
+        <p>Operasi berhasil!</p>
+    </div>
+
+    <!-- Component Loading System -->
+    <script src="js/dom-helpers.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/component-loader.js"></script>
+    
+    <!-- Core JavaScript Files -->
+    <script src="js/config.js"></script>
+    <script src="js/keyboard-shortcuts.js"></script>
+    <script src="js/pos-core.js"></script>
+    
+    <!-- Enhanced Navigation System -->
+    <script src="js/navigation-enhanced.js"></script>
+    
+    <!-- Application Modules -->
+    <script src="js/settings.js"></script>
+    <script src="js/product-management.js"></script>
+    <script src="js/inventory-management.js"></script>
+    <script src="js/employee-management.js"></script>
+    <script src="js/customer-management.js"></script>
+    <script src="js/reports.js"></script>
+    <script src="js/dashboard.js"></script>
+    
+    <!-- Main Application Initialization -->
+    <script>
+        // Initialize the application with component-based architecture
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                console.log('🚀 Starting Sajati Smart System initialization...');
+                
+                // Check if component loader is available
+                if (typeof window.componentLoader === 'undefined') {
+                    throw new Error('ComponentLoader not found');
+                }
+                
+                console.log('✅ Component loader ready');
+                
+                // Load core components with proper container IDs
+                console.log('📦 Loading core components...');
+                
+                // Load header component
+                const headerHtml = await window.componentLoader.loadComponent('components/core/header.html');
+                const headerContainer = document.getElementById('header-container') || document.createElement('div');
+                if (!document.getElementById('header-container')) {
+                    headerContainer.id = 'header-container';
+                    document.querySelector('.container').insertBefore(headerContainer, document.querySelector('.container').firstChild);
+                }
+                headerContainer.innerHTML = window.componentLoader.replaceVariables(headerHtml, {
+                    userRole: 'Admin',
+                    userName: 'Sajati User'
+                });
+                
+                // Load sidebar component  
+                const sidebarHtml = await window.componentLoader.loadComponent('components/core/sidebar.html');
+                const sidebarContainer = document.getElementById('sidebar-container');
+                if (sidebarContainer) {
+                    sidebarContainer.innerHTML = sidebarHtml;
+                }
+                
+                console.log('✅ Core components loaded');
+                
+                // Load default page (dashboard)
+                console.log('📊 Loading dashboard...');
+                const dashboardHtml = await window.componentLoader.loadComponent('components/pages/dashboard.html');
+                const contentContainer = document.getElementById('content-container');
+                if (contentContainer) {
+                    contentContainer.innerHTML = dashboardHtml;
+                }
+                
+                console.log('✅ Dashboard loaded');
+                
+                // Initialize navigation system (simplified)
+                if (typeof initializeNavigation === 'function') {
+                    initializeNavigation();
+                    console.log('✅ Navigation system initialized');
+                }
+                
+                // Initialize keyboard shortcuts
+                if (typeof initKeyboardShortcuts === 'function') {
+                    initKeyboardShortcuts();
+                    console.log('✅ Keyboard shortcuts initialized');
+                }
+                
+                console.log('🎉 Sajati Smart System initialized successfully!');
+                
+            } catch (error) {
+                console.error('❌ Application initialization failed:', error);
+                
+                // Fallback: Show basic error message
+                const contentContainer = document.getElementById('content-container');
+                if (contentContainer) {
+                    contentContainer.innerHTML = `
+                        <div class="error-state">
+                            <i class="hgi-stroke hgi-alert-circle" style="font-size: 3rem; color: #dc3545;"></i>
+                            <h2>Terjadi Kesalahan</h2>
+                            <p>Gagal memuat aplikasi. Silakan refresh halaman.</p>
+                            <button class="btn btn-primary" onclick="location.reload()">
+                                <i class="hgi-stroke hgi-refresh"></i>
+                                Refresh Halaman
+                            </button>
+                        </div>
+                    `;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
