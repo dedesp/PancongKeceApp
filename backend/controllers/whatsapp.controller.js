@@ -82,8 +82,8 @@ exports.setupWhatsAppIntegration = async (req, res) => {
       api_endpoint,
       api_token: api_token, // In production, encrypt this
       phone_number_id: phone_number_id || null,
-      business_name: business_name || 'Pancong Kece',
-      default_template: default_template || 'Halo {name}, terima kasih telah berkunjung ke Pancong Kece!',
+      business_name: business_name || 'Sajati Smart System',
+      default_template: default_template || 'Halo {name}, terima kasih telah berkunjung ke Sajati Smart System!',
       created_by: req.user.id,
       updated_by: req.user.id
     });

@@ -1,4 +1,4 @@
-// Pancong Kece - Reports Module
+// Sajati Smart System - Reports Module
 // Handles sales reports, analytics, and transaction history
 
 let reportData = {
@@ -11,46 +11,46 @@ let reportData = {
 // Sample transaction data (in real app, this would come from database)
 let sampleTransactions = [
     // Juli 2025 - Week 4 (Recent data)
-    { id: 'TXN001', date: new Date(2025, 6, 22, 9, 15), items: ['Kopi Americano', 'Pancong Original'], paymentMethod: 'cash', subtotal: 25000, tax: 2750, service: 1250, total: 29000, cashier: 'Andi Pratama' },
+    { id: 'TXN001', date: new Date(2025, 6, 22, 9, 15), items: ['Kopi Americano', 'Sajati Original'], paymentMethod: 'cash', subtotal: 25000, tax: 2750, service: 1250, total: 29000, cashier: 'Andi Pratama' },
     { id: 'TXN002', date: new Date(2025, 6, 22, 10, 30), items: ['Latte', 'Croissant'], paymentMethod: 'card', subtotal: 35000, tax: 3850, service: 1750, total: 40600, cashier: 'Sari Dewi' },
-    { id: 'TXN003', date: new Date(2025, 6, 22, 11, 45), items: ['Cappuccino', 'Pancong Cokelat'], paymentMethod: 'qris', subtotal: 30000, tax: 3300, service: 1500, total: 34800, cashier: 'Andi Pratama' },
+    { id: 'TXN003', date: new Date(2025, 6, 22, 11, 45), items: ['Cappuccino', 'Sajati Cokelat'], paymentMethod: 'qris', subtotal: 30000, tax: 3300, service: 1500, total: 34800, cashier: 'Andi Pratama' },
     { id: 'TXN004', date: new Date(2025, 6, 22, 14, 20), items: ['Es Teh Manis'], paymentMethod: 'cash', subtotal: 8000, tax: 880, service: 400, total: 9280, cashier: 'Sari Dewi' },
     { id: 'TXN005', date: new Date(2025, 6, 22, 15, 35), items: ['Americano', 'Latte', 'Kue Brownies'], paymentMethod: 'card', subtotal: 45000, tax: 4950, service: 2250, total: 52200, cashier: 'Andi Pratama' },
     
     // Juli 2025 - Week 3
-    { id: 'TXN006', date: new Date(2025, 6, 21, 16, 10), items: ['Pancong Original', 'Kopi Tubruk'], paymentMethod: 'qris', subtotal: 20000, tax: 2200, service: 1000, total: 23200, cashier: 'Sari Dewi' },
+    { id: 'TXN006', date: new Date(2025, 6, 21, 16, 10), items: ['Sajati Original', 'Kopi Tubruk'], paymentMethod: 'qris', subtotal: 20000, tax: 2200, service: 1000, total: 23200, cashier: 'Sari Dewi' },
     { id: 'TXN007', date: new Date(2025, 6, 21, 12, 45), items: ['Cappuccino', 'Sandwich Club'], paymentMethod: 'cash', subtotal: 38000, tax: 4180, service: 1900, total: 44080, cashier: 'Andi Pratama' },
-    { id: 'TXN008', date: new Date(2025, 6, 20, 13, 20), items: ['Latte', 'Pancong Keju'], paymentMethod: 'qris', subtotal: 28000, tax: 3080, service: 1400, total: 32480, cashier: 'Sari Dewi' },
+    { id: 'TXN008', date: new Date(2025, 6, 20, 13, 20), items: ['Latte', 'Sajati Keju'], paymentMethod: 'qris', subtotal: 28000, tax: 3080, service: 1400, total: 32480, cashier: 'Sari Dewi' },
     { id: 'TXN009', date: new Date(2025, 6, 20, 10, 15), items: ['Kopi Americano'], paymentMethod: 'card', subtotal: 15000, tax: 1650, service: 750, total: 17400, cashier: 'Andi Pratama' },
-    { id: 'TXN010', date: new Date(2025, 6, 19, 14, 30), items: ['Es Teh Lemon', 'Pancong Original', 'Cookies'], paymentMethod: 'cash', subtotal: 32000, tax: 3520, service: 1600, total: 37120, cashier: 'Sari Dewi' },
+    { id: 'TXN010', date: new Date(2025, 6, 19, 14, 30), items: ['Es Teh Lemon', 'Sajati Original', 'Cookies'], paymentMethod: 'cash', subtotal: 32000, tax: 3520, service: 1600, total: 37120, cashier: 'Sari Dewi' },
     
     // Juli 2025 - Week 2
     { id: 'TXN011', date: new Date(2025, 6, 18, 11, 25), items: ['Cappuccino', 'Croissant'], paymentMethod: 'qris', subtotal: 33000, tax: 3630, service: 1650, total: 38280, cashier: 'Andi Pratama' },
     { id: 'TXN012', date: new Date(2025, 6, 17, 9, 40), items: ['Latte', 'Muffin Blueberry'], paymentMethod: 'card', subtotal: 31000, tax: 3410, service: 1550, total: 35960, cashier: 'Sari Dewi' },
-    { id: 'TXN013', date: new Date(2025, 6, 16, 15, 15), items: ['Americano', 'Pancong Cokelat', 'Es Jeruk'], paymentMethod: 'cash', subtotal: 35000, tax: 3850, service: 1750, total: 40600, cashier: 'Andi Pratama' },
+    { id: 'TXN013', date: new Date(2025, 6, 16, 15, 15), items: ['Americano', 'Sajati Cokelat', 'Es Jeruk'], paymentMethod: 'cash', subtotal: 35000, tax: 3850, service: 1750, total: 40600, cashier: 'Andi Pratama' },
     { id: 'TXN014', date: new Date(2025, 6, 15, 13, 50), items: ['Cappuccino'], paymentMethod: 'qris', subtotal: 18000, tax: 1980, service: 900, total: 20880, cashier: 'Sari Dewi' },
     { id: 'TXN015', date: new Date(2025, 6, 14, 16, 35), items: ['Latte', 'Sandwich Tuna', 'Kopi Tubruk'], paymentMethod: 'card', subtotal: 42000, tax: 4620, service: 2100, total: 48720, cashier: 'Andi Pratama' },
     
     // Juli 2025 - Week 1
-    { id: 'TXN016', date: new Date(2025, 6, 13, 10, 20), items: ['Es Teh Manis', 'Pancong Keju'], paymentMethod: 'cash', subtotal: 20000, tax: 2200, service: 1000, total: 23200, cashier: 'Sari Dewi' },
+    { id: 'TXN016', date: new Date(2025, 6, 13, 10, 20), items: ['Es Teh Manis', 'Sajati Keju'], paymentMethod: 'cash', subtotal: 20000, tax: 2200, service: 1000, total: 23200, cashier: 'Sari Dewi' },
     { id: 'TXN017', date: new Date(2025, 6, 12, 12, 45), items: ['Americano', 'Cookies'], paymentMethod: 'qris', subtotal: 23000, tax: 2530, service: 1150, total: 26680, cashier: 'Andi Pratama' },
-    { id: 'TXN018', date: new Date(2025, 6, 11, 14, 10), items: ['Cappuccino', 'Pancong Original', 'Kue Brownies'], paymentMethod: 'card', subtotal: 40000, tax: 4400, service: 2000, total: 46400, cashier: 'Sari Dewi' },
+    { id: 'TXN018', date: new Date(2025, 6, 11, 14, 10), items: ['Cappuccino', 'Sajati Original', 'Kue Brownies'], paymentMethod: 'card', subtotal: 40000, tax: 4400, service: 2000, total: 46400, cashier: 'Sari Dewi' },
     { id: 'TXN019', date: new Date(2025, 6, 10, 11, 30), items: ['Latte'], paymentMethod: 'cash', subtotal: 20000, tax: 2200, service: 1000, total: 23200, cashier: 'Andi Pratama' },
-    { id: 'TXN020', date: new Date(2025, 6, 9, 15, 55), items: ['Es Jeruk', 'Pancong Cokelat'], paymentMethod: 'qris', subtotal: 22000, tax: 2420, service: 1100, total: 25520, cashier: 'Sari Dewi' },
+    { id: 'TXN020', date: new Date(2025, 6, 9, 15, 55), items: ['Es Jeruk', 'Sajati Cokelat'], paymentMethod: 'qris', subtotal: 22000, tax: 2420, service: 1100, total: 25520, cashier: 'Sari Dewi' },
     
     // Juni 2025 - Sample data for comparison
     { id: 'TXN021', date: new Date(2025, 5, 30, 13, 45), items: ['Americano', 'Sandwich Club'], paymentMethod: 'card', subtotal: 33000, tax: 3630, service: 1650, total: 38280, cashier: 'Andi Pratama' },
     { id: 'TXN022', date: new Date(2025, 5, 29, 12, 20), items: ['Cappuccino', 'Muffin Cokelat'], paymentMethod: 'cash', subtotal: 29000, tax: 3190, service: 1450, total: 33640, cashier: 'Sari Dewi' },
-    { id: 'TXN023', date: new Date(2025, 5, 28, 10, 15), items: ['Latte', 'Pancong Keju', 'Es Teh Lemon'], paymentMethod: 'qris', subtotal: 38000, tax: 4180, service: 1900, total: 44080, cashier: 'Andi Pratama' },
+    { id: 'TXN023', date: new Date(2025, 5, 28, 10, 15), items: ['Latte', 'Sajati Keju', 'Es Teh Lemon'], paymentMethod: 'qris', subtotal: 38000, tax: 4180, service: 1900, total: 44080, cashier: 'Andi Pratama' },
     { id: 'TXN024', date: new Date(2025, 5, 27, 14, 40), items: ['Kopi Tubruk'], paymentMethod: 'cash', subtotal: 12000, tax: 1320, service: 600, total: 13920, cashier: 'Sari Dewi' },
     { id: 'TXN025', date: new Date(2025, 5, 26, 16, 25), items: ['Americano', 'Cookies', 'Es Jeruk'], paymentMethod: 'card', subtotal: 31000, tax: 3410, service: 1550, total: 35960, cashier: 'Andi Pratama' },
     
     // Hari ini - data terbaru
-    { id: 'TXN026', date: new Date(), items: ['Cappuccino', 'Pancong Original'], paymentMethod: 'qris', subtotal: 28000, tax: 3080, service: 1400, total: 32480, cashier: 'Andi Pratama' },
+    { id: 'TXN026', date: new Date(), items: ['Cappuccino', 'Sajati Original'], paymentMethod: 'qris', subtotal: 28000, tax: 3080, service: 1400, total: 32480, cashier: 'Andi Pratama' },
     { id: 'TXN027', date: new Date(Date.now() - 2*60*60*1000), items: ['Latte', 'Kue Brownies'], paymentMethod: 'cash', subtotal: 32000, tax: 3520, service: 1600, total: 37120, cashier: 'Sari Dewi' },
     { id: 'TXN028', date: new Date(Date.now() - 4*60*60*1000), items: ['Es Teh Manis'], paymentMethod: 'card', subtotal: 8000, tax: 880, service: 400, total: 9280, cashier: 'Andi Pratama' },
     { id: 'TXN029', date: new Date(Date.now() - 6*60*60*1000), items: ['Americano', 'Sandwich Tuna'], paymentMethod: 'qris', subtotal: 27000, tax: 2970, service: 1350, total: 31320, cashier: 'Sari Dewi' },
-    { id: 'TXN030', date: new Date(Date.now() - 8*60*60*1000), items: ['Cappuccino', 'Pancong Keju', 'Es Jeruk'], paymentMethod: 'cash', subtotal: 38000, tax: 4180, service: 1900, total: 44080, cashier: 'Andi Pratama' }
+    { id: 'TXN030', date: new Date(Date.now() - 8*60*60*1000), items: ['Cappuccino', 'Sajati Keju', 'Es Jeruk'], paymentMethod: 'cash', subtotal: 38000, tax: 4180, service: 1900, total: 44080, cashier: 'Andi Pratama' }
 ];
 
 // Initialize Reports

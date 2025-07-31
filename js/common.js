@@ -1,5 +1,5 @@
 /**
- * Common Utilities for PancongKece
+ * Common Utilities for Sajati Smart System
  * Unified utility functions to prevent code duplication
  */
 

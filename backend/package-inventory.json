@@ -1,0 +1,117 @@
+{
+  "name": "sajati-inventory-system",
+  "version": "1.0.0",
+  "description": "Sistem Pelacakan Inventaris Otomatis untuk Sajati Smart System",
+  "main": "scripts/setupInventorySystem.js",
+  "scripts": {
+    "setup-inventory": "node scripts/setupInventorySystem.js",
+    "import-compositions": "node scripts/importProductCompositions.js",
+    "test-inventory": "node scripts/testInventorySystem.js",
+    "backup-db": "sqlite3 database/sajati_smart_system.db \".backup backup_$(date +%Y%m%d).db\"",
+    "export-schema": "sqlite3 database/sajati_smart_system.db \".schema\" > schema_export.sql"
+  },
+  "dependencies": {
+    "sqlite3": "^5.1.6",
+    "csv-parser": "^3.0.0",
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.0.0",
+    "morgan": "^1.10.0",
+    "dotenv": "^16.3.1",
+    "moment": "^2.29.4",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "jest": "^29.6.2",
+    "supertest": "^6.3.3"
+  },
+  "keywords": [
+    "inventory",
+    "tracking",
+    "pos",
+    "restaurant",
+    "stock",
+    "management",
+    "sqlite",
+    "nodejs"
+  ],
+  "author": "Sajati Smart System",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sajati/smart-system.git"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "inventory_system": {
+    "version": "1.0.0",
+    "features": [
+      "Real-time stock tracking",
+      "Automatic stock deduction on sales",
+      "PG (Product Gabungan) support",
+      "Daily sales and financial reports",
+      "Stock alerts and notifications",
+      "Cost calculation and profit tracking",
+      "Multi-unit inventory management",
+      "Transaction-based stock movements"
+    ],
+    "database": {
+      "type": "SQLite",
+      "file": "database/sajati_smart_system.db",
+      "tables": {
+        "core": [
+          "raw_materials",
+          "products",
+          "transactions",
+          "transaction_items"
+        ],
+        "inventory": [
+          "product_compositions",
+          "pg_compositions",
+          "raw_material_stock",
+          "stock_movements",
+          "daily_inventory_summary",
+          "daily_sales_summary",
+          "daily_product_sales"
+        ],
+        "views": [
+          "product_full_composition",
+          "current_stock_status",
+          "daily_sales_summary",
+          "stock_movement_summary"
+        ]
+      }
+    },
+    "api_endpoints": {
+      "stock": [
+        "GET /api/inventory/stock-status",
+        "GET /api/inventory/stock-movements",
+        "POST /api/inventory/update-stock"
+      ],
+      "sales": [
+        "GET /api/inventory/daily-summary",
+        "GET /api/inventory/daily-product-sales",
+        "GET /api/inventory/sales-trend"
+      ],
+      "analytics": [
+        "GET /api/inventory/dashboard",
+        "GET /api/inventory/profit-trend",
+        "GET /api/inventory/potential-sales"
+      ],
+      "composition": [
+        "GET /api/inventory/product-composition/:id",
+        "GET /api/inventory/pg-composition/:id"
+      ]
+    },
+    "setup_instructions": {
+      "1": "npm install",
+      "2": "npm run setup-inventory",
+      "3": "Add inventory routes to your main app.js",
+      "4": "Start your application server",
+      "5": "Test with sample transactions"
+    }
+  }
+}

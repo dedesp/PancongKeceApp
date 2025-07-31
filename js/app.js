@@ -1,9 +1,9 @@
-// Pancong Kece - Main Application Entry Point
+// Sajati Smart System - Main Application Entry Point
 // Coordinates all modules and initializes the application
 
 // Application initialization
 function initializeApp() {
-    console.log('🚀 Initializing Pancong Kece POS Application...');
+    console.log('🚀 Initializing Sajati Smart System POS Application...');
     
     // Initialize all modules in sequence
     try {
@@ -34,7 +34,7 @@ function initializeApp() {
         // 5. Setup additional event handlers
         setupAdditionalEventHandlers();
         
-        console.log('🎉 Pancong Kece POS Application ready!');
+        console.log('🎉 Sajati Smart System POS Application ready!');
         
         // Show welcome message
         setTimeout(() => {
@@ -151,7 +151,7 @@ function showInitializationError(error) {
     
     errorDiv.innerHTML = `
         <h3>⚠️ Application Error</h3>
-        <p>Failed to initialize Pancong Kece POS:</p>
+        <p>Failed to initialize Sajati Smart System POS:</p>
         <code style="background: rgba(0,0,0,0.1); padding: 0.5rem; border-radius: 4px; display: block; margin: 1rem 0;">
             ${error.message}
         </code>
@@ -221,7 +221,7 @@ const AppState = {
 
 // Export for debugging purposes
 if (typeof window !== 'undefined') {
-    window.PancongKeceApp = {
+    window.SajatiSmartSystem = {
         state: AppState,
         initialize: initializeApp,
         checkModules: checkModuleAvailability

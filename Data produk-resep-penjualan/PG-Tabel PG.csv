@@ -1,0 +1,135 @@
+Tabel PG
+Nama PG;Bahan;Qty Produksi;Volume
+Kailan Crispy;Beras;1000;Gram
+;Air;40;Gram
+;Chicken Powder;7,5;Gram
+;Gula Pasir;7,5;Gram
+;Vetsin;7,5;Gram
+;;;
+Nasi Putih Besar ;Beras;1000;Gram
+;Air;1500;Gram
+;;;
+Nasi Putih Kecil;Beras;1000;Gram
+;Air;1500;Gram
+;;;
+Bumbu Oseng Sapi;Bawang Merah;75;Gram
+;Bawang Putih;25;Gram
+;Cabe Keriting Merah;25;Gram
+;Cabe Rawit Merah;50;Gram
+;Cabe Tanjung Merah;100;Gram
+;Daun Jeruk;1;Gram
+;Sereh;40;Gram
+;Minyak Goreng;120;Ml
+;;;
+Bumbu Ayam Kemangi;Bawang Merah;65;Gram
+;Bawang Putih;50;Gram
+;Cabe Keriting Merah;30;Gram
+;Cabe Rawit Merah;25;Gram
+;Cabe Tanjung Merah;30;Gram
+;Daun Jeruk;1;Gram
+;Kemiri;10;Gram
+;Kencur;6;Gram
+;Kunyit;3;Gram
+;Lengkuas;20;Gram
+;Minyak Goreng;120;Ml
+;Sereh;40;Gram
+;;;
+Bumbu Nasi & Mie Goreng;Bawang Merah;160;Gram
+;Bawang Putih;80;Gram
+;Cabai Keriting Merah;45;Gram
+;Cabai Tanjung Merah;80;Gram
+;Ebi Kering;15;Gram
+;Kemiri;40;Gram
+;Minyak Goreng;150;Ml
+;;;
+Base Kentang Rumahan;Garam;15;Gram
+;Cuka;30;Ml
+;Kentang;1000;Gram
+;Tepung Maizena;150;Gram
+;;;
+Ayam Suwir Besar;Dada Ayam Fillet;1000;Gram
+;Garam;5;Gram
+;Bawang Daun;3;Gram
+;Bawang Putih;8;Gram
+;;;
+Ayam Suwir Kecil;Dada Ayam Fillet;1000;Gram
+;Garam;5;Gram
+;Bawang Daun;3;Gram
+;Bawang Putih;8;Gram
+;;;
+Nasi Putih;Beras;1000;Gram
+;;;
+Daging Slice;Daging Slice;1000;Gram
+;;;
+Kerupuk;Kerupuk;1000;Gram
+;;;
+Bihun Crispy;Bihun;500;Gram
+;Chicken Powder;7,5;Gram
+;Vetsin;7,5;Gram
+;;;
+Sayap Ayam Bawang;Sayap Ayam;12;Pcs
+;Telur Ayam;1;Pcs
+;Tepung Tapioka;90;Gram
+;Bawang Merah;40;Gram
+;Bawang Putih;50;Gram
+;Ketumbar;7,5;Gram
+;Terasi Udang;3,8;Gram
+;Chicken Powder;7,5;Gram
+;Garam;7,5;Gram
+;Lada Putih;7,5;Gram
+;Vetsin;7,5;Gram
+;Cuka;15;ml
+;;;
+Paha Filet Bumbu;Paha Ayam Fillet;1000;Gram
+;Tepung Tapioka;50;Gram
+;Telur Ayam;1;Pcs
+;Chicken Powder;5;Gram
+;Vetsin;5;Gram
+;Garam;5;Gram
+;Lada Putih;5;Gram
+;;;
+Bumbu Blackpepper;Bawang Putih;45;Gram
+;Bawang Merah;50;Gram
+;Lada Hitam;20;Gram
+;Gula Pasir;45;Gram
+;Vetsin;15;Gram
+;Margarin;30;Gram
+;Minyak Goreng;20;Gram
+;Kecap Inggris;15;Gram
+;Kecap Asin;7,5;Gram
+;Minyak Wijen;2,5;Gram
+;Saus Tiram;22,5;Gram
+;Saus Tomat;80;Gram
+;Air;330;Gram
+;;;
+Bumbu Teriyaki;Bawang Putih;15;Gram
+;Jahe;15;Gram
+;Air;20;Gram
+;Kecap Asin Jepang;60;Gram
+;Brown Sugar;85;Gram
+;Air;120;Gram
+;Cuka Apel;15;ml
+;Kecap Manis;15;Gram
+;Saus Tiram;10;Gram
+;Tepung Maizena;15;Gram
+;Air;5;Gram
+;;;
+Bumbu Popmayo;Mayonaise Jepang;130;Gram
+;Mayonaise;200;Gram
+;Susu Kental Manis;25;Gram
+;Saus Tomat;30;Gram
+;;;
+Spaghetti Rebus;Spaghetti;1000;Gram
+;Minyak Goreng;10;Gram
+;Garam;5;Gram
+;;;
+Garlic Bread;Roti Tawar Tipis;25;Pcs
+;Margarin;150;Gram
+;Bawang Putih;25;Gram
+;Bubuk Bawang Putih;5;Gram
+;Oregano;0,5;Gram
+;Parsley;0,5;Gram
+;;;
+Mie Rebus;Mie Telur;1000;Gram
+;Minyak Goreng;10;Gram
+;Garam;5;Gram

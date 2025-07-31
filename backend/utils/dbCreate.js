@@ -82,7 +82,7 @@ const createDatabase = async () => {
     const adminUser = await User.create({
       username: 'admin',
       password: hashedPassword,
-      email: 'admin@pancongkece.com',
+      email: 'admin@sajati.com',
       full_name: 'Administrator',
       role_id: 1, // Admin role
       is_active: true
@@ -93,7 +93,7 @@ const createDatabase = async () => {
     const managerUser = await User.create({
       username: 'manager',
       password: hashedPassword,
-      email: 'manager@pancongkece.com',
+      email: 'manager@sajati.com',
       full_name: 'Manager Cafe',
       role_id: 2, // Manager role
       is_active: true
@@ -104,7 +104,7 @@ const createDatabase = async () => {
     const cashierUser = await User.create({
       username: 'kasir',
       password: hashedPassword,
-      email: 'kasir@pancongkece.com',
+      email: 'kasir@sajati.com',
       full_name: 'Kasir Cafe',
       role_id: 3, // Cashier role
       is_active: true
@@ -120,7 +120,7 @@ const createDatabase = async () => {
       },
       {
         name: 'Makanan',
-        description: 'Pancong dan makanan lainnya',
+        description: 'Sajati dan makanan lainnya',
         icon: 'hgi-stroke hgi-fork-knife'
       },
       {
@@ -178,8 +178,8 @@ const createDatabase = async () => {
       },
       {
         id: uuidv4(),
-        name: 'Pancong Original',
-        description: 'Pancong dengan taburan gula',
+        name: 'Sajati Original',
+        description: 'Sajati dengan taburan gula',
         price: 12000,
         category_id: 2,
         image_url: 'https://public.youware.com/users-website-assets/prod/63f75314-f75c-43cc-ae5d-0421aa05ea62/photo-1721027322774-b1479ea07627',
@@ -208,8 +208,8 @@ const createDatabase = async () => {
       },
       {
         id: uuidv4(),
-        name: 'Pancong Keju',
-        description: 'Pancong dengan taburan keju',
+        name: 'Sajati Keju',
+        description: 'Sajati dengan taburan keju',
         price: 15000,
         category_id: 2,
         image_url: 'https://public.youware.com/users-website-assets/prod/63f75314-f75c-43cc-ae5d-0421aa05ea62/photo-1713700321951-d79e5c39ea93',
@@ -228,8 +228,8 @@ const createDatabase = async () => {
       },
       {
         id: uuidv4(),
-        name: 'Pancong Coklat',
-        description: 'Pancong dengan taburan coklat',
+        name: 'Sajati Coklat',
+        description: 'Sajati dengan taburan coklat',
         price: 14000,
         category_id: 2,
         image_url: 'https://public.youware.com/users-website-assets/prod/63f75314-f75c-43cc-ae5d-0421aa05ea62/photo-1498604132755-751b73a22ec9',
@@ -324,7 +324,7 @@ const createDatabase = async () => {
       {
         code: 'BUY2GET1',
         name: 'Beli 2 Gratis 1',
-        description: 'Beli 2 pancong gratis 1 pancong',
+        description: 'Beli 2 sajati gratis 1 sajati',
         type: 'buy_x_get_y',
         value: 0,
         buy_quantity: 2,
@@ -353,8 +353,8 @@ const createDatabase = async () => {
     
     // Create loyalty program
     const loyaltyProgram = await LoyaltyProgram.create({
-      name: 'Pancong Kece Loyalty Program',
-      description: 'Program loyalty untuk customer setia Pancong Kece',
+      name: 'Sajati Smart System Loyalty Program',
+      description: 'Program loyalty untuk customer setia Sajati Smart System',
       earn_rate: 1.0,
       tier_bronze_min: 0,
       tier_silver_min: 500000,
@@ -504,7 +504,7 @@ const createDatabase = async () => {
         type: 'whatsapp',
         status: 'running',
         target_segments: [segments[1].id, segments[2].id],
-        message_template: 'Halo {name}! Dapatkan diskon 20% untuk pembelian weekend ini di Pancong Kece. Berlaku Sabtu-Minggu.',
+        message_template: 'Halo {name}! Dapatkan diskon 20% untuk pembelian weekend ini di Sajati Smart System. Berlaku Sabtu-Minggu.',
         start_date: new Date(),
         end_date: moment().add(7, 'days').toDate(),
         sent_count: 85,
@@ -522,8 +522,8 @@ const createDatabase = async () => {
         type: 'email',
         status: 'scheduled',
         target_segments: [segments[0].id],
-        message_template: 'Selamat ulang tahun {name}! Nikmati menu special dengan diskon 30% sebagai hadiah dari Pancong Kece.',
-        subject: 'Happy Birthday from Pancong Kece!',
+        message_template: 'Selamat ulang tahun {name}! Nikmati menu special dengan diskon 30% sebagai hadiah dari Sajati Smart System.',
+        subject: 'Happy Birthday from Sajati Smart System!',
         start_date: moment().add(1, 'day').toDate(),
         budget: 200000,
         created_by: adminUser.id,
@@ -550,7 +550,7 @@ const createDatabase = async () => {
         customer_id: customers[1].id,
         type: 'phone_call',
         direction: 'inbound',
-        message: 'Customer menanyakan ketersediaan menu pancong untuk acara ulang tahun (50 porsi). Sudah dijadwalkan untuk minggu depan.',
+        message: 'Customer menanyakan ketersediaan menu sajati untuk acara ulang tahun (50 porsi). Sudah dijadwalkan untuk minggu depan.',
         status: 'delivered',
         priority: 'high',
         follow_up_required: true,
@@ -568,7 +568,7 @@ const createDatabase = async () => {
         type: 'review',
         rating: 5,
         title: 'Pelayanan Sangat Memuaskan',
-        message: 'Pancong nya enak banget, pelayanan ramah, suasana nyaman. Pasti akan datang lagi bersama keluarga.',
+        message: 'Sajati nya enak banget, pelayanan ramah, suasana nyaman. Pasti akan datang lagi bersama keluarga.',
         category: 'general',
         status: 'new',
         priority: 'low',
@@ -609,7 +609,7 @@ const createDatabase = async () => {
         estimated_value: 5000000,
         probability: 80,
         expected_close_date: moment().add(10, 'days').toDate(),
-        notes: 'Tertarik catering untuk acara kantor bulanan (200 porsi/bulan)',
+        notes: 'Membutuhkan catering sajati untuk 5 acara wedding dalam 2 bulan',
         last_contact_date: moment().subtract(1, 'day').toDate(),
         next_follow_up: moment().add(2, 'days').toDate(),
         assigned_to: adminUser.id,
@@ -629,7 +629,7 @@ const createDatabase = async () => {
         estimated_value: 15000000,
         probability: 60,
         expected_close_date: moment().add(30, 'days').toDate(),
-        notes: 'Membutuhkan catering pancong untuk 5 acara wedding dalam 2 bulan',
+        notes: 'Membutuhkan catering sajati untuk 5 acara wedding dalam 2 bulan',
         last_contact_date: moment().subtract(3, 'days').toDate(),
         next_follow_up: moment().add(1, 'day').toDate(),
         assigned_to: adminUser.id,

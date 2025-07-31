@@ -1,4 +1,4 @@
-// Pancong Kece - Core Configuration and Settings
+// Sajati Smart System - Core Configuration and Settings
 // This file contains all global settings and configurations
 
 // Tax and service settings
@@ -33,20 +33,123 @@ let cafeStatus = {
 let selectedPaymentMethod = 'cash';
 
 // Popular products mapping for keyboard shortcuts (F1-F12)
-const popularProducts = {
-    'F1': { id: 1, name: 'Kopi Americano' },
-    'F2': { id: 2, name: 'Pancong Original' },
-    'F3': { id: 3, name: 'Latte' },
-    'F4': { id: 4, name: 'Cappuccino' },
-    'F5': { id: 5, name: 'Pancong Keju' },
-    'F6': { id: 6, name: 'Green Tea Latte' },
-    'F7': { id: 7, name: 'Pancong Coklat' },
-    'F8': { id: 8, name: 'Espresso' },
-    'F9': { id: 9, name: 'Roti Bakar' },
-    'F10': { id: 10, name: 'Es Teh' },
-    'F11': { id: 11, name: 'Nasi Goreng' },
-    'F12': { id: 12, name: 'Ayam Geprek' }
+// This will be dynamically updated based on last month's sales data
+let popularProducts = {
+    'F1': { id: null, name: 'Loading...' },
+    'F2': { id: null, name: 'Loading...' },
+    'F3': { id: null, name: 'Loading...' },
+    'F4': { id: null, name: 'Loading...' },
+    'F5': { id: null, name: 'Loading...' },
+    'F6': { id: null, name: 'Loading...' },
+    'F7': { id: null, name: 'Loading...' },
+    'F8': { id: null, name: 'Loading...' },
+    'F9': { id: null, name: 'Loading...' },
+    'F10': { id: null, name: 'Loading...' },
+    'F11': { id: null, name: 'Loading...' },
+    'F12': { id: null, name: 'Loading...' }
 };
+
+// Last update timestamp for popular products
+let lastPopularProductsUpdate = localStorage.getItem('lastPopularProductsUpdate') || null;
+
+// Function to get top products from last month
+async function getTopProductsLastMonth() {
+    try {
+        // Get top 12 products from last month
+        // Using 'month' period which gets data from last 30 days
+        const response = await API.get(`${API_ENDPOINTS.DASHBOARD.TOP_PRODUCTS}?period=month&limit=12`);
+        
+        if (response.status === 'success' && response.data) {
+            return response.data;
+        }
+        return [];
+    } catch (error) {
+        console.error('Error fetching top products:', error);
+        // Fallback: return empty array if API fails
+        return [];
+    }
+}
+
+// Function to update popular products shortcuts
+async function updatePopularProductsShortcuts() {
+    try {
+        const topProducts = await getTopProductsLastMonth();
+        const functionKeys = ['F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'F9', 'F10', 'F11', 'F12'];
+        
+        // Reset all shortcuts
+        functionKeys.forEach(key => {
+            popularProducts[key] = { id: null, name: 'Tidak tersedia' };
+        });
+        
+        // Assign top products to function keys
+        topProducts.forEach((product, index) => {
+            if (index < 12) {
+                const key = functionKeys[index];
+                popularProducts[key] = {
+                    id: product.product_id,
+                    name: product.product_name
+                };
+            }
+        });
+        
+        // Save update timestamp
+        lastPopularProductsUpdate = new Date().toISOString();
+        localStorage.setItem('lastPopularProductsUpdate', lastPopularProductsUpdate);
+        localStorage.setItem('popularProducts', JSON.stringify(popularProducts));
+        
+        console.log('Popular products shortcuts updated:', popularProducts);
+        
+        // Trigger event for UI update if needed
+        if (typeof window !== 'undefined') {
+            window.dispatchEvent(new CustomEvent('popularProductsUpdated', { detail: popularProducts }));
+        }
+        
+        return popularProducts;
+    } catch (error) {
+        console.error('Error updating popular products shortcuts:', error);
+        return popularProducts;
+    }
+}
+
+// Function to check if update is needed (monthly)
+function shouldUpdatePopularProducts() {
+    if (!lastPopularProductsUpdate) return true;
+    
+    const lastUpdate = new Date(lastPopularProductsUpdate);
+    const now = new Date();
+    
+    // Check if it's a new month
+    return lastUpdate.getMonth() !== now.getMonth() || lastUpdate.getFullYear() !== now.getFullYear();
+}
+
+// Auto-update popular products on page load if needed
+if (typeof window !== 'undefined') {
+    document.addEventListener('DOMContentLoaded', async () => {
+        // Load saved popular products from localStorage
+        const savedPopularProducts = localStorage.getItem('popularProducts');
+        if (savedPopularProducts) {
+            try {
+                popularProducts = JSON.parse(savedPopularProducts);
+            } catch (error) {
+                console.error('Error parsing saved popular products:', error);
+            }
+        }
+        
+        // Check if update is needed
+        if (shouldUpdatePopularProducts()) {
+            console.log('Updating popular products shortcuts for new month...');
+            await updatePopularProductsShortcuts();
+        }
+    });
+    
+    // Set up monthly auto-update (check every hour)
+    setInterval(() => {
+        if (shouldUpdatePopularProducts()) {
+            console.log('Monthly update triggered for popular products shortcuts...');
+            updatePopularProductsShortcuts();
+        }
+    }, 60 * 60 * 1000); // Check every hour
+}
 
 // Discount presets
 const discountPresets = [
@@ -68,7 +171,7 @@ const menuItems = [
     },
     {
         id: 2,
-        name: "Pancong Original",
+        name: "Sajati Original",
         price: 12000,
         image: "https://public.youware.com/users-website-assets/prod/63f75314-f75c-43cc-ae5d-0421aa05ea62/photo-1721027322774-b1479ea07627",
         category: "makanan"
@@ -89,7 +192,7 @@ const menuItems = [
     },
     {
         id: 5,
-        name: "Pancong Keju",
+        name: "Sajati Keju",
         price: 15000,
         image: "https://public.youware.com/users-website-assets/prod/63f75314-f75c-43cc-ae5d-0421aa05ea62/photo-1713700321951-d79e5c39ea93",
         category: "makanan"
@@ -103,7 +206,7 @@ const menuItems = [
     },
     {
         id: 7,
-        name: "Pancong Coklat",
+        name: "Sajati Coklat",
         price: 14000,
         image: "https://public.youware.com/users-website-assets/prod/63f75314-f75c-43cc-ae5d-0421aa05ea62/photo-1498604132755-751b73a22ec9",
         category: "makanan"
@@ -133,6 +236,16 @@ if (typeof module !== 'undefined' && module.exports) {
         popularProducts,
         discountPresets,
         menuItems,
-        cart
+        cart,
+        getTopProductsLastMonth,
+        updatePopularProductsShortcuts,
+        shouldUpdatePopularProducts
     };
+}
+
+// Make functions globally available
+if (typeof window !== 'undefined') {
+    window.getTopProductsLastMonth = getTopProductsLastMonth;
+    window.updatePopularProductsShortcuts = updatePopularProductsShortcuts;
+    window.shouldUpdatePopularProducts = shouldUpdatePopularProducts;
 }

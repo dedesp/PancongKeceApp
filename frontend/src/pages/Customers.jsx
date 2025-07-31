@@ -15,42 +15,7 @@ const Customers = () => {
     notes: ''
   });
 
-  // Mock customer data
-const mockCustomers = React.useMemo(() => [
-  {
-    id: '1',
-    name: 'Budi Santoso', 
-    phone: '081234567890',
-    email: 'budi@email.com',
-    address: 'Jl. Merdeka No. 123, Jakarta',
-    total_orders: 15,
-    total_spent: 450000,
-    last_order: '2024-01-15',
-    notes: 'Pelanggan setia, suka pancong keju'
-  },
-  {
-    id: '2',
-    name: 'Siti Nurhaliza',
-    phone: '081987654321', 
-    email: 'siti@email.com',
-    address: 'Jl. Sudirman No. 456, Jakarta',
-    total_orders: 8,
-    total_spent: 240000,
-    last_order: '2024-01-10',
-    notes: 'Sering pesan untuk acara kantor'
-  },
-  {
-    id: '3',
-    name: 'Ahmad Rahman',
-    phone: '081122334455',
-    email: 'ahmad@email.com',
-    address: 'Jl. Thamrin No. 789, Jakarta', 
-    total_orders: 22,
-    total_spent: 660000,
-    last_order: '2024-01-18',
-    notes: 'VIP customer, selalu order dalam jumlah besar'
-  }
-], []); // Empty dependency array since data is static
+  // Removed mock customer data - now using only database API calls
 
   // Load customers on component mount
   useEffect(() => {
@@ -61,16 +26,22 @@ const mockCustomers = React.useMemo(() => [
   const loadCustomers = useCallback(async () => {
     try {
       setLoading(true);
-      // Simulate API call
-      setTimeout(() => {
-        setCustomers(mockCustomers);
-        setLoading(false);
-      }, 500);
+      const response = await fetch('/api/customers');
+      const result = await response.json();
+      
+      if (result.status === 'success') {
+        setCustomers(result.data || []);
+      } else {
+        console.error('Failed to fetch customers:', result.message);
+        setCustomers([]);
+      }
     } catch (error) {
       console.error('Error loading customers:', error);
+      setCustomers([]);
+    } finally {
       setLoading(false);
     }
-  }, [mockCustomers]);
+  }, []);
 
   // Filter customers based on search term
   const filteredCustomers = customers.filter(customer =>

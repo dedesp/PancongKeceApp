@@ -1,0 +1,2198 @@
+[
+  {
+    "code": "5Mie Telor",
+    "name": "G-1111",
+    "category": "Mie Telor",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Tepung Tapioka",
+    "name": "G-1112",
+    "category": "Tepung Tapioka",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 1000,
+    "unitPrice": 28500
+  },
+  {
+    "code": "5Tepung Maizena",
+    "name": "G-1113",
+    "category": "Tepung Maizena",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 540,
+    "unitPrice": 16200
+  },
+  {
+    "code": "5Tepung Roti",
+    "name": "G-1114",
+    "category": "Tepung Roti",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 195,
+    "unitPrice": 2925
+  },
+  {
+    "code": "5Gula Halus",
+    "name": "G-1115",
+    "category": "Gula Halus",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Selai Coklat",
+    "name": "G-1116",
+    "category": "Selai Coklat",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Susu Kental Manis",
+    "name": "G-1117",
+    "category": "Susu Kental Manis",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 976,
+    "unitPrice": 14152
+  },
+  {
+    "code": "5Brown Sugar",
+    "name": "G-1118",
+    "category": "Brown Sugar",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 300,
+    "unitPrice": 5985
+  },
+  {
+    "code": "5Beras",
+    "name": "G-1119",
+    "category": "Beras",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 3000,
+    "unitPrice": 43800
+  },
+  {
+    "code": "5Backing Powder",
+    "name": "G-1120",
+    "category": "Backing Powder",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Soda Kue",
+    "name": "G-1121",
+    "category": "Soda Kue",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Spaghetti",
+    "name": "G-1122",
+    "category": "Spaghetti",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 2,
+    "unitPrice": 60000
+  },
+  {
+    "code": "5Ebi Kering",
+    "name": "G-1123",
+    "category": "Ebi Kering",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Biji Wijen",
+    "name": "G-1124",
+    "category": "Biji Wijen",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 145,
+    "unitPrice": 1305
+  },
+  {
+    "code": "5Coklat Bubuk",
+    "name": "G-1125",
+    "category": "Coklat Bubuk",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Bihun",
+    "name": "G-1126",
+    "category": "Bihun",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Telur Ayam",
+    "name": "G-1127",
+    "category": "Telur Ayam",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 28,
+    "unitPrice": 42000
+  },
+  {
+    "code": "5Margarin",
+    "name": "G-1128",
+    "category": "Margarin",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 1000,
+    "unitPrice": 30000
+  },
+  {
+    "code": "5Minyak Goreng",
+    "name": "G-1129",
+    "category": "Minyak Goreng",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Air",
+    "name": "G-1130",
+    "category": "Air",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Terasi Udang",
+    "name": "G-1131",
+    "category": "Terasi Udang",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Kerupuk",
+    "name": "G-1132",
+    "category": "Kerupuk",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Meses Coklat",
+    "name": "G-1133",
+    "category": "Meses Coklat",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Air Mineral Aqua",
+    "name": "G-1134",
+    "category": "Air Mineral Aqua",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Air Mineral Cleo",
+    "name": "G-1135",
+    "category": "Air Mineral Cleo",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Arabika Beans",
+    "name": "G-1136",
+    "category": "Arabika Beans",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 2000,
+    "unitPrice": 1592500
+  },
+  {
+    "code": "5Biscuit Lotus Biscoff",
+    "name": "G-1137",
+    "category": "Biscuit Lotus Biscoff",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 80,
+    "unitPrice": 3911
+  },
+  {
+    "code": "5Blacktea Leaf",
+    "name": "G-1138",
+    "category": "Blacktea Leaf",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 600,
+    "unitPrice": 153333
+  },
+  {
+    "code": "5Caramel sauce",
+    "name": "G-1139",
+    "category": "Caramel sauce",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 2070,
+    "unitPrice": 222945
+  },
+  {
+    "code": "5Cream Cheese Syrup",
+    "name": "G-1140",
+    "category": "Cream Cheese Syrup",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 1000,
+    "unitPrice": 84360
+  },
+  {
+    "code": "5Dried fruit",
+    "name": "G-1141",
+    "category": "Dried fruit",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Elder Flower",
+    "name": "G-1142",
+    "category": "Elder Flower",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 1796,
+    "unitPrice": 195360
+  },
+  {
+    "code": "5Gula Aren",
+    "name": "G-1143",
+    "category": "Gula Aren",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 6,
+    "unitPrice": 120
+  },
+  {
+    "code": "5House Blends Beans",
+    "name": "G-1144",
+    "category": "House Blends Beans",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 2900,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Jasmine Syrup",
+    "name": "G-1145",
+    "category": "Jasmine Syrup",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 523,
+    "unitPrice": 53058
+  },
+  {
+    "code": "5Manggo Syrup",
+    "name": "G-1146",
+    "category": "Manggo Syrup",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 838,
+    "unitPrice": 93018
+  },
+  {
+    "code": "5Matcha Powder",
+    "name": "G-1147",
+    "category": "Matcha Powder",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Mint Syrup",
+    "name": "G-1148",
+    "category": "Mint Syrup",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 322,
+    "unitPrice": 28305
+  },
+  {
+    "code": "5Nutella",
+    "name": "G-1149",
+    "category": "Nutella",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 611,
+    "unitPrice": 98982
+  },
+  {
+    "code": "5Puding Susu Mangga",
+    "name": "G-1150",
+    "category": "Puding Susu Mangga",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Rajamandala Cokelat Powder",
+    "name": "G-1151",
+    "category": "Rajamandala Cokelat Powder",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Shortbread Syrup",
+    "name": "G-1153",
+    "category": "Shortbread Syrup",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 289,
+    "unitPrice": 39627
+  },
+  {
+    "code": "5Sulawesi Cokelat Powder",
+    "name": "G-1154",
+    "category": "Sulawesi Cokelat Powder",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 587,
+    "unitPrice": 193710
+  },
+  {
+    "code": "5Sumatera Cokelat Powder",
+    "name": "G-1155",
+    "category": "Sumatera Cokelat Powder",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 1111,
+    "unitPrice": 366360
+  },
+  {
+    "code": "5Taro Powder",
+    "name": "G-1156",
+    "category": "Taro Powder",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 200,
+    "unitPrice": 14000
+  },
+  {
+    "code": "5Vanilla Syrup",
+    "name": "G-1157",
+    "category": "Vanilla Syrup",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 1728,
+    "unitPrice": 170940
+  },
+  {
+    "code": "5White Passion Syrup",
+    "name": "G-1158",
+    "category": "White Passion Syrup",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 1000,
+    "unitPrice": 84360
+  },
+  {
+    "code": "5Yuzu Pulp Syrup",
+    "name": "G-1159",
+    "category": "Yuzu Pulp Syrup",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 70,
+    "unitPrice": 11655
+  },
+  {
+    "code": "5Beans Reguler V60",
+    "name": "G-1160",
+    "category": "Beans Reguler V60",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Beans Seasonal V60",
+    "name": "G-1161",
+    "category": "Beans Seasonal V60",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Beans Geisha V60",
+    "name": "G-1162",
+    "category": "Beans Geisha V60",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Mineral Water Mini",
+    "name": "G-1163",
+    "category": "Mineral Water Mini",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Mineral Water Reguler",
+    "name": "G-1164",
+    "category": "Mineral Water Reguler",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Bubuk Bawang Putih",
+    "name": "G-1165",
+    "category": "Bubuk Bawang Putih",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Cajun Powder",
+    "name": "G-1166",
+    "category": "Cajun Powder",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 470,
+    "unitPrice": 58750
+  },
+  {
+    "code": "5Cayene Powder",
+    "name": "G-1167",
+    "category": "Cayene Powder",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Chicken Powder",
+    "name": "G-1168",
+    "category": "Chicken Powder",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Cuka",
+    "name": "G-1169",
+    "category": "Cuka",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Cuka Apel",
+    "name": "G-1170",
+    "category": "Cuka Apel",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Garam",
+    "name": "G-1171",
+    "category": "Garam",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 255,
+    "unitPrice": 2295
+  },
+  {
+    "code": "5Gula Pasir",
+    "name": "G-1172",
+    "category": "Gula Pasir",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Kecap Asin",
+    "name": "G-1173",
+    "category": "Kecap Asin",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Kecap Asin Jepang",
+    "name": "G-1174",
+    "category": "Kecap Asin Jepang",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Kecap Ikan",
+    "name": "G-1175",
+    "category": "Kecap Ikan",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 500,
+    "unitPrice": 20000
+  },
+  {
+    "code": "5Kecap Inggris",
+    "name": "G-1176",
+    "category": "Kecap Inggris",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 750,
+    "unitPrice": 44513
+  },
+  {
+    "code": "5Kecap Manis",
+    "name": "G-1177",
+    "category": "Kecap Manis",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Lada Hitam",
+    "name": "G-1178",
+    "category": "Lada Hitam",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 600,
+    "unitPrice": 69000
+  },
+  {
+    "code": "5Lada Putih",
+    "name": "G-1179",
+    "category": "Lada Putih",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 650,
+    "unitPrice": 61750
+  },
+  {
+    "code": "5Mayonaise Jepang",
+    "name": "G-1180",
+    "category": "Mayonaise Jepang",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Minyak Wijen",
+    "name": "G-1181",
+    "category": "Minyak Wijen",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Oregano",
+    "name": "G-1182",
+    "category": "Oregano",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 16,
+    "unitPrice": 8720
+  },
+  {
+    "code": "5Parsley",
+    "name": "G-1183",
+    "category": "Parsley",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 7,
+    "unitPrice": 5373
+  },
+  {
+    "code": "5Saus Sambal",
+    "name": "G-1184",
+    "category": "Saus Sambal",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 4000,
+    "unitPrice": 73369
+  },
+  {
+    "code": "5Saus Tiram",
+    "name": "G-1185",
+    "category": "Saus Tiram",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 200,
+    "unitPrice": 9600
+  },
+  {
+    "code": "5Saus Tomat",
+    "name": "G-1186",
+    "category": "Saus Tomat",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 5000,
+    "unitPrice": 74775
+  },
+  {
+    "code": "5Vetsin",
+    "name": "G-1187",
+    "category": "Vetsin",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Mayonaise",
+    "name": "G-1188",
+    "category": "Mayonaise",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 655,
+    "unitPrice": 15393
+  },
+  {
+    "code": "5Paprika Powder",
+    "name": "G-1189",
+    "category": "Paprika Powder",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 5,
+    "unitPrice": 850
+  },
+  {
+    "code": "5bumbu Kari",
+    "name": "G-1190",
+    "category": "bumbu Kari",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5bubuk Kari",
+    "name": "G-1191",
+    "category": "bubuk Kari",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Oatmeal",
+    "name": "G-1192",
+    "category": "Oatmeal",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Kaldu block sapi",
+    "name": "G-1193",
+    "category": "Kaldu block sapi",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Santan kental",
+    "name": "G-1194",
+    "category": "Santan kental",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Jinten",
+    "name": "G-1195",
+    "category": "Jinten",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Kapulaga",
+    "name": "G-1196",
+    "category": "Kapulaga",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Cengkeh",
+    "name": "G-1197",
+    "category": "Cengkeh",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Bunga Lawang",
+    "name": "G-1198",
+    "category": "Bunga Lawang",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Tepung Beras",
+    "name": "G-1199",
+    "category": "Tepung Beras",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Baking soda",
+    "name": "G-1200",
+    "category": "Baking soda",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "G-1201",
+    "category": "",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "G-1202",
+    "category": "",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "G-1203",
+    "category": "",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "G-1204",
+    "category": "",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "G-1205",
+    "category": "",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "G-1206",
+    "category": "",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "G-1207",
+    "category": "",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "G-1208",
+    "category": "",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "G-1209",
+    "category": "",
+    "unit": "Grocery",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "Dairy & Frozen",
+    "category": "",
+    "unit": "pcs",
+    "currentStock": 0,
+    "minimumStock": 8940,
+    "unitPrice": 482973
+  },
+  {
+    "code": "5Tahu Kuning",
+    "name": "D-2111",
+    "category": "Tahu Kuning",
+    "unit": "Dairy & Frozen",
+    "currentStock": 0,
+    "minimumStock": 12,
+    "unitPrice": 15273
+  },
+  {
+    "code": "5Baso Sapi",
+    "name": "D-2112",
+    "category": "Baso Sapi",
+    "unit": "Dairy & Frozen",
+    "currentStock": 0,
+    "minimumStock": 15,
+    "unitPrice": 13200
+  },
+  {
+    "code": "5Sosis Sapi",
+    "name": "D-2113",
+    "category": "Sosis Sapi",
+    "unit": "Dairy & Frozen",
+    "currentStock": 0,
+    "minimumStock": 62,
+    "unitPrice": 93000
+  },
+  {
+    "code": "5Donat Frozen",
+    "name": "D-2114",
+    "category": "Donat Frozen",
+    "unit": "Dairy & Frozen",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Smoked Beef",
+    "name": "D-2115",
+    "category": "Smoked Beef",
+    "unit": "Dairy & Frozen",
+    "currentStock": 0,
+    "minimumStock": 10,
+    "unitPrice": 17700
+  },
+  {
+    "code": "5Cheddar Cheese",
+    "name": "D-2116",
+    "category": "Cheddar Cheese",
+    "unit": "Dairy & Frozen",
+    "currentStock": 0,
+    "minimumStock": 15,
+    "unitPrice": 22500
+  },
+  {
+    "code": "5Slice Cheese",
+    "name": "D-2117",
+    "category": "Slice Cheese",
+    "unit": "Dairy & Frozen",
+    "currentStock": 0,
+    "minimumStock": 12,
+    "unitPrice": 12900
+  },
+  {
+    "code": "5Parmesan Cheese",
+    "name": "D-2118",
+    "category": "Parmesan Cheese",
+    "unit": "Dairy & Frozen",
+    "currentStock": 0,
+    "minimumStock": 790,
+    "unitPrice": 126400
+  },
+  {
+    "code": "5Roti Tawar Tebal",
+    "name": "D-2119",
+    "category": "Roti Tawar Tebal",
+    "unit": "Dairy & Frozen",
+    "currentStock": 0,
+    "minimumStock": 24,
+    "unitPrice": 42000
+  },
+  {
+    "code": "5Beef Slice",
+    "name": "D-2120",
+    "category": "Beef Slice",
+    "unit": "Dairy & Frozen",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Dada Ayam Fillet",
+    "name": "D-2121",
+    "category": "Dada Ayam Fillet",
+    "unit": "Dairy & Frozen",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Paha Ayam Fillet",
+    "name": "D-2122",
+    "category": "Paha Ayam Fillet",
+    "unit": "Dairy & Frozen",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Sayap Ayam",
+    "name": "D-2123",
+    "category": "Sayap Ayam",
+    "unit": "Dairy & Frozen",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Fresh Milk",
+    "name": "D-2124",
+    "category": "Fresh Milk",
+    "unit": "Dairy & Frozen",
+    "currentStock": 0,
+    "minimumStock": 5000,
+    "unitPrice": 90000
+  },
+  {
+    "code": "5Udang",
+    "name": "D-2125",
+    "category": "Udang",
+    "unit": "Dairy & Frozen",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Kulit Ayam",
+    "name": "D-2126",
+    "category": "Kulit Ayam",
+    "unit": "Dairy & Frozen",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Whipping Cream",
+    "name": "D-2127",
+    "category": "Whipping Cream",
+    "unit": "Dairy & Frozen",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Cherry",
+    "name": "D-2128",
+    "category": "Cherry",
+    "unit": "Dairy & Frozen",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Roti Tawar Tipis",
+    "name": "D-2129",
+    "category": "Roti Tawar Tipis",
+    "unit": "Dairy & Frozen",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Ice Cream Vanilla",
+    "name": "D-2130",
+    "category": "Ice Cream Vanilla",
+    "unit": "Dairy & Frozen",
+    "currentStock": 0,
+    "minimumStock": 3000,
+    "unitPrice": 50000
+  },
+  {
+    "code": "5Pangsit goreng",
+    "name": "D-2131",
+    "category": "Pangsit goreng",
+    "unit": "Dairy & Frozen",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Cranberries juice",
+    "name": "D-2132",
+    "category": "Cranberries juice",
+    "unit": "Dairy & Frozen",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Oatmilk Outside",
+    "name": "D-2133",
+    "category": "Oatmilk Outside",
+    "unit": "Dairy & Frozen",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Daging Sengkel Sapi",
+    "name": "D-2134",
+    "category": "Daging Sengkel Sapi",
+    "unit": "Dairy & Frozen",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Asam Jawa",
+    "name": "D-2135",
+    "category": "Asam Jawa",
+    "unit": "Dairy & Frozen",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Butter",
+    "name": "D-2136",
+    "category": "Butter",
+    "unit": "Dairy & Frozen",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Manggo popping",
+    "name": "D-2137",
+    "category": "Manggo popping",
+    "unit": "Dairy & Frozen",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "D-2138",
+    "category": "",
+    "unit": "Dairy & Frozen",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "D-2139",
+    "category": "",
+    "unit": "Dairy & Frozen",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "D-2140",
+    "category": "",
+    "unit": "Dairy & Frozen",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "D-2141",
+    "category": "",
+    "unit": "Dairy & Frozen",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "D-2142",
+    "category": "",
+    "unit": "Dairy & Frozen",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "D-2143",
+    "category": "",
+    "unit": "Dairy & Frozen",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "D-2144",
+    "category": "",
+    "unit": "Dairy & Frozen",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "D-2145",
+    "category": "",
+    "unit": "Dairy & Frozen",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "D-2146",
+    "category": "",
+    "unit": "Dairy & Frozen",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "D-2147",
+    "category": "",
+    "unit": "Dairy & Frozen",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "Fruit & Vegetable",
+    "category": "",
+    "unit": "pcs",
+    "currentStock": 0,
+    "minimumStock": 20,
+    "unitPrice": 83105
+  },
+  {
+    "code": "5Bawang Bombay",
+    "name": "F-3111",
+    "category": "Bawang Bombay",
+    "unit": "Fruit & Vegetable",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Bawang Daun",
+    "name": "F-3112",
+    "category": "Bawang Daun",
+    "unit": "Fruit & Vegetable",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Bawang Merah",
+    "name": "F-3113",
+    "category": "Bawang Merah",
+    "unit": "Fruit & Vegetable",
+    "currentStock": 0,
+    "minimumStock": 845,
+    "unitPrice": 35490
+  },
+  {
+    "code": "5Bawang Putih",
+    "name": "F-3114",
+    "category": "Bawang Putih",
+    "unit": "Fruit & Vegetable",
+    "currentStock": 0,
+    "minimumStock": 970,
+    "unitPrice": 43115
+  },
+  {
+    "code": "5Cabai Keriting Merah",
+    "name": "F-3115",
+    "category": "Cabai Keriting Merah",
+    "unit": "Fruit & Vegetable",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Cabai Rawit Merah",
+    "name": "F-3116",
+    "category": "Cabai Rawit Merah",
+    "unit": "Fruit & Vegetable",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Cabai Tanjung Merah",
+    "name": "F-3117",
+    "category": "Cabai Tanjung Merah",
+    "unit": "Fruit & Vegetable",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Daun Jeruk",
+    "name": "F-3118",
+    "category": "Daun Jeruk",
+    "unit": "Fruit & Vegetable",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Daun Kemangi",
+    "name": "F-3119",
+    "category": "Daun Kemangi",
+    "unit": "Fruit & Vegetable",
+    "currentStock": 0,
+    "minimumStock": 375,
+    "unitPrice": 4500
+  },
+  {
+    "code": "5Daun Salam",
+    "name": "F-3120",
+    "category": "Daun Salam",
+    "unit": "Fruit & Vegetable",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Jahe",
+    "name": "F-3121",
+    "category": "Jahe",
+    "unit": "Fruit & Vegetable",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Jamur kancing",
+    "name": "F-3122",
+    "category": "Jamur kancing",
+    "unit": "Fruit & Vegetable",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Kailan",
+    "name": "F-3123",
+    "category": "Kailan",
+    "unit": "Fruit & Vegetable",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Kemiri",
+    "name": "F-3124",
+    "category": "Kemiri",
+    "unit": "Fruit & Vegetable",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Kencur",
+    "name": "F-3125",
+    "category": "Kencur",
+    "unit": "Fruit & Vegetable",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Kentang",
+    "name": "F-3126",
+    "category": "Kentang",
+    "unit": "Fruit & Vegetable",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Ketumbar",
+    "name": "F-3127",
+    "category": "Ketumbar",
+    "unit": "Fruit & Vegetable",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Kol",
+    "name": "F-3128",
+    "category": "Kol",
+    "unit": "Fruit & Vegetable",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Kunyit",
+    "name": "F-3129",
+    "category": "Kunyit",
+    "unit": "Fruit & Vegetable",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Lengkuas",
+    "name": "F-3130",
+    "category": "Lengkuas",
+    "unit": "Fruit & Vegetable",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Pisang",
+    "name": "F-3131",
+    "category": "Pisang",
+    "unit": "Fruit & Vegetable",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Sereh",
+    "name": "F-3132",
+    "category": "Sereh",
+    "unit": "Fruit & Vegetable",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Tomat Merah",
+    "name": "F-3133",
+    "category": "Tomat Merah",
+    "unit": "Fruit & Vegetable",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Wortel",
+    "name": "F-3134",
+    "category": "Wortel",
+    "unit": "Fruit & Vegetable",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Lobak Besar",
+    "name": "F-3135",
+    "category": "Lobak Besar",
+    "unit": "Fruit & Vegetable",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Seledri",
+    "name": "F-3136",
+    "category": "Seledri",
+    "unit": "Fruit & Vegetable",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Jeruk nipis",
+    "name": "F-3137",
+    "category": "Jeruk nipis",
+    "unit": "Fruit & Vegetable",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "F-3138",
+    "category": "",
+    "unit": "Fruit & Vegetable",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "F-3139",
+    "category": "",
+    "unit": "Fruit & Vegetable",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "F-3140",
+    "category": "",
+    "unit": "Fruit & Vegetable",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "Product Goods",
+    "category": "",
+    "unit": "pcs",
+    "currentStock": 0,
+    "minimumStock": 5334,
+    "unitPrice": 576247
+  },
+  {
+    "code": "5Nasi Putih Besar - 180 gr",
+    "name": "PG-5111",
+    "category": "Nasi Putih Besar - 180 gr",
+    "unit": "Processed Goods",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Nasi Putih Kecil - 130 gr",
+    "name": "PG-5112",
+    "category": "Nasi Putih Kecil - 130 gr",
+    "unit": "Processed Goods",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Spaghetti - 140 gr",
+    "name": "PG-5113",
+    "category": "Spaghetti - 140 gr",
+    "unit": "Processed Goods",
+    "currentStock": 0,
+    "minimumStock": 3,
+    "unitPrice": 5955
+  },
+  {
+    "code": "5Paha Fillet Bumbu - 80 gr",
+    "name": "PG-5114",
+    "category": "Paha Fillet Bumbu - 80 gr",
+    "unit": "Processed Goods",
+    "currentStock": 0,
+    "minimumStock": 6,
+    "unitPrice": 20348
+  },
+  {
+    "code": "5Ayam Suwir Besar - 75 gr",
+    "name": "PG-5115",
+    "category": "Ayam Suwir Besar - 75 gr",
+    "unit": "Processed Goods",
+    "currentStock": 0,
+    "minimumStock": 15,
+    "unitPrice": 60000
+  },
+  {
+    "code": "5Beef Slice - 100 gr",
+    "name": "PG-5116",
+    "category": "Beef Slice - 100 gr",
+    "unit": "Processed Goods",
+    "currentStock": 0,
+    "minimumStock": 18,
+    "unitPrice": 144000
+  },
+  {
+    "code": "5Kentang Rumahan - 100 gr",
+    "name": "PG-5117",
+    "category": "Kentang Rumahan - 100 gr",
+    "unit": "Processed Goods",
+    "currentStock": 0,
+    "minimumStock": 40,
+    "unitPrice": 48000
+  },
+  {
+    "code": "5Sayap Ayam Bawang - 6 pcs",
+    "name": "PG-5118",
+    "category": "Sayap Ayam Bawang - 6 pcs",
+    "unit": "Processed Goods",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Bumbu Nasi Goreng - 40 Gr",
+    "name": "PG-5119",
+    "category": "Bumbu Nasi Goreng - 40 Gr",
+    "unit": "Processed Goods",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Bumbu Ayam Kemangi - 25 Gr",
+    "name": "PG-5120",
+    "category": "Bumbu Ayam Kemangi - 25 Gr",
+    "unit": "Processed Goods",
+    "currentStock": 0,
+    "minimumStock": 25,
+    "unitPrice": 3553
+  },
+  {
+    "code": "5Bumbu Oseng Sapi - 25 gr",
+    "name": "PG-5121",
+    "category": "Bumbu Oseng Sapi - 25 gr",
+    "unit": "Processed Goods",
+    "currentStock": 0,
+    "minimumStock": 45,
+    "unitPrice": 58435
+  },
+  {
+    "code": "5Saus Teriyaki - 35 gr",
+    "name": "PG-5122",
+    "category": "Saus Teriyaki - 35 gr",
+    "unit": "Processed Goods",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Saus Blackpepper - 35 gr",
+    "name": "PG-5123",
+    "category": "Saus Blackpepper - 35 gr",
+    "unit": "Processed Goods",
+    "currentStock": 0,
+    "minimumStock": 1100,
+    "unitPrice": 30800
+  },
+  {
+    "code": "5Saus Bagos - 35 gr",
+    "name": "PG-5124",
+    "category": "Saus Bagos - 35 gr",
+    "unit": "Processed Goods",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Saus Pop Mayo - 35 gr",
+    "name": "PG-5125",
+    "category": "Saus Pop Mayo - 35 gr",
+    "unit": "Processed Goods",
+    "currentStock": 0,
+    "minimumStock": 520,
+    "unitPrice": 15080
+  },
+  {
+    "code": "5Kerupuk - 11 pcs",
+    "name": "PG-5126",
+    "category": "Kerupuk - 11 pcs",
+    "unit": "Processed Goods",
+    "currentStock": 0,
+    "minimumStock": 300,
+    "unitPrice": 9600
+  },
+  {
+    "code": "5Kailan Crispy - 20 gr",
+    "name": "PG-5127",
+    "category": "Kailan Crispy - 20 gr",
+    "unit": "Processed Goods",
+    "currentStock": 0,
+    "minimumStock": 450,
+    "unitPrice": 9876
+  },
+  {
+    "code": "5Garlic Bread - 2 pcs",
+    "name": "PG-5128",
+    "category": "Garlic Bread - 2 pcs",
+    "unit": "Processed Goods",
+    "currentStock": 0,
+    "minimumStock": 75,
+    "unitPrice": 8000
+  },
+  {
+    "code": "5Bihun Crispy - 10 gr",
+    "name": "PG-5129",
+    "category": "Bihun Crispy - 10 gr",
+    "unit": "Processed Goods",
+    "currentStock": 0,
+    "minimumStock": 115,
+    "unitPrice": 34600
+  },
+  {
+    "code": "5Ayam Suwir Kecil - 25 gr",
+    "name": "PG-5130",
+    "category": "Ayam Suwir Kecil - 25 gr",
+    "unit": "Processed Goods",
+    "currentStock": 0,
+    "minimumStock": 40,
+    "unitPrice": 48000
+  },
+  {
+    "code": "5Baso Goreng - 1 pcs",
+    "name": "PG-5132",
+    "category": "Baso Goreng - 1 pcs",
+    "unit": "Processed Goods",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5BlackTea Cair",
+    "name": "PG-5133",
+    "category": "BlackTea Cair",
+    "unit": "Processed Goods",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Gula Aren Cair",
+    "name": "PG-5134",
+    "category": "Gula Aren Cair",
+    "unit": "Processed Goods",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Jelly Mango",
+    "name": "PG-5135",
+    "category": "Jelly Mango",
+    "unit": "Processed Goods",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Macchiato",
+    "name": "PG-5136",
+    "category": "Macchiato",
+    "unit": "pcs",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Simple Syrup",
+    "name": "PG-5137",
+    "category": "Simple Syrup",
+    "unit": "pcs",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Susu Tabung",
+    "name": "PG-5138",
+    "category": "Susu Tabung",
+    "unit": "pcs",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Espresso House Blends",
+    "name": "PG-5139",
+    "category": "Espresso House Blends",
+    "unit": "pcs",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Espresso Arabika",
+    "name": "PG-5140",
+    "category": "Espresso Arabika",
+    "unit": "pcs",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Mie Telor - PG",
+    "name": "PG-5141",
+    "category": "Mie Telor - PG",
+    "unit": "pcs",
+    "currentStock": 0,
+    "minimumStock": 20,
+    "unitPrice": 80000
+  },
+  {
+    "code": "5",
+    "name": "PG-5142",
+    "category": "",
+    "unit": "Processed Goods",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "PG-5143",
+    "category": "",
+    "unit": "Processed Goods",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "PG-5144",
+    "category": "",
+    "unit": "Processed Goods",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "PG-5145",
+    "category": "",
+    "unit": "Processed Goods",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "PG-5146",
+    "category": "",
+    "unit": "Processed Goods",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "PG-5147",
+    "category": "",
+    "unit": "Processed Goods",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Tagoya",
+    "name": "PC-6111",
+    "category": "Tagoya",
+    "unit": "Product Consigment",
+    "currentStock": 0,
+    "minimumStock": 23,
+    "unitPrice": 207000
+  },
+  {
+    "code": "5Croissant",
+    "name": "PC-6112",
+    "category": "Croissant",
+    "unit": "Product Consigment",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Brownies",
+    "name": "PC-6113",
+    "category": "Brownies",
+    "unit": "Product Consigment",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "PC-6114",
+    "category": "",
+    "unit": "Product Consigment",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "PC-6115",
+    "category": "",
+    "unit": "Product Consigment",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "PC-6116",
+    "category": "",
+    "unit": "Product Consigment",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "PC-6117",
+    "category": "",
+    "unit": "Product Consigment",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "PC-6118",
+    "category": "",
+    "unit": "Product Consigment",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "PC-6119",
+    "category": "",
+    "unit": "Product Consigment",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "PC-6120",
+    "category": "",
+    "unit": "Product Consigment",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "PC-6121",
+    "category": "",
+    "unit": "Product Consigment",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "PC-6122",
+    "category": "",
+    "unit": "Product Consigment",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "PC-6123",
+    "category": "",
+    "unit": "Product Consigment",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "PC-6124",
+    "category": "",
+    "unit": "Product Consigment",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "PC-6125",
+    "category": "",
+    "unit": "Product Consigment",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "PC-6126",
+    "category": "",
+    "unit": "Product Consigment",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "Product Consigment",
+    "category": "",
+    "unit": "pcs",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 248511
+  },
+  {
+    "code": "5Straw Hitam Besar - 250 pcs",
+    "name": "S-4111",
+    "category": "Straw Hitam Besar - 250 pcs",
+    "unit": "Supporting Product",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Straw Hitam Kecil - 500 Pcs",
+    "name": "S-4112",
+    "category": "Straw Hitam Kecil - 500 Pcs",
+    "unit": "Supporting Product",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Straw Panas",
+    "name": "S-4113",
+    "category": "Straw Panas",
+    "unit": "Supporting Product",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Plastik Cup Kemasan - 1 pcs",
+    "name": "S-4114",
+    "category": "Plastik Cup Kemasan - 1 pcs",
+    "unit": "Supporting Product",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Plastik Cup Kemasan - 2 pcs",
+    "name": "S-4115",
+    "category": "Plastik Cup Kemasan - 2 pcs",
+    "unit": "Supporting Product",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Plastik Shrink Roll",
+    "name": "S-4116",
+    "category": "Plastik Shrink Roll",
+    "unit": "Supporting Product",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Cup dingin",
+    "name": "S-4117",
+    "category": "Cup dingin",
+    "unit": "Supporting Product",
+    "currentStock": 0,
+    "minimumStock": 350,
+    "unitPrice": 245000
+  },
+  {
+    "code": "5Cup panas",
+    "name": "S-4118",
+    "category": "Cup panas",
+    "unit": "Supporting Product",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Es Batu",
+    "name": "S-4119",
+    "category": "Es Batu",
+    "unit": "Supporting Product",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Paper V60",
+    "name": "S-4120",
+    "category": "Paper V60",
+    "unit": "Supporting Product",
+    "currentStock": 0,
+    "minimumStock": 79,
+    "unitPrice": 3511
+  },
+  {
+    "code": "5Sendok Garpu TA",
+    "name": "S-4121",
+    "category": "Sendok Garpu TA",
+    "unit": "Supporting Product",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Plastik TA Reguler",
+    "name": "S-4122",
+    "category": "Plastik TA Reguler",
+    "unit": "Supporting Product",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Plastik TA Mini",
+    "name": "S-4123",
+    "category": "Plastik TA Mini",
+    "unit": "Supporting Product",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Plastik Kemasan Besar",
+    "name": "S-4124",
+    "category": "Plastik Kemasan Besar",
+    "unit": "Supporting Product",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Plastik Kemasan Sedang",
+    "name": "S-4125",
+    "category": "Plastik Kemasan Sedang",
+    "unit": "Supporting Product",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5Plastik Kemasan kecil",
+    "name": "S-4126",
+    "category": "Plastik Kemasan kecil",
+    "unit": "Supporting Product",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "S-4127",
+    "category": "",
+    "unit": "Supporting Product",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "S-4128",
+    "category": "",
+    "unit": "Supporting Product",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "S-4129",
+    "category": "",
+    "unit": "Supporting Product",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "S-4130",
+    "category": "",
+    "unit": "Supporting Product",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "S-4131",
+    "category": "",
+    "unit": "Supporting Product",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "S-4132",
+    "category": "",
+    "unit": "Product Consigment",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  },
+  {
+    "code": "5",
+    "name": "S-4133",
+    "category": "",
+    "unit": "Product Consigment",
+    "currentStock": 0,
+    "minimumStock": 0,
+    "unitPrice": 0
+  }
+]

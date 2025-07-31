@@ -3,6 +3,10 @@ const API_BASE_URL = 'http://localhost:3000/api';
 
 // Mock token for development - in production this should come from auth
 const getAuthToken = () => {
+  // For development, always return a mock token
+  if (!localStorage.getItem('authToken')) {
+    localStorage.setItem('authToken', 'mock-token-for-development');
+  }
   return localStorage.getItem('authToken') || 'mock-token-for-development';
 };
 

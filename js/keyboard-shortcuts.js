@@ -1,4 +1,4 @@
-// Pancong Kece - Keyboard Shortcuts Module
+// Sajati Smart System - Keyboard Shortcuts Module
 // Enhanced keyboard shortcuts for POS operations
 
 // Initialize keyboard shortcuts

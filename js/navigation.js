@@ -1,4 +1,4 @@
-// Pancong Kece - Navigation Module
+// Sajati Smart System - Navigation Module
 // Handles section switching and navigation functionality
 
 // Initialize navigation system

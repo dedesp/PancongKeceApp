@@ -1,21 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { LayoutDashboard, TrendingUp, Users, Package, DollarSign } from 'lucide-react';
 
-const StatCard = ({ title, value, icon: Icon, trend, trendValue }) => {
+const StatCard = ({ title, value, trend, trendValue, icon }) => {
+  const IconComponent = icon;
   return (
     <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
       <div className="flex items-center justify-between">
         <div>
           <p className="text-sm font-medium text-gray-600">{title}</p>
           <p className="text-2xl font-bold text-gray-900 mt-1">{value}</p>
-          {trend && (
+          {trend && trendValue && (
             <p className={`text-sm mt-1 ${trend === 'up' ? 'text-green-600' : 'text-red-600'}`}>
               {trend === 'up' ? '↗' : '↘'} {trendValue}
             </p>
           )}
         </div>
         <div className="p-3 bg-primary-50 rounded-lg">
-          <Icon className="w-6 h-6 text-primary-600" />
+          <IconComponent className="w-6 h-6 text-primary-600" />
         </div>
       </div>
     </div>
@@ -23,36 +24,99 @@ const StatCard = ({ title, value, icon: Icon, trend, trendValue }) => {
 };
 
 const Dashboard = () => {
-  const stats = [
+  const [stats, setStats] = useState([
     {
       title: 'Penjualan Hari Ini',
-      value: 'Rp 2.450.000',
+      value: 'Rp 0',
       icon: DollarSign,
-      trend: 'up',
-      trendValue: '+12%'
+      trend: null,
+      trendValue: null
     },
     {
       title: 'Total Transaksi',
-      value: '156',
+      value: '0',
       icon: TrendingUp,
-      trend: 'up',
-      trendValue: '+8%'
+      trend: null,
+      trendValue: null
     },
     {
-      title: 'Customer Aktif',
-      value: '89',
+      title: 'Karyawan Aktif',
+      value: '0',
       icon: Users,
-      trend: 'up',
-      trendValue: '+5%'
+      trend: null,
+      trendValue: null
     },
     {
-      title: 'Produk Terjual',
-      value: '324',
+      title: 'Stok Rendah',
+      value: '0',
       icon: Package,
-      trend: 'down',
-      trendValue: '-2%'
+      trend: null,
+      trendValue: null
     }
-  ];
+  ]);
+  const [loading, setLoading] = useState(true);
+
+  // Load dashboard data from database
+  useEffect(() => {
+    const loadDashboardData = async () => {
+      try {
+        setLoading(true);
+        const response = await fetch('http://localhost:3000/api/dashboard/stats', {
+          headers: {
+            'Authorization': `Bearer ${localStorage.getItem('authToken') || 'mock-token-for-development'}`,
+            'Content-Type': 'application/json'
+          }
+        });
+        const result = await response.json();
+        
+        if (result.status === 'success') {
+          const data = result.data;
+          setStats([
+            {
+              title: 'Penjualan Hari Ini',
+              value: new Intl.NumberFormat('id-ID', {
+                style: 'currency',
+                currency: 'IDR',
+                minimumFractionDigits: 0
+              }).format(data.today_sales || 0),
+              icon: DollarSign,
+              trend: data.today_sales_trend || null,
+              trendValue: data.today_sales_trend_value || null
+            },
+            {
+              title: 'Total Transaksi',
+              value: (data.transaction_count || 0).toString(),
+              icon: TrendingUp,
+              trend: data.transaction_trend || null,
+              trendValue: data.transaction_trend_value || null
+            },
+            {
+              title: 'Karyawan Aktif',
+              value: (data.employee_count || 0).toString(),
+              icon: Users,
+              trend: data.employee_trend || null,
+              trendValue: data.employee_trend_value || null
+            },
+            {
+              title: 'Stok Rendah',
+              value: (data.low_stock_count || 0).toString(),
+              icon: Package,
+              trend: data.stock_trend || null,
+              trendValue: data.stock_trend_value || null
+            }
+          ]);
+        } else {
+          console.error('Failed to fetch dashboard data:', result.message);
+        }
+      } catch (error) {
+        console.error('Error loading dashboard data:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    
+    loadDashboardData();
+  }, []);
 
   return (
     <div className="space-y-6">
@@ -67,9 +131,25 @@ const Dashboard = () => {
 
       {/* Stats Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {stats.map((stat, index) => (
-          <StatCard key={index} {...stat} />
-        ))}
+        {loading ? (
+          // Loading skeleton
+          Array.from({ length: 4 }).map((_, index) => (
+            <div key={index} className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 animate-pulse">
+              <div className="flex items-center justify-between">
+                <div className="flex-1">
+                  <div className="h-4 bg-gray-200 rounded w-3/4 mb-2"></div>
+                  <div className="h-8 bg-gray-200 rounded w-1/2 mb-2"></div>
+                  <div className="h-3 bg-gray-200 rounded w-1/4"></div>
+                </div>
+                <div className="w-12 h-12 bg-gray-200 rounded-lg"></div>
+              </div>
+            </div>
+          ))
+        ) : (
+          stats.map((stat, index) => (
+            <StatCard key={index} {...stat} />
+          ))
+        )}
       </div>
 
       {/* Quick Actions */}

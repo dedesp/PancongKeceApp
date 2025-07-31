@@ -1,6 +1,6 @@
-# Pancong Kece Backend API
+# Sajati Cafe Backend API
 
-Backend API untuk aplikasi manajemen cafe Pancong Kece dengan fitur Point of Sales (POS) dan Human Resource Management (HRM).
+Backend API untuk aplikasi manajemen cafe Sajati dengan fitur Point of Sales (POS) dan Human Resource Management (HRM).
 
 ## Instalasi
 
@@ -17,11 +17,11 @@ Pastikan PostgreSQL sudah terinstal dan berjalan di sistem Anda.
 sudo -u postgres psql
 
 # Buat database baru
-CREATE DATABASE pancong_kece;
+CREATE DATABASE sajati_cafe;
 
 # Buat user dan berikan privileges
 CREATE USER cafe_user WITH PASSWORD 'password';
-GRANT ALL PRIVILEGES ON DATABASE pancong_kece TO cafe_user;
+GRANT ALL PRIVILEGES ON DATABASE sajati_cafe TO cafe_user;
 
 # Keluar dari PostgreSQL
 \q
@@ -46,7 +46,7 @@ Contoh konfigurasi `.env`:
 # Database Configuration
 DB_HOST=localhost
 DB_PORT=5432
-DB_NAME=pancong_kece
+DB_NAME=sajati_cafe
 DB_USER=cafe_user
 DB_PASSWORD=password
 
@@ -55,7 +55,7 @@ PORT=3000
 NODE_ENV=development
 
 # JWT Secret
-JWT_SECRET=pancong_kece_secret_key
+JWT_SECRET=sajati_cafe_secret_key
 JWT_EXPIRATION=1d
 
 # Cors Configuration

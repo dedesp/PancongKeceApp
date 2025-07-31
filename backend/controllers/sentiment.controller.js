@@ -326,7 +326,7 @@ async function performSentimentAnalysis(text, title = '') {
   const positiveWords = ['enak', 'bagus', 'mantap', 'lezat', 'puas', 'suka', 'rekomendasi', 'terbaik', 'nyaman', 'ramah'];
   const negativeWords = ['buruk', 'jelek', 'kecewa', 'mahal', 'lama', 'kotor', 'tidak', 'benci', 'gagal', 'rusak'];
   const serviceWords = ['pelayanan', 'service', 'kasir', 'staff', 'karyawan', 'waitress'];
-  const foodWords = ['makanan', 'pancong', 'rasa', 'menu', 'masak', 'porsi'];
+  const foodWords = ['makanan', 'sajati', 'rasa', 'menu', 'masak', 'porsi'];
   const priceWords = ['harga', 'mahal', 'murah', 'nilai', 'bayar'];
   
   // Calculate sentiment score
@@ -382,7 +382,7 @@ async function performSentimentAnalysis(text, title = '') {
   // Generate auto response
   let autoResponse = '';
   if (sentimentScore >= 0.3) {
-    autoResponse = 'Terima kasih atas feedback positif Anda! Kami senang Anda menikmati pengalaman di Pancong Kece.';
+    autoResponse = 'Terima kasih atas feedback positif Anda! Kami senang Anda menikmati pengalaman di Sajati Smart System.';
   } else if (sentimentScore <= -0.3) {
     autoResponse = 'Terima kasih atas feedback Anda. Kami akan menindaklanjuti keluhan ini untuk perbaikan layanan kami.';
   } else {

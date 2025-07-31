@@ -1,12 +1,12 @@
-// Pancong Kece - Employee Management Module
+// Sajati Smart System - Employee Management Module
 // Handles employee CRUD, attendance, schedules, and payroll
 
 let employees = [
-    { id: 1, name: 'Andi Pratama', email: 'andi@pancongkece.com', phone: '081234567890', position: 'manager', startDate: '2024-01-15', salary: 5000000, address: 'Jl. Sudirman No. 123, Jakarta', active: true, isWorking: true, clockInTime: '08:00' },
-    { id: 2, name: 'Sari Dewi', email: 'sari@pancongkece.com', phone: '081234567891', position: 'cashier', startDate: '2024-02-01', salary: 3500000, address: 'Jl. Thamrin No. 456, Jakarta', active: true, isWorking: true, clockInTime: '08:15' },
-    { id: 3, name: 'Budi Santoso', email: 'budi@pancongkece.com', phone: '081234567892', position: 'barista', startDate: '2024-03-01', salary: 3000000, address: 'Jl. Gatot Subroto No. 789, Jakarta', active: true, isWorking: false, clockInTime: null },
-    { id: 4, name: 'Maya Indira', email: 'maya@pancongkece.com', phone: '081234567893', position: 'server', startDate: '2024-03-15', salary: 2800000, address: 'Jl. Kemang No. 321, Jakarta', active: true, isWorking: true, clockInTime: '08:30' },
-    { id: 5, name: 'Rizki Fauzan', email: 'rizki@pancongkece.com', phone: '081234567894', position: 'barista', startDate: '2024-04-01', salary: 3200000, address: 'Jl. Senayan No. 654, Jakarta', active: false, isWorking: false, clockInTime: null }
+    { id: 1, name: 'Andi Pratama', email: 'andi@sajati.com', phone: '081234567890', position: 'manager', startDate: '2024-01-15', salary: 5000000, address: 'Jl. Sudirman No. 123, Jakarta', active: true, isWorking: true, clockInTime: '08:00' },
+    { id: 2, name: 'Sari Dewi', email: 'sari@sajati.com', phone: '081234567891', position: 'cashier', startDate: '2024-02-01', salary: 3500000, address: 'Jl. Thamrin No. 456, Jakarta', active: true, isWorking: true, clockInTime: '08:15' },
+    { id: 3, name: 'Budi Santoso', email: 'budi@sajati.com', phone: '081234567892', position: 'barista', startDate: '2024-03-01', salary: 3000000, address: 'Jl. Gatot Subroto No. 789, Jakarta', active: true, isWorking: false, clockInTime: null },
+    { id: 4, name: 'Maya Indira', email: 'maya@sajati.com', phone: '081234567893', position: 'server', startDate: '2024-03-15', salary: 2800000, address: 'Jl. Kemang No. 321, Jakarta', active: true, isWorking: true, clockInTime: '08:30' },
+    { id: 5, name: 'Rizki Fauzan', email: 'rizki@sajati.com', phone: '081234567894', position: 'barista', startDate: '2024-04-01', salary: 3200000, address: 'Jl. Senayan No. 654, Jakarta', active: false, isWorking: false, clockInTime: null }
 ];
 
 let attendanceData = [];

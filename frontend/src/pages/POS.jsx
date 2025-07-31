@@ -1,21 +1,43 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ShoppingCart, Plus, Minus, Trash2, Calculator } from 'lucide-react';
+import { productAPI } from '../services/api';
 
 const POS = () => {
   const [cart, setCart] = useState([]);
   const [total, setTotal] = useState(0);
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  // Sample products
-  const products = [
-    { id: 1, name: 'Kopi Americano', price: 15000, category: 'Minuman' },
-    { id: 2, name: 'Kopi Latte', price: 18000, category: 'Minuman' },
-    { id: 3, name: 'Cappuccino', price: 17000, category: 'Minuman' },
-    { id: 4, name: 'Pancong Original', price: 8000, category: 'Makanan' },
-    { id: 5, name: 'Pancong Coklat', price: 10000, category: 'Makanan' },
-    { id: 6, name: 'Pancong Keju', price: 12000, category: 'Makanan' },
-    { id: 7, name: 'Teh Tarik', price: 12000, category: 'Minuman' },
-    { id: 8, name: 'Jus Jeruk', price: 15000, category: 'Minuman' }
-  ];
+  // Load products from database
+  useEffect(() => {
+    const loadProducts = async () => {
+      try {
+        setLoading(true);
+        const response = await productAPI.getAll();
+        
+        if (response.status === 'success') {
+          // Transform data to match expected format
+          const transformedProducts = response.data.map(product => ({
+            id: product.id,
+            name: product.name,
+            price: product.price,
+            category: product.category?.name || 'Umum'
+          }));
+          setProducts(transformedProducts);
+        } else {
+          console.error('Failed to fetch products:', response.message);
+          setProducts([]);
+        }
+      } catch (error) {
+        console.error('Error loading products:', error);
+        setProducts([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+    
+    loadProducts();
+  }, []);
 
   const addToCart = (product) => {
     const existingItem = cart.find(item => item.id === product.id);
@@ -82,21 +104,32 @@ const POS = () => {
         <div className="lg:col-span-2">
           <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
             <h2 className="text-lg font-semibold text-gray-900 mb-4">Produk</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {products.map((product) => (
-                <button
-                  key={product.id}
-                  onClick={() => addToCart(product)}
-                  className="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors text-left"
-                >
-                  <div className="space-y-2">
-                    <h3 className="font-medium text-gray-900">{product.name}</h3>
-                    <p className="text-sm text-gray-600">{product.category}</p>
-                    <p className="text-lg font-bold text-primary-600">{formatPrice(product.price)}</p>
-                  </div>
-                </button>
-              ))}
-            </div>
+            {loading ? (
+              <div className="text-center py-8">
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-600 mx-auto"></div>
+                <p className="text-gray-500 mt-2">Memuat produk...</p>
+              </div>
+            ) : products.length === 0 ? (
+              <div className="text-center py-8">
+                <p className="text-gray-500">Tidak ada produk tersedia</p>
+              </div>
+            ) : (
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                {products.map((product) => (
+                  <button
+                    key={product.id}
+                    onClick={() => addToCart(product)}
+                    className="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors text-left"
+                  >
+                    <div className="space-y-2">
+                      <h3 className="font-medium text-gray-900">{product.name}</h3>
+                      <p className="text-sm text-gray-600">{product.category}</p>
+                      <p className="text-lg font-bold text-primary-600">{formatPrice(product.price)}</p>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
         </div>
 

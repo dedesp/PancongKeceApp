@@ -11,7 +11,8 @@ import {
   Brain,
   TrendingUp,
   FileText,
-  Settings
+  Settings,
+  ChefHat
 } from 'lucide-react';
 import { clsx } from 'clsx';
 
@@ -42,6 +43,13 @@ const navigationItems = [
     label: 'Inventaris',
     icon: Warehouse,
     path: '/inventory',
+    managerOnly: true
+  },
+  {
+    id: 'recipe-management',
+    label: 'Recipe Management',
+    icon: ChefHat,
+    path: '/recipe-management',
     managerOnly: true
   },
   {

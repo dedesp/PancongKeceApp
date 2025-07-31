@@ -1,0 +1,23 @@
+{
+  "totalProducts": 54,
+  "totalRawMaterials": 0,
+  "totalRecipes": 83,
+  "totalInventoryItems": 244,
+  "totalPurchaseRecords": 1684,
+  "productsByCategory": {
+    "Light Meal": 10,
+    "Main Course": 12,
+    "Coffee": 9,
+    "Unknown": 14,
+    "Non-Coffee": 9
+  },
+  "recipesByCategory": {
+    "Paste/Garnish": 30,
+    "Light Meal": 9,
+    "Main Course": 12,
+    "Coffee": 23,
+    "Non-Coffee": 9
+  },
+  "inventoryValue": 0,
+  "averageMargin": 0
+}

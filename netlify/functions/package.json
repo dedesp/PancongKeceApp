@@ -1,7 +1,7 @@
 {
   "name": "netlify-functions",
   "version": "1.0.0",
-  "description": "Netlify Functions for Pancong Kece App",
+  "description": "Netlify Functions for Sajati Smart System App",
   "main": "server.js",
   "dependencies": {
     "express": "^4.18.2",

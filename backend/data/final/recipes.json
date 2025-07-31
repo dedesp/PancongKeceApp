@@ -1,0 +1,1662 @@
+[
+  {
+    "type": "COGS-PG",
+    "category": "Paste/Garnish",
+    "productName": "Kailan Crispy",
+    "productCode": "Kailan Crispy",
+    "ingredients": [
+      {
+        "no": 1,
+        "description": "Kailan Crispy",
+        "code": "F-3123",
+        "name": "Kailan",
+        "unit": "Gram",
+        "quantity": 4,
+        "unitCost": 1000,
+        "totalCost": 17514.891304347824
+      }
+    ],
+    "totalCost": 17514.891304347824,
+    "yield": 1
+  },
+  {
+    "type": "COGS-PG",
+    "category": "Paste/Garnish",
+    "productName": "Bumbu Oseng Sapi",
+    "productCode": "Bumbu Oseng Sapi",
+    "ingredients": [
+      {
+        "no": 2,
+        "description": "Bumbu Oseng Sapi",
+        "code": "F-3113",
+        "name": "Bawang Merah",
+        "unit": "Gram",
+        "quantity": 12,
+        "unitCost": 75,
+        "totalCost": 819.6044117647059
+      }
+    ],
+    "totalCost": 819.6044117647059,
+    "yield": 1
+  },
+  {
+    "type": "COGS-PG",
+    "category": "Paste/Garnish",
+    "productName": "Bumbu Ayam Kemangi",
+    "productCode": "Bumbu Ayam Kemangi",
+    "ingredients": [
+      {
+        "no": 3,
+        "description": "Bumbu Ayam Kemangi",
+        "code": "F-3113",
+        "name": "Bawang Merah",
+        "unit": "Gram",
+        "quantity": 10,
+        "unitCost": 65,
+        "totalCost": 819.6044117647059
+      }
+    ],
+    "totalCost": 819.6044117647059,
+    "yield": 1
+  },
+  {
+    "type": "COGS-PG",
+    "category": "Paste/Garnish",
+    "productName": "Bumbu Nasi & Mie Goreng",
+    "productCode": "Bumbu Nasi & Mie Goreng",
+    "ingredients": [
+      {
+        "no": 4,
+        "description": "Bumbu Nasi & Mie Goreng",
+        "code": "F-3113",
+        "name": "Bawang Merah",
+        "unit": "Gram",
+        "quantity": 20,
+        "unitCost": 160,
+        "totalCost": 819.6044117647059
+      }
+    ],
+    "totalCost": 819.6044117647059,
+    "yield": 1
+  },
+  {
+    "type": "COGS-PG",
+    "category": "Paste/Garnish",
+    "productName": "Kentang Rumahan",
+    "productCode": "Kentang Rumahan",
+    "ingredients": [
+      {
+        "no": 5,
+        "description": "Kentang Rumahan",
+        "code": "F-3126",
+        "name": "Kentang",
+        "unit": "Gram",
+        "quantity": 4,
+        "unitCost": 1000,
+        "totalCost": 18.969992838379678
+      }
+    ],
+    "totalCost": 18.969992838379678,
+    "yield": 1
+  },
+  {
+    "type": "COGS-PG",
+    "category": "Paste/Garnish",
+    "productName": "Macchiato",
+    "productCode": "Macchiato",
+    "ingredients": [
+      {
+        "no": 6,
+        "description": "Macchiato",
+        "code": "D-2127",
+        "name": "Whipping Cream",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 200,
+        "totalCost": 71.4
+      }
+    ],
+    "totalCost": 71.4,
+    "yield": 1
+  },
+  {
+    "type": "COGS-PG",
+    "category": "Paste/Garnish",
+    "productName": "Nasi Putih Kecil",
+    "productCode": "Nasi Putih Kecil",
+    "ingredients": [
+      {
+        "no": 7,
+        "description": "Nasi Putih Kecil",
+        "code": "G-1119",
+        "name": "Beras",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 1000,
+        "totalCost": 15.54
+      }
+    ],
+    "totalCost": 15.54,
+    "yield": 1
+  },
+  {
+    "type": "COGS-PG",
+    "category": "Paste/Garnish",
+    "productName": "Nasi Putih Besar",
+    "productCode": "Nasi Putih Besar",
+    "ingredients": [
+      {
+        "no": 8,
+        "description": "Nasi Putih Besar",
+        "code": "G-1119",
+        "name": "Beras",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 1000,
+        "totalCost": 15.54
+      }
+    ],
+    "totalCost": 15.54,
+    "yield": 1
+  },
+  {
+    "type": "COGS-PG",
+    "category": "Paste/Garnish",
+    "productName": "Ayam Suir Kecil",
+    "productCode": "Ayam Suir Kecil",
+    "ingredients": [
+      {
+        "no": 9,
+        "description": "Ayam Suir Kecil",
+        "code": "D-2121",
+        "name": "Dada Ayam Fillet",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 1000,
+        "totalCost": 10221.290909090909
+      }
+    ],
+    "totalCost": 10221.290909090909,
+    "yield": 1
+  },
+  {
+    "type": "COGS-PG",
+    "category": "Paste/Garnish",
+    "productName": "Ayam Suwir Besar",
+    "productCode": "Ayam Suwir Besar",
+    "ingredients": [
+      {
+        "no": 10,
+        "description": "Ayam Suwir Besar",
+        "code": "D-2121",
+        "name": "Dada Ayam Fillet",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 1000,
+        "totalCost": 10221.290909090909
+      }
+    ],
+    "totalCost": 10221.290909090909,
+    "yield": 1
+  },
+  {
+    "type": "COGS-PG",
+    "category": "Paste/Garnish",
+    "productName": "Sayap Ayam Bawang",
+    "productCode": "Sayap Ayam Bawang",
+    "ingredients": [
+      {
+        "no": 11,
+        "description": "Sayap Ayam Bawang",
+        "code": "D-2123",
+        "name": "Sayap Ayam",
+        "unit": "Pcs",
+        "quantity": 12,
+        "unitCost": 12,
+        "totalCost": 3222.743055555555
+      }
+    ],
+    "totalCost": 3222.743055555555,
+    "yield": 1
+  },
+  {
+    "type": "COGS-PG",
+    "category": "Paste/Garnish",
+    "productName": "Kerupuk",
+    "productCode": "Kerupuk",
+    "ingredients": [
+      {
+        "no": 12,
+        "description": "Kerupuk",
+        "code": "G-1132",
+        "name": "Kerupuk",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 1000,
+        "totalCost": 45.252
+      }
+    ],
+    "totalCost": 45.252,
+    "yield": 1
+  },
+  {
+    "type": "COGS-PG",
+    "category": "Paste/Garnish",
+    "productName": "Bihun Crispy",
+    "productCode": "Bihun Crispy",
+    "ingredients": [
+      {
+        "no": 13,
+        "description": "Bihun Crispy",
+        "code": "G-1126",
+        "name": "Bihun",
+        "unit": "Gram",
+        "quantity": 2,
+        "unitCost": 500,
+        "totalCost": 47.61636363636363
+      }
+    ],
+    "totalCost": 47.61636363636363,
+    "yield": 1
+  },
+  {
+    "type": "COGS-PG",
+    "category": "Paste/Garnish",
+    "productName": "Paha Fillet Bumbu",
+    "productCode": "Paha Fillet Bumbu",
+    "ingredients": [
+      {
+        "no": 14,
+        "description": "Paha Fillet Bumbu",
+        "code": "D-2122",
+        "name": "Paha Ayam Fillet",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 1000,
+        "totalCost": 49.440409951714294
+      }
+    ],
+    "totalCost": 49.440409951714294,
+    "yield": 1
+  },
+  {
+    "type": "COGS-PG",
+    "category": "Paste/Garnish",
+    "productName": "Bumbu Saus Blackpaper",
+    "productCode": "Bumbu Saus Blackpaper",
+    "ingredients": [
+      {
+        "no": 16,
+        "description": "Bumbu Saus Blackpaper",
+        "code": "F-3114",
+        "name": "Bawang Putih",
+        "unit": "Gram",
+        "quantity": 6,
+        "unitCost": 45,
+        "totalCost": 784.6772405159504
+      }
+    ],
+    "totalCost": 784.6772405159504,
+    "yield": 1
+  },
+  {
+    "type": "COGS-PG",
+    "category": "Paste/Garnish",
+    "productName": "Bumbu Saus Teriyaki",
+    "productCode": "Bumbu Saus Teriyaki",
+    "ingredients": [
+      {
+        "no": 17,
+        "description": "Bumbu Saus Teriyaki",
+        "code": "F-3114",
+        "name": "Bawang Putih",
+        "unit": "Gram",
+        "quantity": 2,
+        "unitCost": 15,
+        "totalCost": 784.6772405159504
+      }
+    ],
+    "totalCost": 784.6772405159504,
+    "yield": 1
+  },
+  {
+    "type": "COGS-PG",
+    "category": "Paste/Garnish",
+    "productName": "Bumbu Popmayo",
+    "productCode": "Bumbu Popmayo",
+    "ingredients": [
+      {
+        "no": 18,
+        "description": "Bumbu Popmayo",
+        "code": "G-1180",
+        "name": "Mayonaise Jepang",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 130,
+        "totalCost": 69.699
+      }
+    ],
+    "totalCost": 69.699,
+    "yield": 1
+  },
+  {
+    "type": "COGS-PG",
+    "category": "Paste/Garnish",
+    "productName": "SAUS BAGOS",
+    "productCode": "SAUS BAGOS",
+    "ingredients": [
+      {
+        "no": 19,
+        "description": "SAUS BAGOS",
+        "code": "F-3114",
+        "name": "Bawang Putih",
+        "unit": "Gram",
+        "quantity": 5,
+        "unitCost": 10,
+        "totalCost": 784.6772405159504
+      }
+    ],
+    "totalCost": 784.6772405159504,
+    "yield": 1
+  },
+  {
+    "type": "COGS-PG",
+    "category": "Paste/Garnish",
+    "productName": "Spaghetti",
+    "productCode": "Spaghetti",
+    "ingredients": [
+      {
+        "no": 20,
+        "description": "Spaghetti",
+        "code": "G-1122",
+        "name": "Spaghetti",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 1000,
+        "totalCost": 31.833333333333332
+      }
+    ],
+    "totalCost": 31.833333333333332,
+    "yield": 1
+  },
+  {
+    "type": "COGS-PG",
+    "category": "Paste/Garnish",
+    "productName": "Beef Slice",
+    "productCode": "Beef Slice",
+    "ingredients": [
+      {
+        "no": 21,
+        "description": "Beef Slice",
+        "code": "D-2120",
+        "name": "Beef Slice",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 1000,
+        "totalCost": 84
+      }
+    ],
+    "totalCost": 84,
+    "yield": 1
+  },
+  {
+    "type": "COGS-PG",
+    "category": "Paste/Garnish",
+    "productName": "Garlic Bread",
+    "productCode": "Garlic Bread",
+    "ingredients": [
+      {
+        "no": 22,
+        "description": "Garlic Bread",
+        "code": "D-2129",
+        "name": "Roti Tawar Tipis",
+        "unit": "pcs",
+        "quantity": 0,
+        "unitCost": 25,
+        "totalCost": 423.07692307692304
+      }
+    ],
+    "totalCost": 423.07692307692304,
+    "yield": 1
+  },
+  {
+    "type": "COGS-PG",
+    "category": "Paste/Garnish",
+    "productName": "Baso Goreng",
+    "productCode": "Baso Goreng",
+    "ingredients": [
+      {
+        "no": 23,
+        "description": "Baso Goreng",
+        "code": "D-2122",
+        "name": "Paha Ayam Fillet",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 400,
+        "totalCost": 49.440409951714294
+      }
+    ],
+    "totalCost": 49.440409951714294,
+    "yield": 1
+  },
+  {
+    "type": "COGS-PG",
+    "category": "Paste/Garnish",
+    "productName": "Susu Tabung",
+    "productCode": "Susu Tabung",
+    "ingredients": [
+      {
+        "no": 24,
+        "description": "Susu Tabung",
+        "code": "D-2124",
+        "name": "Fresh Milk",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 1000,
+        "totalCost": 20.613727272727267
+      }
+    ],
+    "totalCost": 20.613727272727267,
+    "yield": 1
+  },
+  {
+    "type": "COGS-PG",
+    "category": "Paste/Garnish",
+    "productName": "Jelly Mango",
+    "productCode": "Jelly Mango",
+    "ingredients": [
+      {
+        "no": 25,
+        "description": "Jelly Mango",
+        "code": "G-1150",
+        "name": "Puding Susu Mangga",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 170,
+        "totalCost": 95
+      }
+    ],
+    "totalCost": 95,
+    "yield": 1
+  },
+  {
+    "type": "COGS-PG",
+    "category": "Paste/Garnish",
+    "productName": "Simple Syrup",
+    "productCode": "Simple Syrup",
+    "ingredients": [
+      {
+        "no": 26,
+        "description": "Simple Syrup",
+        "code": "G-1134",
+        "name": "Air Mineral Aqua",
+        "unit": "ml",
+        "quantity": 0,
+        "unitCost": 1000,
+        "totalCost": 1.0526315789473684
+      }
+    ],
+    "totalCost": 1.0526315789473684,
+    "yield": 1
+  },
+  {
+    "type": "COGS-PG",
+    "category": "Paste/Garnish",
+    "productName": "Gula Aren Cair",
+    "productCode": "Gula Aren Cair",
+    "ingredients": [
+      {
+        "no": 27,
+        "description": "Gula Aren Cair",
+        "code": "G-1143",
+        "name": "Gula Aren",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 500,
+        "totalCost": 36
+      }
+    ],
+    "totalCost": 36,
+    "yield": 1
+  },
+  {
+    "type": "COGS-PG",
+    "category": "Paste/Garnish",
+    "productName": "Black Tea Cair",
+    "productCode": "Black Tea Cair",
+    "ingredients": [
+      {
+        "no": 28,
+        "description": "Black Tea Cair",
+        "code": "G-1138",
+        "name": "Blacktea Leaf",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 40,
+        "totalCost": 68
+      }
+    ],
+    "totalCost": 68,
+    "yield": 1
+  },
+  {
+    "type": "COGS-PG",
+    "category": "Paste/Garnish",
+    "productName": "Espresso House Blends",
+    "productCode": "Espresso House Blends",
+    "ingredients": [
+      {
+        "no": 29,
+        "description": "Espresso House Blends",
+        "code": "G-1144",
+        "name": "House Blends Beans",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 20,
+        "totalCost": 325
+      }
+    ],
+    "totalCost": 325,
+    "yield": 1
+  },
+  {
+    "type": "COGS-PG",
+    "category": "Paste/Garnish",
+    "productName": "Espresso Arabika",
+    "productCode": "Espresso Arabika",
+    "ingredients": [
+      {
+        "no": 30,
+        "description": "Espresso Arabika",
+        "code": "G-1136",
+        "name": "Arabika Beans",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 20,
+        "totalCost": 325
+      }
+    ],
+    "totalCost": 325,
+    "yield": 1
+  },
+  {
+    "type": "COGS-PG",
+    "category": "Paste/Garnish",
+    "productName": "Total Cost Espresso Arabika",
+    "productCode": "Mie Telur PG",
+    "ingredients": [
+      {
+        "no": 31,
+        "description": "Mie Telur PG",
+        "code": "G-1111",
+        "name": "Mie Telor",
+        "unit": "Pcs",
+        "quantity": 0,
+        "unitCost": 4,
+        "totalCost": 5012.5
+      }
+    ],
+    "totalCost": 5012.5,
+    "yield": 1
+  },
+  {
+    "type": "COGS-LM",
+    "category": "Light Meal",
+    "productName": "Sayap Ayam Bawang Kailan",
+    "productCode": "Sayap Ayam Bawang Kailan",
+    "ingredients": [
+      {
+        "no": 1,
+        "description": "Sayap Ayam Bawang Kailan",
+        "code": "PG-5118",
+        "name": "Sayap Ayam Bawang - 6 pcs",
+        "unit": "Por",
+        "quantity": 0,
+        "unitCost": 1,
+        "totalCost": 56980.61184414617
+      }
+    ],
+    "totalCost": 56980.61184414617,
+    "yield": 1
+  },
+  {
+    "type": "COGS-LM",
+    "category": "Light Meal",
+    "productName": "Tahu Lada Garam",
+    "productCode": "Tahu Lada Garam",
+    "ingredients": [
+      {
+        "no": 2,
+        "description": "Tahu Lada Garam",
+        "code": "D-2111",
+        "name": "Tahu Kuning",
+        "unit": "Pcs",
+        "quantity": 0,
+        "unitCost": 2,
+        "totalCost": 1423.25
+      }
+    ],
+    "totalCost": 1423.25,
+    "yield": 1
+  },
+  {
+    "type": "COGS-LM",
+    "category": "Light Meal",
+    "productName": "Lava Toast",
+    "productCode": "Lava Toast",
+    "ingredients": [
+      {
+        "no": 3,
+        "description": "Lava Toast",
+        "code": "PG-5136",
+        "name": "Macchiato",
+        "unit": "",
+        "quantity": 0,
+        "unitCost": 30,
+        "totalCost": 57.44254545454546
+      }
+    ],
+    "totalCost": 57.44254545454546,
+    "yield": 1
+  },
+  {
+    "type": "COGS-LM",
+    "category": "Light Meal",
+    "productName": "Kentang Rumahan",
+    "productCode": "Kentang Rumahan",
+    "ingredients": [
+      {
+        "no": 5,
+        "description": "Kentang Rumahan",
+        "code": "PG-5117",
+        "name": "Kentang Rumahan - 100 gr",
+        "unit": "Por",
+        "quantity": 0,
+        "unitCost": 1,
+        "totalCost": 6245.74820959492
+      }
+    ],
+    "totalCost": 6245.74820959492,
+    "yield": 1
+  },
+  {
+    "type": "COGS-LM",
+    "category": "Light Meal",
+    "productName": "Kentang Sosis",
+    "productCode": "Kentang Sosis",
+    "ingredients": [
+      {
+        "no": 6,
+        "description": "Kentang Sosis",
+        "code": "PG-5117",
+        "name": "Kentang Rumahan - 100 gr",
+        "unit": "Por",
+        "quantity": 0,
+        "unitCost": 1,
+        "totalCost": 6245.74820959492
+      }
+    ],
+    "totalCost": 6245.74820959492,
+    "yield": 1
+  },
+  {
+    "type": "COGS-LM",
+    "category": "Light Meal",
+    "productName": "Caramel Chessy Toast",
+    "productCode": "Caramel Chessy Toast",
+    "ingredients": [
+      {
+        "no": 8,
+        "description": "Caramel Chessy Toast",
+        "code": "D-2119",
+        "name": "Roti Tawar Tebal",
+        "unit": "",
+        "quantity": 0,
+        "unitCost": 2,
+        "totalCost": 1545
+      }
+    ],
+    "totalCost": 1545,
+    "yield": 1
+  },
+  {
+    "type": "COGS-LM",
+    "category": "Light Meal",
+    "productName": "Chicken Pop Mayo",
+    "productCode": "Chicken Pop Mayo",
+    "ingredients": [
+      {
+        "no": 9,
+        "description": "Chicken Pop Mayo",
+        "code": "PG-5114",
+        "name": "Paha Fillet Bumbu - 80 gr",
+        "unit": "Por",
+        "quantity": 1,
+        "unitCost": 1,
+        "totalCost": 7924.572571225345
+      }
+    ],
+    "totalCost": 7924.572571225345,
+    "yield": 1
+  },
+  {
+    "type": "COGS-LM",
+    "category": "Light Meal",
+    "productName": "Pisang Keju",
+    "productCode": "Pisang Keju",
+    "ingredients": [
+      {
+        "no": 10,
+        "description": "Pisang Keju",
+        "code": "F-3131",
+        "name": "Pisang",
+        "unit": "Pcs",
+        "quantity": 0,
+        "unitCost": 2,
+        "totalCost": 1704.4949124949123
+      }
+    ],
+    "totalCost": 1704.4949124949123,
+    "yield": 1
+  },
+  {
+    "type": "COGS-LM",
+    "category": "Light Meal",
+    "productName": "Baso Goreng",
+    "productCode": "Baso Goreng",
+    "ingredients": [
+      {
+        "no": 11,
+        "description": "Baso Goreng",
+        "code": "PG-5132",
+        "name": "Baso Goreng - 1 pcs",
+        "unit": "Pcs",
+        "quantity": 0,
+        "unitCost": 3,
+        "totalCost": 83390.17590458365
+      }
+    ],
+    "totalCost": 83390.17590458365,
+    "yield": 1
+  },
+  {
+    "type": "COGS-MC",
+    "category": "Main Course",
+    "productName": "Nasi Oseng Sapi",
+    "productCode": "Nasi Oseng Sapi",
+    "ingredients": [
+      {
+        "no": 1,
+        "description": "Nasi Oseng Sapi",
+        "code": "PG-5121",
+        "name": "Bumbu Oseng Sapi - 25 gr",
+        "unit": "Por",
+        "quantity": 0,
+        "unitCost": 1,
+        "totalCost": 8602.955827991118
+      }
+    ],
+    "totalCost": 8602.955827991118,
+    "yield": 1
+  },
+  {
+    "type": "COGS-MC",
+    "category": "Main Course",
+    "productName": "Nasi Ayam Kemangi",
+    "productCode": "Nasi Ayam Kemangi",
+    "ingredients": [
+      {
+        "no": 2,
+        "description": "Nasi Ayam Kemangi",
+        "code": "PG-5120",
+        "name": "Bumbu Ayam Kemangi - 25 Gr",
+        "unit": "Por",
+        "quantity": 0,
+        "unitCost": 1,
+        "totalCost": 8541.360440370756
+      }
+    ],
+    "totalCost": 8541.360440370756,
+    "yield": 1
+  },
+  {
+    "type": "COGS-MC",
+    "category": "Main Course",
+    "productName": "Mie Goreng Sajati",
+    "productCode": "Mie Goreng Sajati",
+    "ingredients": [
+      {
+        "no": 3,
+        "description": "Mie Goreng Sajati",
+        "code": "PG-5119",
+        "name": "Bumbu Nasi Goreng - 40 Gr",
+        "unit": "Por",
+        "quantity": 0,
+        "unitCost": 1,
+        "totalCost": 21304.873956807343
+      }
+    ],
+    "totalCost": 21304.873956807343,
+    "yield": 1
+  },
+  {
+    "type": "COGS-MC",
+    "category": "Main Course",
+    "productName": "Nasi Goreng Sajati",
+    "productCode": "Nasi Goreng Sajati",
+    "ingredients": [
+      {
+        "no": 4,
+        "description": "Nasi Goreng Sajati",
+        "code": "PG-5119",
+        "name": "Bumbu Nasi Goreng - 40 Gr",
+        "unit": "Por",
+        "quantity": 0,
+        "unitCost": 1,
+        "totalCost": 21304.873956807343
+      }
+    ],
+    "totalCost": 21304.873956807343,
+    "yield": 1
+  },
+  {
+    "type": "COGS-MC",
+    "category": "Main Course",
+    "productName": "Nasi Tahu Telur",
+    "productCode": "Nasi Tahu Telur",
+    "ingredients": [
+      {
+        "no": 5,
+        "description": "Nasi Tahu Telur",
+        "code": "G-1127",
+        "name": "Telur Ayam",
+        "unit": "Pcs",
+        "quantity": 0,
+        "unitCost": 2,
+        "totalCost": 1417.119136609167
+      }
+    ],
+    "totalCost": 1417.119136609167,
+    "yield": 1
+  },
+  {
+    "type": "COGS-MC",
+    "category": "Main Course",
+    "productName": "Kentang Omelete Sosis",
+    "productCode": "Kentang Omelete Sosis",
+    "ingredients": [
+      {
+        "no": 6,
+        "description": "Kentang Omelete Sosis",
+        "code": "F-3111",
+        "name": "Bawang Bombay",
+        "unit": "",
+        "quantity": 0,
+        "unitCost": 10,
+        "totalCost": 48.888776786223815
+      }
+    ],
+    "totalCost": 48.888776786223815,
+    "yield": 1
+  },
+  {
+    "type": "COGS-MC",
+    "category": "Main Course",
+    "productName": "Nasi Ayam Lada Hitam",
+    "productCode": "Nasi Ayam Lada Hitam",
+    "ingredients": [
+      {
+        "no": 7,
+        "description": "Nasi Ayam Lada Hitam",
+        "code": "PG-5114",
+        "name": "Paha Fillet Bumbu - 80 gr",
+        "unit": "Por",
+        "quantity": 0,
+        "unitCost": 1,
+        "totalCost": 7924.572571225345
+      }
+    ],
+    "totalCost": 7924.572571225345,
+    "yield": 1
+  },
+  {
+    "type": "COGS-MC",
+    "category": "Main Course",
+    "productName": "Nasi Ayam Teriyaki",
+    "productCode": "Nasi Ayam Teriyaki",
+    "ingredients": [
+      {
+        "no": 8,
+        "description": "Nasi Ayam Teriyaki",
+        "code": "PG-5114",
+        "name": "Paha Fillet Bumbu - 80 gr",
+        "unit": "Por",
+        "quantity": 0,
+        "unitCost": 1,
+        "totalCost": 7924.572571225345
+      }
+    ],
+    "totalCost": 7924.572571225345,
+    "yield": 1
+  },
+  {
+    "type": "COGS-MC",
+    "category": "Main Course",
+    "productName": "Nasi Sapi Lada Hitam",
+    "productCode": "Nasi Sapi Lada Hitam",
+    "ingredients": [
+      {
+        "no": 9,
+        "description": "Nasi Sapi Lada Hitam",
+        "code": "PG-5123",
+        "name": "Saus Blackpepper - 35 gr",
+        "unit": "Por",
+        "quantity": 0,
+        "unitCost": 1,
+        "totalCost": 694.8545717863788
+      }
+    ],
+    "totalCost": 694.8545717863788,
+    "yield": 1
+  },
+  {
+    "type": "COGS-MC",
+    "category": "Main Course",
+    "productName": "Spaghetti Aglio E Olio",
+    "productCode": "Spaghetti Aglio E Olio",
+    "ingredients": [
+      {
+        "no": 10,
+        "description": "Spaghetti Aglio E Olio",
+        "code": "F-3114",
+        "name": "Bawang Putih",
+        "unit": "Gram",
+        "quantity": 1,
+        "unitCost": 5,
+        "totalCost": 784.6772405159504
+      }
+    ],
+    "totalCost": 784.6772405159504,
+    "yield": 1
+  },
+  {
+    "type": "COGS-MC",
+    "category": "Main Course",
+    "productName": "Spaghetti Carbonara",
+    "productCode": "Spaghetti Carbonara",
+    "ingredients": [
+      {
+        "no": 11,
+        "description": "Spaghetti Carbonara",
+        "code": "F-3114",
+        "name": "Bawang Putih",
+        "unit": "Gram",
+        "quantity": 1,
+        "unitCost": 5,
+        "totalCost": 784.6772405159504
+      }
+    ],
+    "totalCost": 784.6772405159504,
+    "yield": 1
+  },
+  {
+    "type": "COGS-MC",
+    "category": "Main Course",
+    "productName": "Spaghetti Sajati",
+    "productCode": "Spaghetti Sajati",
+    "ingredients": [
+      {
+        "no": 12,
+        "description": "Spaghetti Sajati",
+        "code": "PG-5119",
+        "name": "Bumbu Nasi Goreng - 40 Gr",
+        "unit": "Por",
+        "quantity": 1,
+        "unitCost": 1,
+        "totalCost": 21304.873956807343
+      }
+    ],
+    "totalCost": 21304.873956807343,
+    "yield": 1
+  },
+  {
+    "type": "COGS-CO",
+    "category": "Coffee",
+    "productName": "Es Kopi Susu Sajati",
+    "productCode": "Es Kopi Susu Sajati",
+    "ingredients": [
+      {
+        "no": 1,
+        "description": "Es Kopi Susu Sajati",
+        "code": "G-1136",
+        "name": "Arabika Beans",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 20,
+        "totalCost": 325
+      }
+    ],
+    "totalCost": 325,
+    "yield": 1
+  },
+  {
+    "type": "COGS-CO",
+    "category": "Coffee",
+    "productName": "Es Kopi Susu Aren",
+    "productCode": "Es Kopi Susu Aren",
+    "ingredients": [
+      {
+        "no": 2,
+        "description": "Es Kopi Susu Aren",
+        "code": "PG-5139",
+        "name": "Espresso House Blends",
+        "unit": "Pax",
+        "quantity": 0,
+        "unitCost": 1,
+        "totalCost": 3260.5263157894738
+      }
+    ],
+    "totalCost": 3260.5263157894738,
+    "yield": 1
+  },
+  {
+    "type": "COGS-CO",
+    "category": "Coffee",
+    "productName": "Es Kopi Susu Machiatto",
+    "productCode": "Es Kopi Susu Machiatto",
+    "ingredients": [
+      {
+        "no": 3,
+        "description": "Es Kopi Susu Machiatto",
+        "code": "G-1136",
+        "name": "Arabika Beans",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 20,
+        "totalCost": 325
+      }
+    ],
+    "totalCost": 325,
+    "yield": 1
+  },
+  {
+    "type": "COGS-CO",
+    "category": "Coffee",
+    "productName": "Es Long Black  Machiatto",
+    "productCode": "Es Long Black  Machiatto",
+    "ingredients": [
+      {
+        "no": 4,
+        "description": "Es Long Black  Machiatto",
+        "code": "G-1136",
+        "name": "Arabika Beans",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 20,
+        "totalCost": 325
+      }
+    ],
+    "totalCost": 325,
+    "yield": 1
+  },
+  {
+    "type": "COGS-CO",
+    "category": "Coffee",
+    "productName": "Es Kopi Yuzu",
+    "productCode": "Es Kopi Yuzu",
+    "ingredients": [
+      {
+        "no": 5,
+        "description": "Es Kopi Yuzu",
+        "code": "G-1136",
+        "name": "Arabika Beans",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 20,
+        "totalCost": 325
+      }
+    ],
+    "totalCost": 325,
+    "yield": 1
+  },
+  {
+    "type": "COGS-CO",
+    "category": "Coffee",
+    "productName": "Bianconero",
+    "productCode": "Bianconero",
+    "ingredients": [
+      {
+        "no": 6,
+        "description": "Bianconero",
+        "code": "G-1136",
+        "name": "Arabika Beans",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 20,
+        "totalCost": 325
+      }
+    ],
+    "totalCost": 325,
+    "yield": 1
+  },
+  {
+    "type": "COGS-CO",
+    "category": "Coffee",
+    "productName": "Nutella Mocha",
+    "productCode": "Nutella Mocha",
+    "ingredients": [
+      {
+        "no": 7,
+        "description": "Nutella Mocha",
+        "code": "G-1136",
+        "name": "Arabika Beans",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 20,
+        "totalCost": 325
+      }
+    ],
+    "totalCost": 325,
+    "yield": 1
+  },
+  {
+    "type": "COGS-CO",
+    "category": "Coffee",
+    "productName": "Caramel Machiatto",
+    "productCode": "Caramel Machiatto",
+    "ingredients": [
+      {
+        "no": 8,
+        "description": "Caramel Machiatto",
+        "code": "G-1136",
+        "name": "Arabika Beans",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 20,
+        "totalCost": 325
+      }
+    ],
+    "totalCost": 325,
+    "yield": 1
+  },
+  {
+    "type": "COGS-CO",
+    "category": "Coffee",
+    "productName": "Es Kopi Maharani",
+    "productCode": "Es Kopi Maharani",
+    "ingredients": [
+      {
+        "no": 9,
+        "description": "Es Kopi Maharani",
+        "code": "G-1136",
+        "name": "Arabika Beans",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 20,
+        "totalCost": 325
+      }
+    ],
+    "totalCost": 325,
+    "yield": 1
+  },
+  {
+    "type": "COGS-CO",
+    "category": "Coffee",
+    "productName": "Es Kopi Tropis",
+    "productCode": "Es Kopi Tropis",
+    "ingredients": [
+      {
+        "no": 10,
+        "description": "Es Kopi Tropis",
+        "code": "G-1136",
+        "name": "Arabika Beans",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 20,
+        "totalCost": 325
+      }
+    ],
+    "totalCost": 325,
+    "yield": 1
+  },
+  {
+    "type": "COGS-CO",
+    "category": "Coffee",
+    "productName": "Mocha Coffee",
+    "productCode": "Mocha Coffee",
+    "ingredients": [
+      {
+        "no": 11,
+        "description": "Mocha Coffee",
+        "code": "G-1136",
+        "name": "Arabika Beans",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 20,
+        "totalCost": 325
+      }
+    ],
+    "totalCost": 325,
+    "yield": 1
+  },
+  {
+    "type": "COGS-CO",
+    "category": "Coffee",
+    "productName": "Hot/Ice Americano",
+    "productCode": "Hot/Ice Americano",
+    "ingredients": [
+      {
+        "no": 12,
+        "description": "Hot/Ice Americano",
+        "code": "G-1136",
+        "name": "Arabika Beans",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 20,
+        "totalCost": 325
+      }
+    ],
+    "totalCost": 325,
+    "yield": 1
+  },
+  {
+    "type": "COGS-CO",
+    "category": "Coffee",
+    "productName": "Hot/Ice Long Black",
+    "productCode": "Hot/Ice Long Black",
+    "ingredients": [
+      {
+        "no": 13,
+        "description": "Hot/Ice Long Black",
+        "code": "G-1136",
+        "name": "Arabika Beans",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 20,
+        "totalCost": 325
+      }
+    ],
+    "totalCost": 325,
+    "yield": 1
+  },
+  {
+    "type": "COGS-CO",
+    "category": "Coffee",
+    "productName": "Ice Coffe Latte",
+    "productCode": "Ice Coffe Latte",
+    "ingredients": [
+      {
+        "no": 14,
+        "description": "Ice Coffe Latte",
+        "code": "G-1136",
+        "name": "Arabika Beans",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 20,
+        "totalCost": 325
+      }
+    ],
+    "totalCost": 325,
+    "yield": 1
+  },
+  {
+    "type": "COGS-CO",
+    "category": "Coffee",
+    "productName": "Hot Latte",
+    "productCode": "Hot Latte",
+    "ingredients": [
+      {
+        "no": 15,
+        "description": "Hot Latte",
+        "code": "G-1136",
+        "name": "Arabika Beans",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 20,
+        "totalCost": 325
+      }
+    ],
+    "totalCost": 325,
+    "yield": 1
+  },
+  {
+    "type": "COGS-CO",
+    "category": "Coffee",
+    "productName": "Hot Cappucino",
+    "productCode": "Hot Cappucino",
+    "ingredients": [
+      {
+        "no": 16,
+        "description": "Hot Cappucino",
+        "code": "G-1136",
+        "name": "Arabika Beans",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 20,
+        "totalCost": 325
+      }
+    ],
+    "totalCost": 325,
+    "yield": 1
+  },
+  {
+    "type": "COGS-CO",
+    "category": "Coffee",
+    "productName": "V60 hot",
+    "productCode": "V60 hot",
+    "ingredients": [
+      {
+        "no": 17,
+        "description": "V60 hot",
+        "code": "G-1160",
+        "name": "Beans Reguler V60",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 17,
+        "totalCost": 725
+      }
+    ],
+    "totalCost": 725,
+    "yield": 1
+  },
+  {
+    "type": "COGS-CO",
+    "category": "Coffee",
+    "productName": "V60 Japanese",
+    "productCode": "V60 Japanese",
+    "ingredients": [
+      {
+        "no": 18,
+        "description": "V60 Japanese",
+        "code": "G-1160",
+        "name": "Beans Reguler V60",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 17,
+        "totalCost": 725
+      }
+    ],
+    "totalCost": 725,
+    "yield": 1
+  },
+  {
+    "type": "COGS-CO",
+    "category": "Coffee",
+    "productName": "V60 Hot seasonal",
+    "productCode": "V60 Hot seasonal",
+    "ingredients": [
+      {
+        "no": 19,
+        "description": "V60 Hot seasonal",
+        "code": "G-1161",
+        "name": "Beans Seasonal V60",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 15,
+        "totalCost": 1375
+      }
+    ],
+    "totalCost": 1375,
+    "yield": 1
+  },
+  {
+    "type": "COGS-CO",
+    "category": "Coffee",
+    "productName": "V60 Hot Geisha",
+    "productCode": "V60 Hot Geisha",
+    "ingredients": [
+      {
+        "no": 20,
+        "description": "V60 Hot Geisha",
+        "code": "G-1162",
+        "name": "Beans Geisha V60",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 15,
+        "totalCost": 5000
+      }
+    ],
+    "totalCost": 5000,
+    "yield": 1
+  },
+  {
+    "type": "COGS-CO",
+    "category": "Coffee",
+    "productName": "Afogato",
+    "productCode": "Afogato",
+    "ingredients": [
+      {
+        "no": 21,
+        "description": "Afogato",
+        "code": "PG-5140",
+        "name": "Espresso Arabika",
+        "unit": "Pax",
+        "quantity": 0,
+        "unitCost": 1.5,
+        "totalCost": 6521.0526315789475
+      }
+    ],
+    "totalCost": 6521.0526315789475,
+    "yield": 1
+  },
+  {
+    "type": "COGS-CO",
+    "category": "Coffee",
+    "productName": "Vanila Latte Ice",
+    "productCode": "Vanila Latte Ice",
+    "ingredients": [
+      {
+        "no": 22,
+        "description": "Vanila Latte Ice",
+        "code": "G-1136",
+        "name": "Arabika Beans",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 20,
+        "totalCost": 325
+      }
+    ],
+    "totalCost": 325,
+    "yield": 1
+  },
+  {
+    "type": "COGS-CO",
+    "category": "Coffee",
+    "productName": "Cream Cheese Coffee",
+    "productCode": "Cream Cheese Coffee",
+    "ingredients": [
+      {
+        "no": 23,
+        "description": "Cream Cheese Coffee",
+        "code": "PG-5140",
+        "name": "Espresso Arabika",
+        "unit": "Pax",
+        "quantity": 0,
+        "unitCost": 1,
+        "totalCost": 6521.0526315789475
+      }
+    ],
+    "totalCost": 6521.0526315789475,
+    "yield": 1
+  },
+  {
+    "type": "COGS-NC",
+    "category": "Non-Coffee",
+    "productName": "Sumatra Cokelat",
+    "productCode": "Sumatra Cokelat",
+    "ingredients": [
+      {
+        "no": 1,
+        "description": "Sumatra Cokelat",
+        "code": "G-1155",
+        "name": "Sumatera Cokelat Powder",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 25,
+        "totalCost": 330
+      }
+    ],
+    "totalCost": 330,
+    "yield": 1
+  },
+  {
+    "type": "COGS-NC",
+    "category": "Non-Coffee",
+    "productName": "Rajamandala Cokelat",
+    "productCode": "Rajamandala Cokelat",
+    "ingredients": [
+      {
+        "no": 2,
+        "description": "Rajamandala Cokelat",
+        "code": "G-1151",
+        "name": "Rajamandala Cokelat Powder",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 25,
+        "totalCost": 330
+      }
+    ],
+    "totalCost": 330,
+    "yield": 1
+  },
+  {
+    "type": "COGS-NC",
+    "category": "Non-Coffee",
+    "productName": "Sulawesi Cokelat",
+    "productCode": "Sulawesi Cokelat",
+    "ingredients": [
+      {
+        "no": 3,
+        "description": "Sulawesi Cokelat",
+        "code": "G-1154",
+        "name": "Sulawesi Cokelat Powder",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 25,
+        "totalCost": 330
+      }
+    ],
+    "totalCost": 330,
+    "yield": 1
+  },
+  {
+    "type": "COGS-NC",
+    "category": "Non-Coffee",
+    "productName": "Matcha Latte",
+    "productCode": "Matcha Latte",
+    "ingredients": [
+      {
+        "no": 4,
+        "description": "Matcha Latte",
+        "code": "G-1147",
+        "name": "Matcha Powder",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 4,
+        "totalCost": 630
+      }
+    ],
+    "totalCost": 630,
+    "yield": 1
+  },
+  {
+    "type": "COGS-NC",
+    "category": "Non-Coffee",
+    "productName": "Taro Latte",
+    "productCode": "Taro Latte",
+    "ingredients": [
+      {
+        "no": 5,
+        "description": "Taro Latte",
+        "code": "G-1156",
+        "name": "Taro Powder",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 30,
+        "totalCost": 126
+      }
+    ],
+    "totalCost": 126,
+    "yield": 1
+  },
+  {
+    "type": "COGS-NC",
+    "category": "Non-Coffee",
+    "productName": "Heavy Mango",
+    "productCode": "Heavy Mango",
+    "ingredients": [
+      {
+        "no": 6,
+        "description": "Heavy Mango",
+        "code": "G-1146",
+        "name": "Manggo Syrup",
+        "unit": "Gram",
+        "quantity": 0,
+        "unitCost": 30,
+        "totalCost": 139.34285714285713
+      }
+    ],
+    "totalCost": 139.34285714285713,
+    "yield": 1
+  },
+  {
+    "type": "COGS-NC",
+    "category": "Non-Coffee",
+    "productName": "Mango Tea",
+    "productCode": "Mango Tea",
+    "ingredients": [
+      {
+        "no": 7,
+        "description": "Mango Tea",
+        "code": "G-1134",
+        "name": "Air Mineral Aqua",
+        "unit": "ml",
+        "quantity": 0,
+        "unitCost": 20,
+        "totalCost": 1.0526315789473684
+      }
+    ],
+    "totalCost": 1.0526315789473684,
+    "yield": 1
+  },
+  {
+    "type": "COGS-NC",
+    "category": "Non-Coffee",
+    "productName": "Yuzu Tea",
+    "productCode": "Yuzu Tea",
+    "ingredients": [
+      {
+        "no": 8,
+        "description": "Yuzu Tea",
+        "code": "G-1134",
+        "name": "Air Mineral Aqua",
+        "unit": "ml",
+        "quantity": 0,
+        "unitCost": 20,
+        "totalCost": 1.0526315789473684
+      }
+    ],
+    "totalCost": 1.0526315789473684,
+    "yield": 1
+  },
+  {
+    "type": "COGS-NC",
+    "category": "Non-Coffee",
+    "productName": "Miamore Sweetness",
+    "productCode": "Miamore Sweetness",
+    "ingredients": [
+      {
+        "no": 9,
+        "description": "Miamore Sweetness",
+        "code": "G-1137",
+        "name": "Biscuit Lotus Biscoff",
+        "unit": "Pcs",
+        "quantity": 0,
+        "unitCost": 2,
+        "totalCost": 1375
+      }
+    ],
+    "totalCost": 1375,
+    "yield": 1
+  }
+]

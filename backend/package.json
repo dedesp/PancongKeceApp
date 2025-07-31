@@ -1,7 +1,7 @@
 {
-  "name": "pancong-kece-backend",
+  "name": "sajati-smart-system-backend",
   "version": "1.0.0",
-  "description": "Backend API untuk aplikasi manajemen cafe Pancong Kece",
+  "description": "Backend API untuk aplikasi manajemen cafe Sajati Smart System",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

@@ -1,4 +1,4 @@
-// Pancong Kece - POS Core Module
+// Sajati Smart System - POS Core Module
 // Core POS functionality including menu, cart, and payment processing
 
 // Initialize POS system

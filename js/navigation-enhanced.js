@@ -281,7 +281,7 @@ class NavigationManager {
         }
 
         // Update document title
-        document.title = `${this.getSectionTitle(sectionId)} - Pancong Kece`;
+        document.title = `${this.getSectionTitle(sectionId)} - Sajati Smart System`;
     }
 
     /**

@@ -1,0 +1,1986 @@
+[
+  {
+    "materialCode": "5Mie Telor",
+    "materialName": "G-1111",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.550Z"
+  },
+  {
+    "materialCode": "5Tepung Tapioka",
+    "materialName": "G-1112",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Tepung Maizena",
+    "materialName": "G-1113",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Tepung Roti",
+    "materialName": "G-1114",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Gula Halus",
+    "materialName": "G-1115",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Selai Coklat",
+    "materialName": "G-1116",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Susu Kental Manis",
+    "materialName": "G-1117",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Brown Sugar",
+    "materialName": "G-1118",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Beras",
+    "materialName": "G-1119",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Backing Powder",
+    "materialName": "G-1120",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Soda Kue",
+    "materialName": "G-1121",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Spaghetti",
+    "materialName": "G-1122",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Ebi Kering",
+    "materialName": "G-1123",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Biji Wijen",
+    "materialName": "G-1124",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Coklat Bubuk",
+    "materialName": "G-1125",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Bihun",
+    "materialName": "G-1126",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Telur Ayam",
+    "materialName": "G-1127",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Margarin",
+    "materialName": "G-1128",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Minyak Goreng",
+    "materialName": "G-1129",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Air",
+    "materialName": "G-1130",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Terasi Udang",
+    "materialName": "G-1131",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Kerupuk",
+    "materialName": "G-1132",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Meses Coklat",
+    "materialName": "G-1133",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Air Mineral Aqua",
+    "materialName": "G-1134",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Air Mineral Cleo",
+    "materialName": "G-1135",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Arabika Beans",
+    "materialName": "G-1136",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Biscuit Lotus Biscoff",
+    "materialName": "G-1137",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Blacktea Leaf",
+    "materialName": "G-1138",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Caramel sauce",
+    "materialName": "G-1139",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Cream Cheese Syrup",
+    "materialName": "G-1140",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Dried fruit ",
+    "materialName": "G-1141",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Elder Flower",
+    "materialName": "G-1142",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Gula Aren",
+    "materialName": "G-1143",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5House Blends Beans",
+    "materialName": "G-1144",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Jasmine Syrup",
+    "materialName": "G-1145",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Manggo Syrup",
+    "materialName": "G-1146",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Matcha Powder",
+    "materialName": "G-1147",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Mint Syrup",
+    "materialName": "G-1148",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Nutella",
+    "materialName": "G-1149",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Puding Susu Mangga",
+    "materialName": "G-1150",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Rajamandala Cokelat Powder",
+    "materialName": "G-1151",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Shortbread Syrup",
+    "materialName": "G-1153",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Sulawesi Cokelat Powder",
+    "materialName": "G-1154",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Sumatera Cokelat Powder",
+    "materialName": "G-1155",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Taro Powder",
+    "materialName": "G-1156",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Vanilla Syrup",
+    "materialName": "G-1157",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5White Passion Syrup",
+    "materialName": "G-1158",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Yuzu Pulp Syrup",
+    "materialName": "G-1159",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Beans Reguler V60",
+    "materialName": "G-1160",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Beans Seasonal V60",
+    "materialName": "G-1161",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Beans Geisha V60",
+    "materialName": "G-1162",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Mineral Water Mini",
+    "materialName": "G-1163",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Mineral Water Reguler",
+    "materialName": "G-1164",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Bubuk Bawang Putih",
+    "materialName": "G-1165",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Cajun Powder",
+    "materialName": "G-1166",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Cayene Powder",
+    "materialName": "G-1167",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Chicken Powder",
+    "materialName": "G-1168",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Cuka",
+    "materialName": "G-1169",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Cuka Apel",
+    "materialName": "G-1170",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Garam",
+    "materialName": "G-1171",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Gula Pasir",
+    "materialName": "G-1172",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Kecap Asin",
+    "materialName": "G-1173",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Kecap Asin Jepang",
+    "materialName": "G-1174",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Kecap Ikan",
+    "materialName": "G-1175",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Kecap Inggris",
+    "materialName": "G-1176",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Kecap Manis",
+    "materialName": "G-1177",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Lada Hitam",
+    "materialName": "G-1178",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Lada Putih",
+    "materialName": "G-1179",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Mayonaise Jepang",
+    "materialName": "G-1180",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Minyak Wijen",
+    "materialName": "G-1181",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Oregano",
+    "materialName": "G-1182",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Parsley",
+    "materialName": "G-1183",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Saus Sambal",
+    "materialName": "G-1184",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Saus Tiram",
+    "materialName": "G-1185",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Saus Tomat",
+    "materialName": "G-1186",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Vetsin",
+    "materialName": "G-1187",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Mayonaise",
+    "materialName": "G-1188",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Paprika Powder",
+    "materialName": "G-1189",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5bumbu Kari",
+    "materialName": "G-1190",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5bubuk Kari",
+    "materialName": "G-1191",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Oatmeal",
+    "materialName": "G-1192",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Kaldu block sapi",
+    "materialName": "G-1193",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Santan kental",
+    "materialName": "G-1194",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Jinten",
+    "materialName": "G-1195",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Kapulaga",
+    "materialName": "G-1196",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Cengkeh",
+    "materialName": "G-1197",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Bunga Lawang",
+    "materialName": "G-1198",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Tepung Beras",
+    "materialName": "G-1199",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Baking soda",
+    "materialName": "G-1200",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "G-1201",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "G-1202",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "G-1203",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "G-1204",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "G-1205",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "G-1206",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "G-1207",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "G-1208",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "G-1209",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "",
+    "currentStock": 0,
+    "unit": "Grocery",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "Dairy & Frozen",
+    "currentStock": 0,
+    "unit": "",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Tahu Kuning",
+    "materialName": "D-2111",
+    "currentStock": 0,
+    "unit": "Dairy & Frozen",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Baso Sapi",
+    "materialName": "D-2112",
+    "currentStock": 0,
+    "unit": "Dairy & Frozen",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Sosis Sapi",
+    "materialName": "D-2113",
+    "currentStock": 0,
+    "unit": "Dairy & Frozen",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Donat Frozen",
+    "materialName": "D-2114",
+    "currentStock": 0,
+    "unit": "Dairy & Frozen",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Smoked Beef",
+    "materialName": "D-2115",
+    "currentStock": 0,
+    "unit": "Dairy & Frozen",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Cheddar Cheese",
+    "materialName": "D-2116",
+    "currentStock": 0,
+    "unit": "Dairy & Frozen",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Slice Cheese",
+    "materialName": "D-2117",
+    "currentStock": 0,
+    "unit": "Dairy & Frozen",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Parmesan Cheese",
+    "materialName": "D-2118",
+    "currentStock": 0,
+    "unit": "Dairy & Frozen",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Roti Tawar Tebal",
+    "materialName": "D-2119",
+    "currentStock": 0,
+    "unit": "Dairy & Frozen",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Beef Slice",
+    "materialName": "D-2120",
+    "currentStock": 0,
+    "unit": "Dairy & Frozen",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Dada Ayam Fillet",
+    "materialName": "D-2121",
+    "currentStock": 0,
+    "unit": "Dairy & Frozen",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Paha Ayam Fillet",
+    "materialName": "D-2122",
+    "currentStock": 0,
+    "unit": "Dairy & Frozen",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Sayap Ayam",
+    "materialName": "D-2123",
+    "currentStock": 0,
+    "unit": "Dairy & Frozen",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Fresh Milk",
+    "materialName": "D-2124",
+    "currentStock": 0,
+    "unit": "Dairy & Frozen",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Udang",
+    "materialName": "D-2125",
+    "currentStock": 0,
+    "unit": "Dairy & Frozen",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Kulit Ayam",
+    "materialName": "D-2126",
+    "currentStock": 0,
+    "unit": "Dairy & Frozen",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Whipping Cream",
+    "materialName": "D-2127",
+    "currentStock": 0,
+    "unit": "Dairy & Frozen",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Cherry",
+    "materialName": "D-2128",
+    "currentStock": 0,
+    "unit": "Dairy & Frozen",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Roti Tawar Tipis",
+    "materialName": "D-2129",
+    "currentStock": 0,
+    "unit": "Dairy & Frozen",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Ice Cream Vanilla",
+    "materialName": "D-2130",
+    "currentStock": 0,
+    "unit": "Dairy & Frozen",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Pangsit goreng",
+    "materialName": "D-2131",
+    "currentStock": 0,
+    "unit": "Dairy & Frozen",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Cranberries juice",
+    "materialName": "D-2132",
+    "currentStock": 0,
+    "unit": "Dairy & Frozen",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Oatmilk Outside",
+    "materialName": "D-2133",
+    "currentStock": 0,
+    "unit": "Dairy & Frozen",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Daging Sengkel Sapi",
+    "materialName": "D-2134",
+    "currentStock": 0,
+    "unit": "Dairy & Frozen",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Asam Jawa",
+    "materialName": "D-2135",
+    "currentStock": 0,
+    "unit": "Dairy & Frozen",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Butter",
+    "materialName": "D-2136",
+    "currentStock": 0,
+    "unit": "Dairy & Frozen",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Manggo popping",
+    "materialName": "D-2137",
+    "currentStock": 0,
+    "unit": "Dairy & Frozen",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "D-2138",
+    "currentStock": 0,
+    "unit": "Dairy & Frozen",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "D-2139",
+    "currentStock": 0,
+    "unit": "Dairy & Frozen",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "D-2140",
+    "currentStock": 0,
+    "unit": "Dairy & Frozen",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "D-2141",
+    "currentStock": 0,
+    "unit": "Dairy & Frozen",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "D-2142",
+    "currentStock": 0,
+    "unit": "Dairy & Frozen",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "D-2143",
+    "currentStock": 0,
+    "unit": "Dairy & Frozen",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "D-2144",
+    "currentStock": 0,
+    "unit": "Dairy & Frozen",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "D-2145",
+    "currentStock": 0,
+    "unit": "Dairy & Frozen",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "D-2146",
+    "currentStock": 0,
+    "unit": "Dairy & Frozen",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "D-2147",
+    "currentStock": 0,
+    "unit": "Dairy & Frozen",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "Fruit & Vegetable",
+    "currentStock": 0,
+    "unit": "",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Bawang Bombay",
+    "materialName": "F-3111",
+    "currentStock": 0,
+    "unit": "Fruit & Vegetable",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Bawang Daun",
+    "materialName": "F-3112",
+    "currentStock": 0,
+    "unit": "Fruit & Vegetable",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Bawang Merah",
+    "materialName": "F-3113",
+    "currentStock": 0,
+    "unit": "Fruit & Vegetable",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Bawang Putih",
+    "materialName": "F-3114",
+    "currentStock": 0,
+    "unit": "Fruit & Vegetable",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Cabai Keriting Merah",
+    "materialName": "F-3115",
+    "currentStock": 0,
+    "unit": "Fruit & Vegetable",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Cabai Rawit Merah",
+    "materialName": "F-3116",
+    "currentStock": 0,
+    "unit": "Fruit & Vegetable",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Cabai Tanjung Merah",
+    "materialName": "F-3117",
+    "currentStock": 0,
+    "unit": "Fruit & Vegetable",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Daun Jeruk",
+    "materialName": "F-3118",
+    "currentStock": 0,
+    "unit": "Fruit & Vegetable",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Daun Kemangi",
+    "materialName": "F-3119",
+    "currentStock": 0,
+    "unit": "Fruit & Vegetable",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Daun Salam",
+    "materialName": "F-3120",
+    "currentStock": 0,
+    "unit": "Fruit & Vegetable",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Jahe",
+    "materialName": "F-3121",
+    "currentStock": 0,
+    "unit": "Fruit & Vegetable",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Jamur kancing",
+    "materialName": "F-3122",
+    "currentStock": 0,
+    "unit": "Fruit & Vegetable",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Kailan",
+    "materialName": "F-3123",
+    "currentStock": 0,
+    "unit": "Fruit & Vegetable",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Kemiri",
+    "materialName": "F-3124",
+    "currentStock": 0,
+    "unit": "Fruit & Vegetable",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Kencur",
+    "materialName": "F-3125",
+    "currentStock": 0,
+    "unit": "Fruit & Vegetable",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Kentang",
+    "materialName": "F-3126",
+    "currentStock": 0,
+    "unit": "Fruit & Vegetable",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Ketumbar",
+    "materialName": "F-3127",
+    "currentStock": 0,
+    "unit": "Fruit & Vegetable",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Kol",
+    "materialName": "F-3128",
+    "currentStock": 0,
+    "unit": "Fruit & Vegetable",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Kunyit",
+    "materialName": "F-3129",
+    "currentStock": 0,
+    "unit": "Fruit & Vegetable",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Lengkuas",
+    "materialName": "F-3130",
+    "currentStock": 0,
+    "unit": "Fruit & Vegetable",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Pisang",
+    "materialName": "F-3131",
+    "currentStock": 0,
+    "unit": "Fruit & Vegetable",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Sereh",
+    "materialName": "F-3132",
+    "currentStock": 0,
+    "unit": "Fruit & Vegetable",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Tomat Merah",
+    "materialName": "F-3133",
+    "currentStock": 0,
+    "unit": "Fruit & Vegetable",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Wortel",
+    "materialName": "F-3134",
+    "currentStock": 0,
+    "unit": "Fruit & Vegetable",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Lobak Besar",
+    "materialName": "F-3135",
+    "currentStock": 0,
+    "unit": "Fruit & Vegetable",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Seledri",
+    "materialName": "F-3136",
+    "currentStock": 0,
+    "unit": "Fruit & Vegetable",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Jeruk nipis",
+    "materialName": "F-3137",
+    "currentStock": 0,
+    "unit": "Fruit & Vegetable",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "F-3138",
+    "currentStock": 0,
+    "unit": "Fruit & Vegetable",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "F-3139",
+    "currentStock": 0,
+    "unit": "Fruit & Vegetable",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "F-3140",
+    "currentStock": 0,
+    "unit": "Fruit & Vegetable",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "",
+    "currentStock": 0,
+    "unit": "Fruit & Vegetable",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "Product Goods",
+    "currentStock": 0,
+    "unit": "",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Nasi Putih Besar - 180 gr",
+    "materialName": "PG-5111",
+    "currentStock": 0,
+    "unit": "Processed Goods",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Nasi Putih Kecil - 130 gr",
+    "materialName": "PG-5112",
+    "currentStock": 0,
+    "unit": "Processed Goods",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Spaghetti - 140 gr",
+    "materialName": "PG-5113",
+    "currentStock": 0,
+    "unit": "Processed Goods",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Paha Fillet Bumbu - 80 gr",
+    "materialName": "PG-5114",
+    "currentStock": 0,
+    "unit": "Processed Goods",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Ayam Suwir Besar - 75 gr",
+    "materialName": "PG-5115",
+    "currentStock": 0,
+    "unit": "Processed Goods",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Beef Slice - 100 gr",
+    "materialName": "PG-5116",
+    "currentStock": 0,
+    "unit": "Processed Goods",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Kentang Rumahan - 100 gr",
+    "materialName": "PG-5117",
+    "currentStock": 0,
+    "unit": "Processed Goods",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Sayap Ayam Bawang - 6 pcs",
+    "materialName": "PG-5118",
+    "currentStock": 0,
+    "unit": "Processed Goods",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Bumbu Nasi Goreng - 40 Gr",
+    "materialName": "PG-5119",
+    "currentStock": 0,
+    "unit": "Processed Goods",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Bumbu Ayam Kemangi - 25 Gr",
+    "materialName": "PG-5120",
+    "currentStock": 0,
+    "unit": "Processed Goods",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Bumbu Oseng Sapi - 25 gr",
+    "materialName": "PG-5121",
+    "currentStock": 0,
+    "unit": "Processed Goods",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Saus Teriyaki - 35 gr",
+    "materialName": "PG-5122",
+    "currentStock": 0,
+    "unit": "Processed Goods",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Saus Blackpepper - 35 gr",
+    "materialName": "PG-5123",
+    "currentStock": 0,
+    "unit": "Processed Goods",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Saus Bagos - 35 gr",
+    "materialName": "PG-5124",
+    "currentStock": 0,
+    "unit": "Processed Goods",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Saus Pop Mayo - 35 gr",
+    "materialName": "PG-5125",
+    "currentStock": 0,
+    "unit": "Processed Goods",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Kerupuk - 11 pcs",
+    "materialName": "PG-5126",
+    "currentStock": 0,
+    "unit": "Processed Goods",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Kailan Crispy - 20 gr",
+    "materialName": "PG-5127",
+    "currentStock": 0,
+    "unit": "Processed Goods",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Garlic Bread - 2 pcs",
+    "materialName": "PG-5128",
+    "currentStock": 0,
+    "unit": "Processed Goods",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Bihun Crispy - 10 gr",
+    "materialName": "PG-5129",
+    "currentStock": 0,
+    "unit": "Processed Goods",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Ayam Suwir Kecil - 25 gr",
+    "materialName": "PG-5130",
+    "currentStock": 0,
+    "unit": "Processed Goods",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Baso Goreng - 1 pcs",
+    "materialName": "PG-5132",
+    "currentStock": 0,
+    "unit": "Processed Goods",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5BlackTea Cair",
+    "materialName": "PG-5133",
+    "currentStock": 0,
+    "unit": "Processed Goods",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Gula Aren Cair",
+    "materialName": "PG-5134",
+    "currentStock": 0,
+    "unit": "Processed Goods",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Jelly Mango",
+    "materialName": "PG-5135",
+    "currentStock": 0,
+    "unit": "Processed Goods",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Macchiato",
+    "materialName": "PG-5136",
+    "currentStock": 0,
+    "unit": "",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Simple Syrup",
+    "materialName": "PG-5137",
+    "currentStock": 0,
+    "unit": "",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Susu Tabung",
+    "materialName": "PG-5138",
+    "currentStock": 0,
+    "unit": "",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Espresso House Blends",
+    "materialName": "PG-5139",
+    "currentStock": 0,
+    "unit": "",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Espresso Arabika",
+    "materialName": "PG-5140",
+    "currentStock": 0,
+    "unit": "",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Mie Telor - PG",
+    "materialName": "PG-5141",
+    "currentStock": 0,
+    "unit": "",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "PG-5142",
+    "currentStock": 0,
+    "unit": "Processed Goods",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "PG-5143",
+    "currentStock": 0,
+    "unit": "Processed Goods",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "PG-5144",
+    "currentStock": 0,
+    "unit": "Processed Goods",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "PG-5145",
+    "currentStock": 0,
+    "unit": "Processed Goods",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "PG-5146",
+    "currentStock": 0,
+    "unit": "Processed Goods",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "PG-5147",
+    "currentStock": 0,
+    "unit": "Processed Goods",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "",
+    "currentStock": 0,
+    "unit": "Processed Goods",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Tagoya",
+    "materialName": "PC-6111",
+    "currentStock": 0,
+    "unit": "Product Consigment",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Croissant",
+    "materialName": "PC-6112",
+    "currentStock": 0,
+    "unit": "Product Consigment",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Brownies",
+    "materialName": "PC-6113",
+    "currentStock": 0,
+    "unit": "Product Consigment",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "PC-6114",
+    "currentStock": 0,
+    "unit": "Product Consigment",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "PC-6115",
+    "currentStock": 0,
+    "unit": "Product Consigment",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "PC-6116",
+    "currentStock": 0,
+    "unit": "Product Consigment",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "PC-6117",
+    "currentStock": 0,
+    "unit": "Product Consigment",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "PC-6118",
+    "currentStock": 0,
+    "unit": "Product Consigment",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "PC-6119",
+    "currentStock": 0,
+    "unit": "Product Consigment",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "PC-6120",
+    "currentStock": 0,
+    "unit": "Product Consigment",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "PC-6121",
+    "currentStock": 0,
+    "unit": "Product Consigment",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "PC-6122",
+    "currentStock": 0,
+    "unit": "Product Consigment",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "PC-6123",
+    "currentStock": 0,
+    "unit": "Product Consigment",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "PC-6124",
+    "currentStock": 0,
+    "unit": "Product Consigment",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "PC-6125",
+    "currentStock": 0,
+    "unit": "Product Consigment",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "PC-6126",
+    "currentStock": 0,
+    "unit": "Product Consigment",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "",
+    "currentStock": 0,
+    "unit": "Product Consigment",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "Product Consigment",
+    "currentStock": 0,
+    "unit": "",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Straw Hitam Besar - 250 pcs",
+    "materialName": "S-4111",
+    "currentStock": 0,
+    "unit": "Supporting Product",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Straw Hitam Kecil - 500 Pcs",
+    "materialName": "S-4112",
+    "currentStock": 0,
+    "unit": "Supporting Product",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Straw Panas",
+    "materialName": "S-4113",
+    "currentStock": 0,
+    "unit": "Supporting Product",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Plastik Cup Kemasan - 1 pcs",
+    "materialName": "S-4114",
+    "currentStock": 0,
+    "unit": "Supporting Product",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Plastik Cup Kemasan - 2 pcs",
+    "materialName": "S-4115",
+    "currentStock": 0,
+    "unit": "Supporting Product",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Plastik Shrink Roll",
+    "materialName": "S-4116",
+    "currentStock": 0,
+    "unit": "Supporting Product",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Cup dingin",
+    "materialName": "S-4117",
+    "currentStock": 0,
+    "unit": "Supporting Product",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Cup panas",
+    "materialName": "S-4118",
+    "currentStock": 0,
+    "unit": "Supporting Product",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Es Batu",
+    "materialName": "S-4119",
+    "currentStock": 0,
+    "unit": "Supporting Product",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Paper V60",
+    "materialName": "S-4120",
+    "currentStock": 0,
+    "unit": "Supporting Product",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Sendok Garpu TA",
+    "materialName": "S-4121",
+    "currentStock": 0,
+    "unit": "Supporting Product",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Plastik TA Reguler",
+    "materialName": "S-4122",
+    "currentStock": 0,
+    "unit": "Supporting Product",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Plastik TA Mini",
+    "materialName": "S-4123",
+    "currentStock": 0,
+    "unit": "Supporting Product",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Plastik Kemasan Besar",
+    "materialName": "S-4124",
+    "currentStock": 0,
+    "unit": "Supporting Product",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Plastik Kemasan Sedang",
+    "materialName": "S-4125",
+    "currentStock": 0,
+    "unit": "Supporting Product",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5Plastik Kemasan kecil",
+    "materialName": "S-4126",
+    "currentStock": 0,
+    "unit": "Supporting Product",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "S-4127",
+    "currentStock": 0,
+    "unit": "Supporting Product",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "S-4128",
+    "currentStock": 0,
+    "unit": "Supporting Product",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "S-4129",
+    "currentStock": 0,
+    "unit": "Supporting Product",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "S-4130",
+    "currentStock": 0,
+    "unit": "Supporting Product",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "S-4131",
+    "currentStock": 0,
+    "unit": "Supporting Product",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "S-4132",
+    "currentStock": 0,
+    "unit": "Product Consigment",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  },
+  {
+    "materialCode": "5",
+    "materialName": "S-4133",
+    "currentStock": 0,
+    "unit": "Product Consigment",
+    "minimumStock": 0,
+    "lastUpdated": "2025-07-23T15:19:02.557Z"
+  }
+]

@@ -8,6 +8,7 @@ import Products from './pages/Products';
 import Customers from './pages/Customers';
 import Inventory from './pages/Inventory';
 import Reports from './pages/Reports';
+import RecipeManagement from './pages/RecipeManagement';
 
 // Loading component
 const LoadingSpinner = () => (
@@ -46,6 +47,7 @@ function App() {
               <Route path="/pos" element={<POS />} />
               <Route path="/products" element={<Products />} />
               <Route path="/inventory" element={<Inventory />} />
+              <Route path="/recipe-management" element={<RecipeManagement />} />
               <Route path="/employees" element={<PlaceholderPage title="Karyawan" />} />
               <Route path="/customers" element={<Customers />} />
               <Route path="/crm" element={<PlaceholderPage title="CRM" />} />

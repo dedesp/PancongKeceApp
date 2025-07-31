@@ -1,5 +1,5 @@
 /**
- * Component Loader System for PancongKece
+ * Component Loader System for Sajati Smart System
  * Handles dynamic loading of HTML components for better performance
  */
 

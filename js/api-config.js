@@ -1,4 +1,4 @@
-// API Configuration for Pancong Kece App
+// API Configuration for Sajati Smart System
 const API_CONFIG = {
     // Automatically detect environment - Netlify deployment
     BASE_URL: window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
@@ -128,7 +128,9 @@ const API_ENDPOINTS = {
     // Dashboard
     DASHBOARD: {
         STATS: '/dashboard/stats',
-        CHARTS: '/dashboard/charts'
+        CHARTS: '/dashboard/charts',
+        TOP_PRODUCTS: '/dashboard/top-products',
+        RECENT_TRANSACTIONS: '/dashboard/recent-transactions'
     },
     
     // Health check

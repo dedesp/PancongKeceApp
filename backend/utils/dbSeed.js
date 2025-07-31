@@ -28,8 +28,8 @@ const seedMockData = async () => {
     const hashedPassword = await bcrypt.hash('admin123', 10);
     const users = await User.bulkCreate([
       {
-        username: 'admin',
-        email: 'admin@pancongkece.com',
+idak         username: 'admin',
+        email: 'admin@sajati.com',
         password: hashedPassword,
         full_name: 'Administrator',
         role_id: roles[0].id,
@@ -37,7 +37,7 @@ const seedMockData = async () => {
       },
       {
         username: 'manager1',
-        email: 'manager@pancongkece.com',
+        email: 'manager@sajati.com',
         password: hashedPassword,
         full_name: 'Manager Cafe',
         role_id: roles[1].id,
@@ -45,7 +45,7 @@ const seedMockData = async () => {
       },
       {
         username: 'kasir1',
-        email: 'kasir@pancongkece.com',
+        email: 'kasir@sajati.com',
         password: hashedPassword,
         full_name: 'Kasir Utama',
         role_id: roles[2].id,
@@ -56,7 +56,7 @@ const seedMockData = async () => {
 
     // Seed Categories
     const categories = await Category.bulkCreate([
-      { name: 'Pancong', description: 'Pancong tradisional dan modern' },
+      { name: 'Sajati', description: 'Sajati tradisional dan modern' },
       { name: 'Minuman', description: 'Berbagai macam minuman' },
       { name: 'Snack', description: 'Cemilan pendamping' },
       { name: 'Dessert', description: 'Pencuci mulut' }
@@ -66,24 +66,24 @@ const seedMockData = async () => {
     // Seed Products
     const products = await Product.bulkCreate([
       {
-        name: 'Pancong Cokelat',
-        description: 'Pancong dengan topping cokelat melimpah',
+        name: 'Sajati Cokelat',
+      description: 'Sajati dengan topping cokelat melimpah',
         price: 15000,
         sku: 'PNC001',
         category_id: categories[0].id,
         is_active: true
       },
       {
-        name: 'Pancong Keju',
-        description: 'Pancong dengan keju premium',
+        name: 'Sajati Keju',
+      description: 'Sajati dengan keju premium',
         price: 18000,
         sku: 'PNC002',
         category_id: categories[0].id,
         is_active: true
       },
       {
-        name: 'Pancong Original',
-        description: 'Pancong tradisional tanpa topping',
+        name: 'Sajati Original',
+      description: 'Sajati tradisional tanpa topping',
         price: 12000,
         sku: 'PNC003',
         category_id: categories[0].id,

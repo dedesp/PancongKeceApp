@@ -1,0 +1,56 @@
+Menu
+SKU;Kategori;Nama Produk
+LM.0001;Light Meal;Baso Goreng Sajati
+LM.0002;Light Meal;Caramel Cheese Toast
+LM.0003;Light Meal;Chiken Pop Mayo
+LM.0004;Light Meal;Kentang Rumahan
+LM.0005;Light Meal;Kentang Sosis
+LM.0006;Light Meal;Lava Toast
+LM.0007;Light Meal;Pisang Keju
+LM.0008;Light Meal;Sayap Ayam Bawang Kalian
+LM.0009;Light Meal;Tahu Goreng Ayam Bumbu Rujak
+LM.0010;Light Meal;Tahu Lada Garam
+MC.0001;Main Course;Kentang omelte
+MC.0002;Main Course;Mie Goreng Sajati
+MC.0003;Main Course;Nasi Ayam Kemangi
+MC.0004;Main Course;Nasi Ayam Lada Hitam
+MC.0005;Main Course;Nasi Ayam Teriyaki
+MC.0006;Main Course;Nasi Goreng Sajati
+MC.0007;Main Course;Nasi Oseng Sapi
+MC.0008;Main Course;Nasi Sapi Lada Hitam
+MC.0009;Main Course;Nasi Tahu Telur
+MC.0010;Main Course;Spaghetti Aglio E Olio
+MC.0011;Main Course;Spaghetti Carbonara
+MC.0012;Main Course;Spaghetti Sajati
+CO.0001;Coffee;Hot Cappucino
+CO.0002;Coffee;Hot Latte
+CO.0003;Coffee;Hot/Ice Americano
+CO.0004;Coffee;Hot/Ice Long Black
+CO.0005;Coffee;Ice Latte
+CO.0006;Coffee;V60 hot
+CO.0007;Coffee;V60 Hot Geisha
+CO.0008;Coffee;V60 Hot seasonal
+CO.0009;Coffee;V60 Japanese
+SC.0001;Sweet Coffee;Afogato
+SC.0002;Sweet Coffee;Bianconero
+SC.0003;Sweet Coffee;Caramel Machiatto
+SC.0004;Sweet Coffee;Cream Chesse Coffee
+SC.0005;Sweet Coffee;Es Kopi Maharani
+SC.0006;Sweet Coffee;Es Kopi Susu Aren
+SC.0007;Sweet Coffee;Es Kopi Susu Machiatto
+SC.0008;Sweet Coffee;Es Kopi Susu Sajati
+SC.0009;Sweet Coffee;Es Kopi Tropis
+SC.0010;Sweet Coffee;Es Kopi Yuzu
+SC.0011;Sweet Coffee;Es Long Black  Machiatto
+SC.0012;Sweet Coffee;Mocha Coffee
+SC.0013;Sweet Coffee;Nutella Mocha
+SC.0014;Sweet Coffee;Vanila Latte Ice
+NC.0001;Non Coffee;Sumatra Cokelat
+NC.0002;Non Coffee;Rajamandala Cokelat
+NC.0003;Non Coffee;Sulawesi Cokelat
+NC.0004;Non Coffee;Matcha Latte
+NC.0005;Non Coffee;Taro Latte
+NC.0006;Non Coffee;Heavy Mango
+NC.0007;Non Coffee;Mango Tea
+NC.0008;Non Coffee;Yuzu Tea
+NC.0009;Non Coffee;Miamore Sweetness

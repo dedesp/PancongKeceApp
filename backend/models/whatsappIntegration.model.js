@@ -35,11 +35,11 @@ const WhatsAppIntegration = sequelize.define('whatsapp_integrations', {
   },
   business_name: {
     type: DataTypes.STRING,
-    defaultValue: 'Pancong Kece'
+    defaultValue: 'Sajati Smart System'
   },
   default_template: {
     type: DataTypes.TEXT,
-    defaultValue: 'Halo {name}, terima kasih telah berkunjung ke Pancong Kece!'
+    defaultValue: 'Halo {name}, terima kasih telah berkunjung ke Sajati Smart System!'
   },
   rate_limit: {
     type: DataTypes.INTEGER,

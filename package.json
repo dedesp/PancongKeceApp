@@ -1,7 +1,7 @@
 {
-  "name": "pancong-kece-app",
+  "name": "sajati-smart-system-app",
   "version": "1.0.0",
-  "description": "Pancong Kece Cafe Management System - Bundle Siap Deploy",
+  "description": "Sajati Smart System - Bundle Siap Deploy",
   "main": "backend/server-minimal.js",
   "scripts": {
     "start": "cd backend && node server-minimal.js",
@@ -13,14 +13,20 @@
     "test": "cd backend && npm test",
     "deploy": "npm run build && echo 'Ready for Netlify deployment'"
   },
-  "keywords": ["cafe", "pos", "management", "pancong"],
-  "author": "PancongKece Team",
+  "keywords": [
+    "cafe",
+    "pos",
+    "management",
+    "sajati"
+  ],
+  "author": "Sajati Smart System Team",
   "license": "MIT",
   "engines": {
     "node": "18.17.0",
     "npm": "9.6.7"
   },
   "dependencies": {
+    "csv-parser": "^3.2.0",
     "serverless-http": "^3.2.0"
   }
 }

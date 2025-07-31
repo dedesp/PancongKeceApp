@@ -7,7 +7,7 @@ const app = express();
 
 // Basic middleware
 app.use(cors({
-  origin: ['https://pancong-kece.netlify.app', 'http://localhost:3000', '*'],
+  origin: ['https://sajati-smart-system.netlify.app', 'http://localhost:3000', '*'],
   credentials: true
 }));
 
@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 app.get('/api/health', (req, res) => {
   res.json({ 
     status: 'OK', 
-    message: 'Pancong Kece API is running on Netlify',
+    message: 'Sajati Smart System API is running on Netlify',
     timestamp: new Date().toISOString()
   });
 });
@@ -42,16 +42,16 @@ app.get('/api/products', (req, res) => {
     data: [
       {
         id: 1,
-        name: 'Pancong Original',
+        name: 'Sajati Original',
         price: 15000,
-        category: 'Pancong',
+        category: 'Sajati',
         stock: 50
       },
       {
         id: 2,
-        name: 'Pancong Keju',
+        name: 'Sajati Keju',
         price: 18000,
-        category: 'Pancong',
+        category: 'Sajati',
         stock: 30
       },
       {
@@ -68,7 +68,7 @@ app.get('/api/products', (req, res) => {
 app.post('/api/auth/login', (req, res) => {
   const { email, password } = req.body;
   
-  if (email === 'admin@pancongkece.com' && password === 'admin123') {
+  if (email === 'admin@sajati.com' && password === 'admin123') {
     res.json({
       status: 'success',
       message: 'Login berhasil',
@@ -76,8 +76,8 @@ app.post('/api/auth/login', (req, res) => {
         token: 'demo-token-' + Date.now(),
         user: {
           id: 1,
-          email: 'admin@pancongkece.com',
-          name: 'Admin Pancong Kece',
+          email: 'admin@sajati.com',
+          name: 'Admin Sajati Smart System',
           role: 'admin'
         }
       }
@@ -122,7 +122,7 @@ app.get('/api/transactions', (req, res) => {
         total: 45000,
         date: new Date().toISOString(),
         items: [
-          { name: 'Pancong Original', qty: 2, price: 15000 },
+          { name: 'Sajati Original', qty: 2, price: 15000 },
           { name: 'Es Teh Manis', qty: 1, price: 8000 }
         ]
       }

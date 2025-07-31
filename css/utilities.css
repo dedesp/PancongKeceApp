@@ -281,24 +281,24 @@
     border: 0 !important;
 }
 
-/* Custom Utilities for PancongKece */
-.pancong-gradient {
+/* Custom Utilities for Sajati Smart System */
+.sajati-gradient {
     background: var(--gradient-primary) !important;
     color: white !important;
 }
 
-.pancong-card {
+.sajati-card {
     background: white !important;
     border-radius: var(--radius-lg) !important;
     box-shadow: var(--shadow-medium) !important;
     padding: var(--spacing-lg) !important;
 }
 
-.pancong-hover {
+.sajati-hover {
     transition: all var(--transition-normal) !important;
 }
 
-.pancong-hover:hover {
+.sajati-hover:hover {
     transform: translateY(-3px) !important;
     box-shadow: var(--shadow-heavy) !important;
 }

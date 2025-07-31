@@ -1,4 +1,4 @@
-// Pancong Kece - Settings Module
+// Sajati Smart System - Settings Module
 // Handles user settings, role management, and system configuration
 
 let selectedRole = null;

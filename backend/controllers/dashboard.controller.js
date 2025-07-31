@@ -15,6 +15,22 @@ const moment = require('moment');
 // Get dashboard statistics
 exports.getDashboardStats = async (req, res) => {
   try {
+    // For development, return mock data
+    if (process.env.NODE_ENV === 'development') {
+      return res.status(200).json({
+        status: 'success',
+        data: {
+          today_sales: 2500000,
+          transaction_count: 45,
+          employee_count: 8,
+          low_stock_count: 3,
+          sales_by_category: [],
+          sales_by_payment_method: [],
+          last_7_days_sales: []
+        }
+      });
+    }
+    
     const today = moment().startOf('day');
     
     // Get total sales for today

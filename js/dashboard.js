@@ -1,4 +1,4 @@
-// Pancong Kece - Dashboard Module
+// Sajati Smart System - Dashboard Module
 // Handles dashboard real-time updates and statistics
 
 let dashboardData = {
@@ -13,10 +13,10 @@ let dashboardData = {
 // Ensure sample transactions are available (fallback if not loaded from reports.js)
 if (typeof sampleTransactions === 'undefined') {
     window.sampleTransactions = [
-        { id: 'TXN001', date: new Date(2024, 6, 22, 9, 15), items: ['Kopi Americano', 'Pancong Original'], paymentMethod: 'cash', subtotal: 25000, tax: 2750, service: 1250, total: 29000, cashier: 'Andi Pratama' },
+        { id: 'TXN001', date: new Date(2024, 6, 22, 9, 15), items: ['Kopi Americano', 'Sajati Original'], paymentMethod: 'cash', subtotal: 25000, tax: 2750, service: 1250, total: 29000, cashier: 'Andi Pratama' },
         { id: 'TXN002', date: new Date(2024, 6, 22, 10, 30), items: ['Latte', 'Croissant'], paymentMethod: 'card', subtotal: 35000, tax: 3850, service: 1750, total: 40600, cashier: 'Sari Dewi' },
         { id: 'TXN003', date: new Date(2024, 6, 22, 11, 45), items: ['Cappuccino'], paymentMethod: 'qris', subtotal: 18000, tax: 1980, service: 900, total: 20880, cashier: 'Andi Pratama' },
-        { id: 'TXN004', date: new Date(2024, 6, 21, 14, 20), items: ['Pancong Cokelat', 'Es Teh Manis'], paymentMethod: 'cash', subtotal: 22000, tax: 2420, service: 1100, total: 25520, cashier: 'Sari Dewi' },
+        { id: 'TXN004', date: new Date(2024, 6, 21, 14, 20), items: ['Sajati Cokelat', 'Es Teh Manis'], paymentMethod: 'cash', subtotal: 22000, tax: 2420, service: 1100, total: 25520, cashier: 'Sari Dewi' },
         { id: 'TXN005', date: new Date(2024, 6, 21, 15, 35), items: ['Americano', 'Latte', 'Kue Brownies'], paymentMethod: 'card', subtotal: 45000, tax: 4950, service: 2250, total: 52200, cashier: 'Andi Pratama' }
     ];
 }

@@ -18,35 +18,7 @@ const Products = () => {
     is_active: true
   });
 
-  // Mock data for fallback
-  const mockProducts = React.useMemo(() => [
-    {
-      id: '1',
-      name: 'Pancong Original', 
-      description: 'Pancong tradisional dengan rasa original',
-      price: 15000,
-      category_id: '1',
-      is_active: true,
-      category: { name: 'Pancong' },
-      inventory: { quantity: 50 }
-    },
-    {
-      id: '2',
-      name: 'Pancong Keju',
-      description: 'Pancong dengan topping keju melimpah', 
-      price: 18000,
-      category_id: '1',
-      is_active: true,
-      category: { name: 'Pancong' },
-      inventory: { quantity: 30 }
-    }
-  ], []); // Empty dependency array since data is static
-
-  const mockCategories = React.useMemo(() => [
-    { id: '1', name: 'Pancong' },
-    { id: '2', name: 'Minuman' },
-    { id: '3', name: 'Snack' }
-  ], []); // Empty dependency array since data is static
+  // Removed mock data - now using only database API calls
 
   // Load products with filters
   const loadProducts = useCallback(async () => {
@@ -60,23 +32,22 @@ const Products = () => {
       setProducts(response.data || []);
     } catch (error) {
       console.error('Error loading products:', error);
-      // Fallback to mock data if API fails
-      setProducts(mockProducts);
+      setProducts([]);
     } finally {
       setLoading(false);
     }
-  }, [mockProducts, searchTerm, selectedCategory]);
+  }, [searchTerm, selectedCategory]);
 
   // Load categories
   const loadCategories = useCallback(async () => {
     try {
       const response = await categoryAPI.getAll();
-      setCategories(response.data || mockCategories);
+      setCategories(response.data || []);
     } catch (error) {
       console.error('Error loading categories:', error);
-      setCategories(mockCategories);
+      setCategories([]);
     }
-  }, [mockCategories]);
+  }, []);
 
   // Load data on component mount
   useEffect(() => {

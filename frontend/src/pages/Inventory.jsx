@@ -14,74 +14,7 @@ const Inventory = () => {
     reason: ''
   });
 
-  // Mock inventory data
-const mockInventory = React.useMemo(() => [
-    {
-      id: '1',
-      product_id: '1', 
-      product_name: 'Pancong Original',
-      category: 'Pancong',
-      current_stock: 45,
-      min_stock: 20,
-      max_stock: 100,
-      unit: 'pcs',
-      cost_per_unit: 8000,
-      last_updated: '2024-01-18T10:30:00Z',
-      status: 'normal'
-    },
-    {
-      id: '2',
-      product_id: '2',
-      product_name: 'Pancong Keju', 
-      category: 'Pancong',
-      current_stock: 15,
-      min_stock: 20,
-      max_stock: 80,
-      unit: 'pcs',
-      cost_per_unit: 10000,
-      last_updated: '2024-01-18T09:15:00Z',
-      status: 'low'
-    },
-    {
-      id: '3',
-      product_id: '3',
-      product_name: 'Es Teh Manis',
-      category: 'Minuman',
-      current_stock: 0,
-      min_stock: 30,
-      max_stock: 150,
-      unit: 'cup',
-      cost_per_unit: 3000,
-      last_updated: '2024-01-17T16:45:00Z',
-      status: 'out'
-    },
-    {
-      id: '4',
-      product_id: '4',
-      product_name: 'Kopi Hitam',
-      category: 'Minuman', 
-      current_stock: 75,
-      min_stock: 25,
-      max_stock: 120,
-      unit: 'cup',
-      cost_per_unit: 4000,
-      last_updated: '2024-01-18T11:00:00Z',
-      status: 'normal'
-    },
-    {
-      id: '5',
-      product_id: '5',
-      product_name: 'Keripik Singkong',
-      category: 'Snack',
-      current_stock: 8,
-      min_stock: 15,
-      max_stock: 50,
-      unit: 'pack',
-      cost_per_unit: 5000,
-      last_updated: '2024-01-18T08:20:00Z',
-      status: 'low'
-    }
-  ], []); // Empty dependency array since data is static
+  // Removed mock inventory data - now using only database API calls
 
   // Load inventory on component mount
   useEffect(() => {
@@ -92,16 +25,37 @@ const mockInventory = React.useMemo(() => [
   const loadInventory = useCallback(async () => {
     try {
       setLoading(true);
-      // Simulate API call
-      setTimeout(() => {
-        setInventory(mockInventory);
-        setLoading(false);
-      }, 500);
+      const response = await fetch('/api/inventory');
+      const result = await response.json();
+      
+      if (result.status === 'success') {
+        // Transform data to match expected format
+        const transformedData = result.data.map(item => ({
+          id: item.id,
+          product_id: item.product_id,
+          product_name: item.Product?.name || 'Unknown Product',
+          category: 'General', // Default category since not in current model
+          current_stock: item.quantity || 0,
+          min_stock: item.min_stock || 10,
+          max_stock: item.max_stock || 100,
+          unit: 'pcs', // Default unit
+          cost_per_unit: item.cost_per_unit || 0,
+          last_updated: item.updated_at || new Date().toISOString(),
+          status: item.quantity <= (item.min_stock || 10) ? 
+                  (item.quantity === 0 ? 'out' : 'low') : 'normal'
+        }));
+        setInventory(transformedData);
+       } else {
+         console.error('Failed to fetch inventory:', result.message);
+         setInventory([]);
+       }
     } catch (error) {
       console.error('Error loading inventory:', error);
+      setInventory([]);
+    } finally {
       setLoading(false);
     }
-  }, [mockInventory]);
+  }, []);
 
   // Filter inventory based on search and status
   const filteredInventory = inventory.filter(item => {

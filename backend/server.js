@@ -24,6 +24,8 @@ const crmRoutes = require('./routes/crm.routes');
 const automationRoutes = require('./routes/automation.routes');
 const whatsappRoutes = require('./routes/whatsapp.routes');
 const sentimentRoutes = require('./routes/sentiment.routes');
+const recipeManagementRoutes = require('./routes/recipeManagement.routes');
+const testRoutes = require('./routes/test.routes');
 
 // Initialize express app
 const app = express();
@@ -62,10 +64,12 @@ app.use('/api/crm', crmRoutes);
 app.use('/api/automation', automationRoutes);
 app.use('/api/whatsapp', whatsappRoutes);
 app.use('/api/sentiment', sentimentRoutes);
+app.use('/api/recipe-management', recipeManagementRoutes);
+app.use('/api/test', testRoutes);
 
 // Default route
 app.get('/', (req, res) => {
-  res.json({ message: 'Selamat datang di API Pancong Kece Cafe Management System' });
+  res.json({ message: 'Selamat datang di API Sajati Smart System' });
 });
 
 // Handle 404

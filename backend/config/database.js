@@ -5,7 +5,7 @@ const { Sequelize } = require('sequelize');
 const sequelize = process.env.DB_DIALECT === 'sqlite' 
   ? new Sequelize({
       dialect: 'sqlite',
-      storage: process.env.DB_STORAGE || './database/pancong_kece.db',
+      storage: process.env.DB_STORAGE || './database/sajati_smart_system.db',
       logging: process.env.NODE_ENV === 'development' ? console.log : false,
       define: {
         underscored: true,

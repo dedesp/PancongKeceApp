@@ -1,5 +1,5 @@
 /**
- * DOM Helper Utilities for PancongKece
+ * DOM Helper Utilities for Sajati Smart System
  * Optimized DOM operations and caching system
  */
 

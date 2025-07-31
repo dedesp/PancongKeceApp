@@ -1,4 +1,4 @@
-// Pancong Kece - Inventory Management Module
+// Sajati Smart System - Inventory Management Module
 // Handles inventory CRUD operations and stock management
 
 let inventoryItems = [

@@ -1,4 +1,4 @@
-// Pancong Kece - Product Management Module
+// Sajati Smart System - Product Management Module
 // Handles product CRUD operations and management interface
 
 let filteredProducts = [];
@@ -66,10 +66,11 @@ function renderProductsGrid() {
 // Get category display name
 function getCategoryName(category) {
     const categories = {
-        'beverages': 'Minuman',
-        'food': 'Makanan',
-        'snacks': 'Snack',
-        'others': 'Lainnya'
+        'Coffee': 'kopi',
+        'noncoffee': 'nonkopi'
+        'food': 'makanan',
+        'snacks': 'lightmeal',
+        'others': 'lainnya'
     };
     return categories[category] || 'Tidak Diketahui';
 }
@@ -85,7 +86,7 @@ function filterProducts(category) {
     } else {
         filteredProducts = menuItems.filter(product => product.category === category);
     }
-    
+
     renderProductsGrid();
 }
 
@@ -93,19 +94,19 @@ function filterProducts(category) {
 function searchProducts() {
     const searchInput = document.getElementById('productSearchInput');
     const query = searchInput.value.toLowerCase().trim();
-    
+
     if (query === '') {
         const activeCategory = document.querySelector('.filter-tab.active').getAttribute('data-category');
         filterProducts(activeCategory);
         return;
     }
-    
-    filteredProducts = menuItems.filter(product => 
+
+    filteredProducts = menuItems.filter(product =>
         product.name.toLowerCase().includes(query) ||
         (product.description && product.description.toLowerCase().includes(query)) ||
         getCategoryName(product.category).toLowerCase().includes(query)
     );
-    
+
     renderProductsGrid();
 }
 
@@ -113,8 +114,8 @@ function searchProducts() {
 function sortProducts() {
     const sortSelect = document.getElementById('productSortSelect');
     const sortBy = sortSelect.value;
-    
-    switch(sortBy) {
+
+    switch (sortBy) {
         case 'name':
             filteredProducts.sort((a, b) => a.name.localeCompare(b.name));
             break;
@@ -129,7 +130,7 @@ function sortProducts() {
             filteredProducts.sort((a, b) => (b.sales || 0) - (a.sales || 0));
             break;
     }
-    
+
     renderProductsGrid();
 }
 
@@ -137,14 +138,14 @@ function sortProducts() {
 function showAddProductModal() {
     const modal = document.getElementById('addProductModal');
     const form = document.getElementById('addProductForm');
-    
+
     // Reset form
     form.reset();
     document.getElementById('productAvailable').checked = true;
-    
+
     // Update available keyboard shortcuts
     updateAvailableShortcuts('productKeyboardShortcut');
-    
+
     modal.classList.add('active');
 }
 
@@ -158,7 +159,7 @@ function closeAddProductModal() {
 function saveProduct() {
     const form = document.getElementById('addProductForm');
     const formData = new FormData(form);
-    
+
     // Validate required fields
     if (!formData.get('name') || !formData.get('category') || !formData.get('price')) {
         if (typeof showError === 'function') {
@@ -166,10 +167,10 @@ function saveProduct() {
         }
         return;
     }
-    
+
     // Generate new ID
     const newId = Math.max(...menuItems.map(p => p.id), 0) + 1;
-    
+
     // Create new product object
     const newProduct = {
         id: newId,
@@ -181,10 +182,10 @@ function saveProduct() {
         available: formData.get('available') === 'on',
         sales: 0
     };
-    
+
     // Add to menuItems array
     menuItems.push(newProduct);
-    
+
     // Update keyboard shortcuts mapping if assigned
     if (newProduct.keyboardShortcut && typeof popularProducts !== 'undefined') {
         popularProducts[newProduct.keyboardShortcut] = {
@@ -192,17 +193,17 @@ function saveProduct() {
             name: newProduct.name
         };
     }
-    
+
     // Reload products grid
     loadProductsGrid();
-    
+
     // Close modal and show success
     closeAddProductModal();
-    
+
     if (typeof showSuccess === 'function') {
         showSuccess(`Produk "${newProduct.name}" berhasil ditambahkan`);
     }
-    
+
     // Refresh POS menu if active
     if (typeof loadMenu === 'function') {
         loadMenu();
@@ -213,9 +214,9 @@ function saveProduct() {
 function editProduct(productId) {
     const product = menuItems.find(p => p.id === productId);
     if (!product) return;
-    
+
     currentEditingProduct = product;
-    
+
     // Fill form with product data
     document.getElementById('editProductId').value = product.id;
     document.getElementById('editProductName').value = product.name;
@@ -224,10 +225,10 @@ function editProduct(productId) {
     document.getElementById('editProductDescription').value = product.description || '';
     document.getElementById('editProductKeyboardShortcut').value = product.keyboardShortcut || '';
     document.getElementById('editProductAvailable').checked = product.available !== false;
-    
+
     // Update available keyboard shortcuts
     updateAvailableShortcuts('editProductKeyboardShortcut', product.keyboardShortcut);
-    
+
     // Show modal
     const modal = document.getElementById('editProductModal');
     modal.classList.add('active');
@@ -243,10 +244,10 @@ function closeEditProductModal() {
 // Update product
 function updateProduct() {
     if (!currentEditingProduct) return;
-    
+
     const form = document.getElementById('editProductForm');
     const formData = new FormData(form);
-    
+
     // Validate required fields
     if (!formData.get('name') || !formData.get('category') || !formData.get('price')) {
         if (typeof showError === 'function') {
@@ -254,16 +255,16 @@ function updateProduct() {
         }
         return;
     }
-    
+
     // Find product in array
     const productIndex = menuItems.findIndex(p => p.id === currentEditingProduct.id);
     if (productIndex === -1) return;
-    
+
     // Remove old keyboard shortcut mapping
     if (currentEditingProduct.keyboardShortcut && typeof popularProducts !== 'undefined') {
         delete popularProducts[currentEditingProduct.keyboardShortcut];
     }
-    
+
     // Update product data
     menuItems[productIndex] = {
         ...currentEditingProduct,
@@ -274,7 +275,7 @@ function updateProduct() {
         keyboardShortcut: formData.get('keyboardShortcut') || null,
         available: formData.get('available') === 'on'
     };
-    
+
     // Add new keyboard shortcut mapping
     const updatedProduct = menuItems[productIndex];
     if (updatedProduct.keyboardShortcut && typeof popularProducts !== 'undefined') {
@@ -283,17 +284,17 @@ function updateProduct() {
             name: updatedProduct.name
         };
     }
-    
+
     // Reload products grid
     loadProductsGrid();
-    
+
     // Close modal and show success
     closeEditProductModal();
-    
+
     if (typeof showSuccess === 'function') {
         showSuccess(`Produk "${updatedProduct.name}" berhasil diperbarui`);
     }
-    
+
     // Refresh POS menu if active
     if (typeof loadMenu === 'function') {
         loadMenu();
@@ -303,11 +304,11 @@ function updateProduct() {
 // Delete product
 function deleteProduct() {
     if (!currentEditingProduct) return;
-    
+
     if (!confirm(`Yakin ingin menghapus produk "${currentEditingProduct.name}"? Aksi ini tidak dapat dibatalkan.`)) {
         return;
     }
-    
+
     // Remove from menuItems array
     const productIndex = menuItems.findIndex(p => p.id === currentEditingProduct.id);
     if (productIndex !== -1) {
@@ -315,20 +316,20 @@ function deleteProduct() {
         if (currentEditingProduct.keyboardShortcut && typeof popularProducts !== 'undefined') {
             delete popularProducts[currentEditingProduct.keyboardShortcut];
         }
-        
+
         menuItems.splice(productIndex, 1);
     }
-    
+
     // Reload products grid
     loadProductsGrid();
-    
+
     // Close modal and show success
     closeEditProductModal();
-    
+
     if (typeof showSuccess === 'function') {
         showSuccess(`Produk "${currentEditingProduct.name}" berhasil dihapus`);
     }
-    
+
     // Refresh POS menu if active
     if (typeof loadMenu === 'function') {
         loadMenu();
@@ -339,16 +340,16 @@ function deleteProduct() {
 function toggleProductStatus(productId) {
     const product = menuItems.find(p => p.id === productId);
     if (!product) return;
-    
+
     product.available = !product.available;
-    
+
     renderProductsGrid();
-    
+
     if (typeof showSuccess === 'function') {
         const status = product.available ? 'diaktifkan' : 'dinonaktifkan';
         showSuccess(`Produk "${product.name}" berhasil ${status}`);
     }
-    
+
     // Refresh POS menu if active
     if (typeof loadMenu === 'function') {
         loadMenu();
@@ -359,11 +360,11 @@ function toggleProductStatus(productId) {
 function updateAvailableShortcuts(selectId, currentShortcut = null) {
     const select = document.getElementById(selectId);
     if (!select) return;
-    
+
     const usedShortcuts = menuItems
         .filter(p => p.keyboardShortcut && p.keyboardShortcut !== currentShortcut)
         .map(p => p.keyboardShortcut);
-    
+
     const options = select.querySelectorAll('option');
     options.forEach(option => {
         const value = option.value;
@@ -423,7 +424,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         });
-        
-        observer.observe(productsSection, { attributes: true });
+
+        observer.observe(productsSection, {
+            attributes: true
+        });
     }
 });

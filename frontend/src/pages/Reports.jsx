@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { BarChart3, TrendingUp, DollarSign, ShoppingCart, Users, Calendar, Download, Filter, Eye } from 'lucide-react';
 
 const Reports = () => {
@@ -11,73 +11,7 @@ const Reports = () => {
   const [reportData, setReportData] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  // Mock report data
-  const mockReportData = useMemo(() => ({
-    sales: {
-      summary: {
-        totalRevenue: 2450000,
-        totalTransactions: 156,
-        averageTransaction: 15705,
-        growth: 12.5
-      },
-      dailySales: [
-        { date: '2024-01-14', revenue: 320000, transactions: 18 },
-        { date: '2024-01-15', revenue: 280000, transactions: 15 },
-        { date: '2024-01-16', revenue: 450000, transactions: 25 },
-        { date: '2024-01-17', revenue: 380000, transactions: 22 },
-        { date: '2024-01-18', revenue: 520000, transactions: 28 }
-      ],
-      topProducts: [
-        { name: 'Pancong Original', revenue: 680000, quantity: 85 },
-        { name: 'Pancong Keju', revenue: 520000, quantity: 52 },
-        { name: 'Es Teh Manis', revenue: 240000, quantity: 80 },
-        { name: 'Kopi Hitam', revenue: 320000, quantity: 80 }
-      ]
-    },
-    products: {
-      summary: {
-        totalProducts: 25,
-        activeProducts: 23,
-        lowStockProducts: 5,
-        outOfStockProducts: 2
-      },
-      performance: [
-        { name: 'Pancong Original', sold: 85, revenue: 680000, margin: 45 },
-        { name: 'Pancong Keju', sold: 52, revenue: 520000, margin: 48 },
-        { name: 'Pancong Coklat', sold: 38, revenue: 380000, margin: 42 },
-        { name: 'Es Teh Manis', sold: 80, revenue: 240000, margin: 60 },
-        { name: 'Kopi Hitam', sold: 80, revenue: 320000, margin: 55 }
-      ]
-    },
-    customers: {
-      summary: {
-        totalCustomers: 342,
-        newCustomers: 28,
-        returningCustomers: 89,
-        customerRetention: 78.5
-      },
-      topCustomers: [
-        { name: 'Ahmad Wijaya', transactions: 15, totalSpent: 450000 },
-        { name: 'Siti Nurhaliza', transactions: 12, totalSpent: 380000 },
-        { name: 'Budi Santoso', transactions: 10, totalSpent: 320000 },
-        { name: 'Dewi Sartika', transactions: 8, totalSpent: 280000 }
-      ]
-    },
-    inventory: {
-      summary: {
-        totalItems: 25,
-        totalValue: 12500000,
-        lowStockItems: 5,
-        outOfStockItems: 2
-      },
-      movements: [
-        { date: '2024-01-18', type: 'out', product: 'Pancong Original', quantity: 15, reason: 'Penjualan' },
-        { date: '2024-01-18', type: 'in', product: 'Es Teh Manis', quantity: 50, reason: 'Restok' },
-        { date: '2024-01-17', type: 'out', product: 'Pancong Keju', quantity: 8, reason: 'Penjualan' },
-        { date: '2024-01-17', type: 'adjustment', product: 'Kopi Hitam', quantity: -2, reason: 'Rusak' }
-       ]
-     }
-  }), []);
+  // Removed mock report data - now using only database API calls
 
   // Load report data
   useEffect(() => {
@@ -87,16 +21,30 @@ const Reports = () => {
   const loadReportData = useCallback(async () => {
     try {
       setLoading(true);
-      // Simulate API call
-      setTimeout(() => {
-        setReportData(mockReportData[selectedReport]);
-        setLoading(false);
-      }, 500);
+      const params = new URLSearchParams({
+        period: selectedPeriod,
+        ...(selectedPeriod === 'custom' && {
+          startDate: customDateRange.startDate,
+          endDate: customDateRange.endDate
+        })
+      });
+      
+      const response = await fetch(`/api/reports/${selectedReport}?${params}`);
+      const result = await response.json();
+      
+      if (result.status === 'success') {
+        setReportData(result.data);
+      } else {
+        console.error('Failed to fetch report data:', result.message);
+        setReportData(null);
+      }
     } catch (error) {
       console.error('Error loading report data:', error);
+      setReportData(null);
+    } finally {
       setLoading(false);
     }
-  }, [selectedReport, mockReportData]);
+  }, [selectedReport, selectedPeriod, customDateRange]);
 
   // Format currency
   const formatCurrency = (amount) => {
